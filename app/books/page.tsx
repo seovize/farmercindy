@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { BookOpen, Star, Sparkles, ShieldCheck, Download, Check, School, Heart } from "lucide-react";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
@@ -30,38 +31,42 @@ export default function BooksPage() {
           </p>
         </div>
 
-        {/* BOOK 1 DEEP SHOWCASE */}
+        {/* BOOK 1 DEEP SHOWCASE WITH REAL AMAZON COVER */}
         <div className="rounded-4xl bg-gradient-to-br from-[#FFF8F0] via-[#FDFBF7] to-amber-50/60 p-8 md:p-12 border-3 border-amber-200 shadow-tactile mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Visual Book Cover Column */}
             <div className="lg:col-span-5 text-center">
-              <div className="relative mx-auto max-w-xs sm:max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-storybook border-4 border-white flex flex-col justify-between p-6 bg-gradient-to-br from-[#E63946] via-[#B82835] to-[#264653] text-white">
-                <div className="flex items-center justify-between z-10">
-                  <span className="bg-black/40 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-amber-200 border border-white/20">
-                    Book 1
+              <div className="relative mx-auto max-w-xs sm:max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-storybook border-4 border-white bg-slate-900 group">
+                <Image
+                  src="/images/book1_cover.jpg"
+                  alt="The Adventures of FarmerCindy: FarmerCindy Finds a Farm Cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+                {/* Book Spine Simulation */}
+                <div className="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-black/50 via-white/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-amber-200 border border-white/20">
+                    Volume 1
                   </span>
-                  <span className="bg-[#E9C46A] text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+                  <span className="bg-[#E9C46A] text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow">
                     Ages 3–9
                   </span>
                 </div>
 
-                <div className="my-auto text-center z-10">
-                  <div className="text-5xl my-4">🍓</div>
-                  <h3 className="text-2xl sm:text-3xl font-black leading-tight drop-shadow">
-                    FarmerCindy Finds a Farm
-                  </h3>
-                  <p className="text-xs text-amber-200 font-bold mt-1">
-                    The Adventures of FarmerCindy
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between border-t border-white/20 pt-3 z-10">
-                  <span className="text-xs font-bold text-amber-200">76 Pages</span>
-                  <span className="text-xs font-bold">Hardcover & Paperback</span>
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10 text-white">
+                  <span className="text-xs font-bold drop-shadow">76 Pages</span>
+                  <span className="text-xs font-extrabold bg-[#E63946] px-2.5 py-0.5 rounded-md shadow">
+                    Amazon Prime
+                  </span>
                 </div>
               </div>
 
-              <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-extrabold text-[#2A9D8F] bg-emerald-50 px-3 py-1 rounded-full">
+              <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-extrabold text-[#2A9D8F] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Verified Amazon ASIN: B0HL5F734J</span>
               </div>
@@ -131,38 +136,41 @@ export default function BooksPage() {
           </div>
         </div>
 
-        {/* BOOK 2 DEEP SHOWCASE */}
+        {/* BOOK 2 DEEP SHOWCASE WITH REAL AMAZON COVER */}
         <div className="rounded-4xl bg-gradient-to-br from-[#FFF8F0] via-[#FDFBF7] to-emerald-50/60 p-8 md:p-12 border-3 border-emerald-200 shadow-tactile mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Visual Book Cover Column */}
             <div className="lg:col-span-5 text-center">
-              <div className="relative mx-auto max-w-xs sm:max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-storybook border-4 border-white flex flex-col justify-between p-6 bg-gradient-to-br from-[#2A9D8F] via-[#1D6E64] to-[#264653] text-white">
-                <div className="flex items-center justify-between z-10">
-                  <span className="bg-black/40 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-amber-200 border border-white/20">
-                    Book 2
+              <div className="relative mx-auto max-w-xs sm:max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-storybook border-4 border-white bg-slate-900 group">
+                <Image
+                  src="/images/book2_cover.jpg"
+                  alt="The Adventures of FarmerCindy: What's Happening to Our Farming Community? Cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Book Spine Simulation */}
+                <div className="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-black/50 via-white/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+                  <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-amber-200 border border-white/20">
+                    Volume 2
                   </span>
-                  <span className="bg-[#E9C46A] text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+                  <span className="bg-[#E9C46A] text-slate-900 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow">
                     Ages 3–9
                   </span>
                 </div>
 
-                <div className="my-auto text-center z-10">
-                  <div className="text-5xl my-4">🌻</div>
-                  <h3 className="text-2xl sm:text-3xl font-black leading-tight drop-shadow">
-                    What's Happening to Our Farming Community?
-                  </h3>
-                  <p className="text-xs text-amber-200 font-bold mt-1">
-                    The Adventures of FarmerCindy
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between border-t border-white/20 pt-3 z-10">
-                  <span className="text-xs font-bold text-amber-200">76 Pages</span>
-                  <span className="text-xs font-bold">Hardcover & Paperback</span>
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10 text-white">
+                  <span className="text-xs font-bold drop-shadow">76 Pages</span>
+                  <span className="text-xs font-extrabold bg-[#2A9D8F] px-2.5 py-0.5 rounded-md shadow">
+                    Series Sequel
+                  </span>
                 </div>
               </div>
 
-              <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-extrabold text-[#2A9D8F] bg-emerald-50 px-3 py-1 rounded-full">
+              <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-extrabold text-[#2A9D8F] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Verified Amazon ASIN: B0HL53WTS8</span>
               </div>

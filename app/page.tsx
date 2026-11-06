@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpen, Sparkles, Heart, Play, ShieldCheck, ArrowRight, Award, Star } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, Sparkles, Heart, Play, ShieldCheck, ArrowRight, Star, Sprout, Users, Award } from "lucide-react";
 import { TiltBookCard } from "@/components/TiltBookCard";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { ActivityKitLeadMagnet } from "@/components/ActivityKitLeadMagnet";
@@ -17,11 +18,19 @@ export default function HomePage() {
       <section className="relative pt-12 pb-20 md:pt-16 md:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Author Headline & Conversion Hooks */}
+            {/* Left Column: Author Headline, Real Portrait Badge & Conversion Hooks */}
             <div className="lg:col-span-7 text-center lg:text-left z-10">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-black uppercase tracking-wider mb-6 shadow-sm">
-                <Sparkles className="w-4 h-4 text-[#E63946]" />
+              {/* Badge with Mini Avatar */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-black uppercase tracking-wider mb-6 shadow-sm">
+                <div className="relative w-6 h-6 rounded-full overflow-hidden border border-amber-400 shrink-0">
+                  <Image
+                    src="/images/farmer_cindy_hero.jpg"
+                    alt="Farmer Cindy Avatar"
+                    fill
+                    sizes="24px"
+                    className="object-cover"
+                  />
+                </div>
                 <span>Wholesome Children's Book Series • Ages 3–9</span>
               </div>
 
@@ -38,9 +47,9 @@ export default function HomePage() {
               </p>
 
               {/* 501(c)(3) Callout Banner */}
-              <div className="mt-6 p-4 rounded-2xl bg-amber-50/90 border-2 border-amber-200/80 inline-flex items-center gap-3 text-left shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center shrink-0 font-bold text-lg">
-                  🌱
+              <div className="mt-6 p-4 rounded-2xl bg-amber-50/90 border-2 border-amber-200/80 inline-flex items-center gap-3.5 text-left shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center shrink-0 font-bold text-lg shadow">
+                  <Sprout className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-xs text-slate-700">
                   <strong className="text-[#264653] font-black block">100% Non-Profit Proceeds:</strong>
@@ -84,13 +93,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: High-Density 3D Book Showcase */}
+            {/* Right Column: High-Density 3D Book Showcase with Real Amazon Cover */}
             <div className="lg:col-span-5 relative z-10">
               <div className="relative mx-auto max-w-sm sm:max-w-md">
                 {/* Visual Glow Behind the Book */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-red-200/60 to-amber-200/60 rounded-full blur-3xl transform -rotate-6 scale-105 pointer-events-none" />
 
-                {/* 3D Tilt Card of Book 1 */}
+                {/* 3D Tilt Card of Book 1 with Real Amazon Cover */}
                 <TiltBookCard
                   asin="B0HL5F734J"
                   volume="Book 1 Spotlight"
@@ -98,9 +107,10 @@ export default function HomePage() {
                   subtitle="A Journey of Heirloom Seeds & Apartment Magic"
                   ageRange="Ages 3–9"
                   pages={76}
+                  coverImage="/images/book1_cover.jpg"
                   gradient="from-[#E63946] via-[#B82835] to-[#264653]"
                   accentColor="#E63946"
-                  badgeText="Amazon Release"
+                  badgeText="Official Amazon Release"
                   synopsis="Farmer Cindy searches across the world for the perfect farm, only to discover she can grow organic food right on her apartment windowsill!"
                 />
               </div>
@@ -127,8 +137,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Spotlight: Dual Book Showcase Grid */}
-      <section className="py-20 bg-gradient-to-b from-[#FDFBF7] via-[#FFF8F0] to-[#FDFBF7] border-y border-amber-200/60">
+      {/* Author & Story World Spotlight with Real Illustration */}
+      <section className="py-16 bg-white border-y border-amber-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Real Hand-Crafted Illustration */}
+            <div className="lg:col-span-5 text-center">
+              <div className="relative mx-auto max-w-md aspect-square rounded-4xl overflow-hidden shadow-2xl border-4 border-amber-200 group">
+                <Image
+                  src="/images/farmer_cindy_hero.jpg"
+                  alt="Farmer Cindy with Fresh Harvest Basket"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 text-white text-center">
+                  <span className="text-xs font-black uppercase tracking-wider bg-[#E63946] px-3.5 py-1 rounded-full shadow">
+                    Meet Author Cindy
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="lg:col-span-7 space-y-4 text-slate-700 text-center lg:text-left">
+              <span className="text-xs font-black uppercase tracking-wider text-[#2A9D8F] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+                Storybook Character & Real Mission
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#264653] leading-tight">
+                Teaching Kids That Real Nutrition Starts in the Soil
+              </h2>
+              <p className="text-base sm:text-lg leading-relaxed text-slate-600">
+                Farmer Cindy is more than a storybook character—she is on a nationwide mission to help elementary students and families discover the wonder of gardening. Through colorful tales of strawberries, cherries, honeybees, and heirloom seeds, she makes agricultural STEM literacy accessible to every child.
+              </p>
+              <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-md transition"
+                >
+                  <Users className="w-4 h-4" />
+                  Read Cindy's Full Bio & School Assemblies
+                </Link>
+                <Link
+                  href="/mission"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[#264653] bg-amber-100 hover:bg-amber-200 transition"
+                >
+                  <Heart className="w-4 h-4 text-[#E63946]" />
+                  See Our 501(c)(3) Free Food Mission
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Spotlight: Dual Book Showcase Grid with Real Covers */}
+      <section className="py-20 bg-gradient-to-b from-[#FDFBF7] via-[#FFF8F0] to-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-black uppercase tracking-wider text-[#2A9D8F] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
@@ -143,7 +208,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            {/* Book 1 */}
+            {/* Book 1 with Real Amazon Cover */}
             <TiltBookCard
               asin="B0HL5F734J"
               volume="Volume 1"
@@ -151,13 +216,14 @@ export default function HomePage() {
               subtitle="Urban Gardening & Heirloom Sprouts"
               ageRange="Ages 3–9"
               pages={76}
+              coverImage="/images/book1_cover.jpg"
               gradient="from-[#E63946] via-[#B82835] to-[#264653]"
               accentColor="#E63946"
               badgeText="Live on Amazon"
               synopsis="Traveling the globe in search of open pastures, Cindy learns that real organic farming begins in your own home with a few heirloom seeds and love."
             />
 
-            {/* Book 2 */}
+            {/* Book 2 with Real Amazon Cover */}
             <TiltBookCard
               asin="B0HL53WTS8"
               volume="Volume 2"
@@ -165,6 +231,7 @@ export default function HomePage() {
               subtitle="Soil Health, Pollinators & Teamwork"
               ageRange="Ages 3–9"
               pages={76}
+              coverImage="/images/book2_cover.jpg"
               gradient="from-[#2A9D8F] via-[#1D6E64] to-[#264653]"
               accentColor="#2A9D8F"
               badgeText="Series Sequel"
@@ -184,7 +251,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Free 12-Page Activity Kit Lead Magnet (Brevo CRM Engine) */}
+      {/* Free 12-Page Activity Kit Lead Magnet (Brevo CRM Engine) with Real Mockup */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ActivityKitLeadMagnet />
       </section>

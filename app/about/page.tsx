@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { User, School, Sparkles, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2 } from "lucide-react";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 
@@ -75,8 +76,15 @@ export default function AboutPage() {
           {/* Visual Avatar Card */}
           <div className="lg:col-span-5 text-center">
             <div className="relative mx-auto max-w-sm rounded-4xl bg-gradient-to-br from-[#FFF8F0] via-white to-amber-50 p-6 border-4 border-amber-200/80 shadow-tactile">
-              <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-[#E63946] via-[#B82835] to-[#264653] flex items-center justify-center text-7xl shadow-inner">
-                👩‍🌾🍓
+              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-md border-2 border-amber-300">
+                <Image
+                  src="/images/farmer_cindy_hero.jpg"
+                  alt="Farmer Cindy Official Portrait"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               <div className="mt-6 text-center">
