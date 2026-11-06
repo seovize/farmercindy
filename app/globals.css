@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Poppins', 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --color-cream-base: #FDFBF7;
+  --color-cream-warm: #FFF8F0;
+  --color-brand-red: #E63946;
+  --color-brand-green: #2A9D8F;
+  --color-slate-dark: #264653;
+}
+
+body {
+  background-color: var(--color-cream-base);
+  color: var(--color-slate-dark);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Storybook Feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E9C46A;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E63946;
+}
+
+/* Accessible Focus Ring */
+*:focus-visible {
+  outline: 3px solid #E63946;
+  outline-offset: 2px;
+}
+
+/* Subtle Paper Texture Overlay */
+.paper-pattern {
+  background-color: #FDFBF7;
+  background-image: radial-gradient(#264653 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+  background-opacity: 0.03;
+}
