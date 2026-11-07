@@ -16,6 +16,19 @@ export async function POST(req: Request) {
       );
     }
 
+    const cleanEmail = String(email).trim().toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(cleanEmail) || cleanEmail.length > 254) {
+      return NextResponse.json(
+        { error: "A valid email address is required." },
+        { status: 400 }
+      );
+    }
+
+    const cleanName = String(name).slice(0, 100).replace(/[<>]/g, "");
+    const cleanOrg = String(organization).slice(0, 120).replace(/[<>]/g, "");
+    const cleanMsg = String(message || "").slice(0, 1000).replace(/[<>]/g, "");
+
     const BREVO_API_KEY = process.env.BREVO_API_KEY;
 
     if (!BREVO_API_KEY || BREVO_API_KEY.includes("your-live-brevo-api-key")) {
@@ -35,18 +48,18 @@ export async function POST(req: Request) {
         "api-key": BREVO_API_KEY,
       },
       body: JSON.stringify({
-        subject: `New School Visit Request: ${organization} (${name})`,
+        subject: `New School Visit Request: ${cleanOrg} (${cleanName})`,
         sender: { name: "Farmer Cindy Web Platform", email: "info@farmercindy.org" },
         to: [{ email: "farmercindy711@gmail.com", name: "Farmer Cindy" }],
         htmlContent: `
           <h3>New School / Library Reading Request</h3>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Organization:</strong> ${organization}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${cleanName}</p>
+          <p><strong>Organization:</strong> ${cleanOrg}</p>
+          <p><strong>Email:</strong> ${cleanEmail}</p>
           <p><strong>Grade Level:</strong> ${gradeLevel || "Not specified"}</p>
           <p><strong>Visit Type:</strong> ${visitType || "Virtual / In-Person"}</p>
           <p><strong>Preferred Date:</strong> ${preferredDate || "Flexible"}</p>
-          <p><strong>Message:</strong> ${message || "None"}</p>
+          <p><strong>Message:</strong> ${cleanMsg || "None"}</p>
         `,
       }),
     });

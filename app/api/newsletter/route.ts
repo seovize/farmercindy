@@ -9,10 +9,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, spamBlocked: true });
     }
 
-    // 2. Validate email syntax
-    if (!email || typeof email !== "string" || !email.includes("@")) {
+    // 2. Validate & sanitize email syntax
+    if (!email || typeof email !== "string") {
       return NextResponse.json(
         { error: "A valid email address is required." },
+        { status: 400 }
+      );
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(cleanEmail) || cleanEmail.length > 254) {
+      return NextResponse.json(
+        { error: "Please provide a valid email address." },
         { status: 400 }
       );
     }
@@ -38,7 +47,7 @@ export async function POST(req: Request) {
         "api-key": BREVO_API_KEY,
       },
       body: JSON.stringify({
-        email,
+        email: cleanEmail,
         listIds: [BREVO_LIST_ID],
         updateEnabled: true,
         attributes: {
