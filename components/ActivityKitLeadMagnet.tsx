@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Download, Sparkles, CheckCircle2, ShieldCheck, Mail, Loader2, BookOpen } from "lucide-react";
+import { Download, Sparkles, CheckCircle2, ShieldCheck, Mail, Loader2, BookOpen, GraduationCap, User, FileText } from "lucide-react";
 import confetti from "canvas-confetti";
 
 export function ActivityKitLeadMagnet() {
@@ -111,18 +111,17 @@ export function ActivityKitLeadMagnet() {
                   </div>
                   <h3 className="text-xl font-black text-emerald-900">Your Activity Kit is Ready!</h3>
                 </div>
-                <p className="text-xs text-emerald-800">
-                  We just sent your 12-page activity packet to <strong>{email}</strong> via Brevo. You can also download it right now:
+                <p className="text-xs text-emerald-800 leading-relaxed">
+                  We sent a confirmation copy to <strong>{email}</strong> via Brevo. You can also download your printable 12-page activity booklet immediately below:
                 </p>
-                <div className="mt-4">
+                <div className="mt-4 flex flex-wrap gap-3">
                   <a
-                    href="/images/activity_kit_preview.jpg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-md transition"
+                    href="/downloads/farmer-cindy-activity-kit.pdf"
+                    download="Farmer-Cindy-Strawberry-Journal-Kit.pdf"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-xs font-black text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-lg hover:shadow-xl transition transform active:scale-95"
                   >
                     <Download className="w-4 h-4" />
-                    Download Activity Packet Preview
+                    Download Printable Activity PDF Now (Instant)
                   </a>
                 </div>
               </div>
@@ -141,7 +140,7 @@ export function ActivityKitLeadMagnet() {
                 {/* Role Radio Pills */}
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-4">
                   <label
-                    className={`cursor-pointer px-4 py-2 rounded-xl text-xs font-black transition ${
+                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition ${
                       role === "Parent"
                         ? "bg-[#E63946] text-white shadow-md"
                         : "bg-white text-slate-700 border border-slate-300 hover:bg-slate-100"
@@ -155,11 +154,12 @@ export function ActivityKitLeadMagnet() {
                       onChange={() => setRole("Parent")}
                       className="hidden"
                     />
-                    🍓 I am a Parent / Grandparent
+                    <User className="w-3.5 h-3.5" />
+                    <span>Parent / Grandparent</span>
                   </label>
 
                   <label
-                    className={`cursor-pointer px-4 py-2 rounded-xl text-xs font-black transition ${
+                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition ${
                       role === "Teacher"
                         ? "bg-[#2A9D8F] text-white shadow-md"
                         : "bg-white text-slate-700 border border-slate-300 hover:bg-slate-100"
@@ -173,7 +173,8 @@ export function ActivityKitLeadMagnet() {
                       onChange={() => setRole("Teacher")}
                       className="hidden"
                     />
-                    🌱 I am an Educator / Librarian
+                    <GraduationCap className="w-3.5 h-3.5" />
+                    <span>Educator / Librarian</span>
                   </label>
                 </div>
 

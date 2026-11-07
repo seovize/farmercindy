@@ -30,7 +30,9 @@ export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: G
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (parseInt(userAnswer.trim(), 10) === num1 + num2) {
-      // Verified adult -> open external site in new tab
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("grownup_gate_verified", "true");
+      }
       window.open(targetUrl, "_blank", "noopener,noreferrer");
       onClose();
     } else {

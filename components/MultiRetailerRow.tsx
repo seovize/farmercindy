@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShoppingCart, BookOpen, ExternalLink, School, Sparkles } from "lucide-react";
+import { ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Check } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 interface MultiRetailerRowProps {
@@ -25,37 +25,41 @@ export function MultiRetailerRow({
   const retailers = [
     {
       name: "Amazon Prime",
-      badge: "Fast 1-2 Day Delivery",
-      tagline: "Kindle & Paperback",
+      badge: "⭐ Most Popular • Fast Delivery",
+      tagline: "Paperback, Hardcover & Kindle",
       icon: ShoppingCart,
       url: `https://www.amazon.com/dp/${asin}`,
-      buttonStyle: "bg-[#232F3E] hover:bg-[#131921] text-white border-b-4 border-[#FF9900]",
-      badgeStyle: "bg-[#FF9900] text-black font-extrabold",
+      isPrimary: true,
+      buttonStyle: "bg-gradient-to-br from-[#232F3E] via-[#1E293B] to-[#0F172A] text-white border-b-4 border-[#FF9900] ring-2 ring-[#FF9900]/50 sm:col-span-2 lg:col-span-1 shadow-lg",
+      badgeStyle: "bg-[#FF9900] text-black font-black",
     },
     {
       name: "Barnes & Noble",
-      badge: "Hardcover & In-Store",
-      tagline: "B&N Rewards Points",
+      badge: "In-Store & Online",
+      tagline: "B&N Member Points",
       icon: BookOpen,
       url: bnbUrl,
+      isPrimary: false,
       buttonStyle: "bg-[#002244] hover:bg-[#00172e] text-white border-b-4 border-emerald-400",
       badgeStyle: "bg-emerald-500 text-white font-bold",
     },
     {
       name: "Lulu Bookstore",
-      badge: "Author Direct Edition",
+      badge: "Author Direct",
       tagline: "Signed Printings",
       icon: ExternalLink,
       url: luluUrl,
+      isPrimary: false,
       buttonStyle: "bg-[#E63946] hover:bg-[#B82835] text-white border-b-4 border-amber-300",
       badgeStyle: "bg-white text-[#E63946] font-extrabold",
     },
     {
       name: "IngramSpark",
-      badge: "Schools & Libraries",
-      tagline: "Tax-Exempt Wholesale",
+      badge: "Wholesale",
+      tagline: "Schools & Libraries",
       icon: School,
       url: ingramSparkUrl,
+      isPrimary: false,
       buttonStyle: "bg-[#2A9D8F] hover:bg-[#1D6E64] text-white border-b-4 border-teal-200",
       badgeStyle: "bg-[#E9C46A] text-[#264653] font-black",
     },
@@ -63,6 +67,10 @@ export function MultiRetailerRow({
 
   const handleRetailerClick = (e: React.MouseEvent, name: string, url: string) => {
     e.preventDefault();
+    if (typeof window !== "undefined" && sessionStorage.getItem("grownup_gate_verified") === "true") {
+      window.open(url, "_blank", "noopener,noreferrer");
+      return;
+    }
     setSelectedRetailer({ name, url });
     setGateOpen(true);
   };
@@ -102,7 +110,8 @@ export function MultiRetailerRow({
         </div>
 
         <p className="mt-3 text-xs text-slate-500 text-center flex items-center justify-center gap-1.5">
-          <span>🔒 Protected by COPPA Grown-Up Gate</span>
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 inline shrink-0" />
+          <span>Protected by COPPA Grown-Up Gate</span>
           <span>•</span>
           <span>100% of proceeds fund youth farming literacy</span>
         </p>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Star, BookOpen, Sparkles } from "lucide-react";
+import { Star, BookOpen, Sparkles, Sun, Sprout } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -125,8 +125,19 @@ export function TiltBookCard({
             </div>
 
             <div className="relative z-10 my-auto text-center py-4">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 shadow-xl text-4xl group-hover:scale-110 transition-transform duration-300">
-                {asin === "B0HL5F734J" ? "🍓" : "🌻"}
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 shadow-xl group-hover:scale-110 transition-transform duration-300 p-4">
+                {asin === "B0HL5F734J" ? (
+                  <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2C8 2 4 6 4 11C4 16.5 12 22 12 22C12 22 20 16.5 20 11C20 6 16 2 12 2Z" fill="#FFF" fillOpacity="0.4" />
+                    <path d="M12 2C10 5 7 5 6 6" stroke="#84CC16" strokeWidth="2.5" />
+                    <path d="M12 2C14 5 17 5 18 6" stroke="#84CC16" strokeWidth="2.5" />
+                    <circle cx="8" cy="10" r="1.2" fill="#FFF" />
+                    <circle cx="12" cy="11" r="1.2" fill="#FFF" />
+                    <circle cx="16" cy="10" r="1.2" fill="#FFF" />
+                  </svg>
+                ) : (
+                  <Sun className="w-10 h-10 text-amber-200" />
+                )}
               </div>
             </div>
 

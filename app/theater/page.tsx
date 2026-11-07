@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Film, Sparkles, BookOpen, Heart, ShieldCheck } from "lucide-react";
+import { Film, Sparkles, BookOpen, Heart, ShieldCheck, Lightbulb } from "lucide-react";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 
@@ -38,8 +38,8 @@ export default function TheaterPage() {
         {/* Classroom & Family Discussion Questions */}
         <div className="max-w-4xl mx-auto mt-16 rounded-4xl bg-[#FFF8F0] p-8 md:p-10 border-3 border-amber-200/80 shadow-tactile">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center text-xl font-bold">
-              💡
+            <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center font-bold">
+              <Lightbulb className="w-5 h-5 text-amber-200" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-black text-[#264653]">

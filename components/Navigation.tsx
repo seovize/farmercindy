@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Heart, Video, User, Menu, X, Sparkles } from "lucide-react";
+import { BookOpen, Heart, Video, User, Menu, X, Sparkles, Sprout } from "lucide-react";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,33 +19,42 @@ export function Navigation() {
 
   return (
     <>
-      {/* Top Non-Profit Mission Announcement Bar */}
-      <div className="bg-[#E63946] text-white text-xs font-black tracking-wide py-2 px-4 text-center border-b border-red-700/30 flex items-center justify-center gap-2">
-        <span>🌱</span>
+      {/* Top Non-Profit Mission Announcement Bar (Desktop/Tablet) */}
+      <div className="hidden sm:flex bg-[#E63946] text-white text-xs font-black tracking-wide py-2 px-4 text-center border-b border-red-700/30 items-center justify-center gap-2">
+        <Sprout className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
         <span>
           Every book purchase plants seeds of healthy nutrition: 100% of proceeds support FarmerCindy, Inc. 501(c)(3) youth farming programs!
         </span>
-        <Link href="/mission" className="underline font-bold hover:text-amber-200 ml-1.5 hidden sm:inline">
+        <Link href="/mission" className="underline font-bold hover:text-amber-200 ml-1.5">
           Learn More →
         </Link>
       </div>
 
       {/* Main Sticky Header */}
       <header className="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-amber-200/60 shadow-sm transition-all duration-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo & Brand Wordmark */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#E63946] to-[#B82835] flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition-transform">
-              🍓
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-[#E63946] to-[#B82835] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform p-2 shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2C8 2 4 6 4 11C4 16.5 12 22 12 22C12 22 20 16.5 20 11C20 6 16 2 12 2Z" fill="#FFF" fillOpacity="0.2" />
+                <path d="M12 2C10 5 7 5 6 6" stroke="#84CC16" strokeWidth="2.5" />
+                <path d="M12 2C14 5 17 5 18 6" stroke="#84CC16" strokeWidth="2.5" />
+                <circle cx="8" cy="10" r="1" fill="#FFF" />
+                <circle cx="12" cy="11" r="1" fill="#FFF" />
+                <circle cx="16" cy="10" r="1" fill="#FFF" />
+                <circle cx="10" cy="15" r="1" fill="#FFF" />
+                <circle cx="14" cy="15" r="1" fill="#FFF" />
+              </svg>
             </div>
             <div>
-              <div className="font-heading font-black text-2xl leading-none text-[#264653] tracking-tight group-hover:text-[#E63946] transition-colors">
+              <div className="font-heading font-black text-xl md:text-2xl leading-none text-[#264653] tracking-tight group-hover:text-[#E63946] transition-colors">
                 Farmer Cindy
               </div>
-              <div className="text-[10px] font-black uppercase tracking-wider text-[#2A9D8F] flex items-center gap-1 mt-0.5">
+              <div className="text-[9px] md:text-[10px] font-black uppercase tracking-wider text-[#2A9D8F] flex items-center gap-1 mt-0.5">
                 <span>FarmerCindy, Inc.</span>
                 <span className="w-1 h-1 rounded-full bg-[#2A9D8F]" />
-                <span className="text-amber-700">501(c)(3) Non-Profit</span>
+                <span className="text-amber-700">501(c)(3)</span>
               </div>
             </div>
           </Link>
@@ -123,16 +132,18 @@ export function Navigation() {
               <Link
                 href="/mission#donate"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-3 rounded-xl font-black text-amber-950 bg-[#E9C46A]"
+                className="w-full text-center py-3 rounded-xl font-black text-amber-950 bg-[#E9C46A] flex items-center justify-center gap-2"
               >
-                ❤️ Support Our 501(c)(3) Mission
+                <Heart className="w-4 h-4 fill-amber-950" />
+                <span>Support Our 501(c)(3) Mission</span>
               </Link>
               <Link
                 href="/books"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-3 rounded-xl font-black text-white bg-[#E63946]"
+                className="w-full text-center py-3 rounded-xl font-black text-white bg-[#E63946] flex items-center justify-center gap-2"
               >
-                📚 Order Book 1 & Book 2
+                <BookOpen className="w-4 h-4" />
+                <span>Order Book 1 & Book 2</span>
               </Link>
             </div>
           </div>

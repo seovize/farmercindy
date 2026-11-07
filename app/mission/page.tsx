@@ -33,8 +33,8 @@ export default function MissionPage() {
         {/* The Origin Story */}
         <div className="rounded-4xl bg-[#FFF8F0] p-8 md:p-12 border-3 border-amber-200/80 shadow-tactile mb-16 max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-2xl bg-[#E63946] text-white flex items-center justify-center text-2xl shadow">
-              🌱
+            <div className="w-12 h-12 rounded-2xl bg-[#E63946] text-white flex items-center justify-center shadow">
+              <Sprout className="w-6 h-6 text-white" />
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl font-heading font-black text-[#264653]">

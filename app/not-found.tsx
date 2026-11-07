@@ -5,8 +5,8 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 py-16 paper-pattern">
       <div className="max-w-md w-full text-center rounded-4xl bg-[#FFF8F0] p-8 md:p-12 border-3 border-amber-200 shadow-tactile">
-        <div className="w-20 h-20 rounded-3xl bg-amber-100 text-amber-800 flex items-center justify-center text-4xl mx-auto mb-6 shadow-sm">
-          🌱
+        <div className="w-20 h-20 rounded-3xl bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-6 shadow-sm">
+          <Sprout className="w-10 h-10 text-emerald-600" />
         </div>
 
         <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3 py-1 rounded-full border border-red-200">

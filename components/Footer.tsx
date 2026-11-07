@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Heart, ShieldCheck, Mail, Sparkles } from "lucide-react";
+import { Heart, ShieldCheck, Mail, Sparkles, Sprout } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,8 +10,17 @@ export function Footer() {
           {/* Brand & Non-Profit Mission */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#E63946] flex items-center justify-center text-white text-xl shadow">
-                🍓
+              <div className="w-10 h-10 rounded-xl bg-[#E63946] flex items-center justify-center text-white shadow p-2">
+                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2C8 2 4 6 4 11C4 16.5 12 22 12 22C12 22 20 16.5 20 11C20 6 16 2 12 2Z" fill="#FFF" fillOpacity="0.2" />
+                  <path d="M12 2C10 5 7 5 6 6" stroke="#84CC16" strokeWidth="2.5" />
+                  <path d="M12 2C14 5 17 5 18 6" stroke="#84CC16" strokeWidth="2.5" />
+                  <circle cx="8" cy="10" r="1" fill="#FFF" />
+                  <circle cx="12" cy="11" r="1" fill="#FFF" />
+                  <circle cx="16" cy="10" r="1" fill="#FFF" />
+                  <circle cx="10" cy="15" r="1" fill="#FFF" />
+                  <circle cx="14" cy="15" r="1" fill="#FFF" />
+                </svg>
               </div>
               <span className="font-heading font-black text-2xl text-white">
                 Farmer Cindy
@@ -102,8 +111,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-teal-300 gap-4">
-          <div>
-            Crafted with love for young readers and heirloom soil 🌱
+          <div className="flex items-center gap-1.5">
+            <span>Crafted with love for young readers and heirloom soil</span>
+            <Sprout className="w-4 h-4 text-emerald-300 inline shrink-0" />
           </div>
           <div className="flex items-center gap-6">
             <span>Amazon ASIN: B0HL5F734J & B0HL53WTS8</span>
