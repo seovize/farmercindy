@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Play, Pause, ShieldCheck, Film, Sparkles, Volume2, RotateCcw, Maximize2 } from "lucide-react";
+import { Play, Pause, ShieldCheck, Film, Sparkles, RotateCcw, Volume2, VolumeX } from "lucide-react";
 
 interface VideoItem {
   id: string;
   title: string;
   episodeTag: string;
   duration: string;
-  youtubeId: string;
+  nativeVideo?: string;
+  youtubeId?: string;
   thumbnail: string;
   description: string;
   curriculumBadge: string;
@@ -17,13 +18,33 @@ interface VideoItem {
 
 const defaultPlaylist: VideoItem[] = [
   {
+    id: "cindy-cartoon-1",
+    title: "The Adventures of Farmer Cindy: Finding the Patch (Official Animation)",
+    episodeTag: "Official Cartoon #1",
+    duration: "0:37",
+    nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
+    thumbnail: "/images/cartoon_thumb_1.jpg",
+    description: "Cindy's official animated cartoon! Join Farmer Cindy on her joyful journey to find the perfect patch of earth to plant her precious heirloom seeds.",
+    curriculumBadge: "Cindy's Original Animation",
+  },
+  {
+    id: "cindy-cartoon-2",
+    title: "Farmer Cindy & The Farming Community (Official Animation)",
+    episodeTag: "Official Cartoon #2",
+    duration: "0:32",
+    nativeVideo: "/videos/farmer_cindy_cartoon_2.mp4",
+    thumbnail: "/images/cartoon_thumb_2.jpg",
+    description: "Cindy's second animated cartoon short! Watch what happens when friends and neighbors join hands to help community gardens bloom.",
+    curriculumBadge: "Community Farming",
+  },
+  {
     id: "strawberries",
-    title: "How Do Strawberries Grow? (Farmer Cindy Strawberry Patch Edition)",
+    title: "How Do Strawberries Grow? (Farmer Cindy Classroom Edition)",
     episodeTag: "Book 1 Companion",
     duration: "4:12",
     youtubeId: "ghbNc0IjAXA",
     thumbnail: "/images/theater_thumbnail.jpg",
-    description: "Discover how tiny white flowers transform into juicy red strawberries! Learn how sunlight, water, and rich soil help Farmer Cindy's strawberries grow.",
+    description: "Discover how tiny white flowers transform into juicy red strawberries! Learn how sunlight, water, and rich soil help plants grow.",
     curriculumBadge: "Plant Life Cycle (Pre-K to 2nd)",
   },
   {
@@ -36,36 +57,63 @@ const defaultPlaylist: VideoItem[] = [
     description: "Explore why honeybees, bumblebees, and butterflies are vital friends for community gardens and fruit orchards.",
     curriculumBadge: "Pollinators & Biodiversity",
   },
-  {
-    id: "earthworms",
-    title: "Worms Are Wonderful! (Soil Science for Young Gardeners)",
-    episodeTag: "Farm Science",
-    duration: "4:05",
-    youtubeId: "l-zc_1vjLnI",
-    thumbnail: "https://img.youtube.com/vi/l-zc_1vjLnI/hqdefault.jpg",
-    description: "Meet the wiggly soil superheroes that keep the earth rich, airy, and full of organic nutrients for heirloom vegetables.",
-    curriculumBadge: "Soil Health & Ecology",
-  },
 ];
 
 export function KidSafeVideoPlayer() {
   const [activeVideo, setActiveVideo] = useState(defaultPlaylist[0]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleSelectVideo = (video: VideoItem) => {
+    setActiveVideo(video);
+    setIsPlaying(true);
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
 
   return (
     <div className="rounded-4xl bg-[#FFF8F0] p-6 md:p-10 border-4 border-amber-200/80 shadow-tactile my-10">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Main Video Frame (16:9) */}
         <div className="lg:w-2/3">
-          <div className="relative aspect-video rounded-3xl overflow-hidden bg-slate-900 border-4 border-amber-300 shadow-2xl">
+          <div className="relative aspect-video rounded-3xl overflow-hidden bg-slate-950 border-4 border-amber-300 shadow-2xl flex items-center justify-center">
             {isPlaying ? (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${activeVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&controls=1`}
-                title={activeVideo.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full border-0"
-              />
+              activeVideo.nativeVideo ? (
+                <div className="relative w-full h-full bg-slate-950 flex items-center justify-center">
+                  <video
+                    ref={videoRef}
+                    src={activeVideo.nativeVideo}
+                    controls
+                    autoPlay
+                    playsInline
+                    poster={activeVideo.thumbnail}
+                    className="max-h-full max-w-full object-contain mx-auto"
+                  />
+                  {/* Floating Mute Toggle for Ease */}
+                  <button
+                    type="button"
+                    onClick={toggleMute}
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                    className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur border border-white/20 transition"
+                  >
+                    {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                  </button>
+                </div>
+              ) : (
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${activeVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&controls=1`}
+                  title={activeVideo.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              )
             ) : (
               <div className="relative w-full h-full group cursor-pointer" onClick={() => setIsPlaying(true)}>
                 {/* Real High-Res Thumbnail Image */}
@@ -122,19 +170,19 @@ export function KidSafeVideoPlayer() {
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold transition"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  Show Thumbnail
+                  Show Poster Card
                 </button>
               )}
               <div className="flex items-center gap-1.5 text-emerald-700 font-bold">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Kid-Safe Theater (Zero Tracking Cookies • No External Ads)</span>
+                <span>Kid-Safe Theater (Zero Tracking Cookies • Safe Streaming)</span>
               </div>
             </div>
 
             <div className="flex items-center gap-3 font-bold text-slate-500">
               <span>Duration: {activeVideo.duration}</span>
               <span>•</span>
-              <span>Full HD 1080p</span>
+              <span className="text-emerald-700 font-black">Official Cindy Animation</span>
             </div>
           </div>
         </div>
@@ -144,7 +192,7 @@ export function KidSafeVideoPlayer() {
           <div>
             <h4 className="font-heading font-black text-xl text-[#264653] flex items-center gap-2 mb-4">
               <Sparkles className="w-5 h-5 text-[#E9C46A]" />
-              Storytime Playlist
+              Animation & Story Playlist
             </h4>
 
             <div className="space-y-3">
@@ -154,10 +202,7 @@ export function KidSafeVideoPlayer() {
                   <button
                     key={video.id}
                     type="button"
-                    onClick={() => {
-                      setActiveVideo(video);
-                      setIsPlaying(true);
-                    }}
+                    onClick={() => handleSelectVideo(video)}
                     className={`w-full p-3 rounded-2xl text-left transition-all duration-200 border-2 flex items-center gap-3.5 ${
                       isSelected
                         ? "bg-amber-100/90 border-[#E63946] shadow-md"
@@ -165,7 +210,7 @@ export function KidSafeVideoPlayer() {
                     }`}
                   >
                     {/* Small thumbnail preview */}
-                    <div className="relative w-20 h-14 rounded-xl overflow-hidden shrink-0 bg-slate-800 border border-slate-200">
+                    <div className="relative w-20 h-14 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-200">
                       <Image
                         src={video.thumbnail}
                         alt={video.title}
@@ -194,7 +239,7 @@ export function KidSafeVideoPlayer() {
           </div>
 
           <div className="mt-6 p-4 rounded-2xl bg-amber-100/60 border border-amber-200 text-xs text-amber-950">
-            <strong>For Parents & Teachers:</strong> Use these videos as educational conversation starters to teach children about plant germination and pollinators!
+            <strong>Cindy's Note:</strong> Enjoy Cindy's hand-crafted animations directly in our ad-free, kid-safe theater designed for bedtime smiles and family classrooms!
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { ActivityKitLeadMagnet } from "@/components/ActivityKitLeadMagnet";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
+import { InstagramSocialFeed } from "@/components/InstagramSocialFeed";
 
 export default function HomePage() {
   const storyHighlights = [
@@ -363,6 +364,11 @@ export default function HomePage() {
 
         <KidSafeVideoPlayer />
       </section>
+
+      {/* =========================================================================
+          INSTAGRAM LIVE SOCIAL FEED & EDITORIAL SHOWCASE
+         ========================================================================= */}
+      <InstagramSocialFeed />
 
       {/* =========================================================================
           501(c)(3) LIVE IMPACT METRICS
