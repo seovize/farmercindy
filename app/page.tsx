@@ -10,7 +10,7 @@ import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 
 export default function HomePage() {
   return (
-    <div className="relative overflow-hidden paper-pattern">
+    <div className="relative overflow-hidden paper-canvas">
       {/* Floating Animated Farm Elements */}
       <FloatingFarmElements />
 
@@ -120,21 +120,22 @@ export default function HomePage() {
       </section>
 
       {/* Multi-Retailer Row for Book 1 */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="bg-[#FFF8F0] rounded-3xl p-6 border-2 border-amber-200/70 shadow-sm">
-          <div className="text-center mb-2">
-            <h3 className="text-lg font-black text-[#264653]">
-              Order Volume 1 Today Across Major Bookstores
-            </h3>
-            <p className="text-xs text-slate-500">
-              Amazon Prime fast delivery, Barnes & Noble, Lulu Press, and IngramSpark wholesale.
-            </p>
-          </div>
-          <MultiRetailerRow
-            asin="B0HL5F734J"
-            bookTitle="The Adventures of FarmerCindy: FarmerCindy Finds a Farm"
-          />
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-4">
+          <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3 py-1 rounded-full border border-red-200">
+            Official Retail Editions
+          </span>
+          <h3 className="mt-2 text-xl sm:text-2xl font-black text-[#264653]">
+            Bring Volume 1 Home for Bedtime & Classroom Storytime
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-1">
+            Order directly on Amazon Prime for fast delivery, or choose our educational and direct print partners.
+          </p>
         </div>
+        <MultiRetailerRow
+          asin="B0HL5F734J"
+          bookTitle="The Adventures of FarmerCindy: FarmerCindy Finds a Farm"
+        />
       </section>
 
       {/* Author & Story World Spotlight with Real Illustration */}

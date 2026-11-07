@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function MissionPage() {
   return (
-    <div className="relative overflow-hidden paper-pattern py-12 md:py-20">
+    <div className="relative overflow-hidden paper-canvas py-12 md:py-20">
       <FloatingFarmElements />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

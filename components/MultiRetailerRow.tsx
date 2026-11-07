@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Check } from "lucide-react";
+import { ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Star, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 interface MultiRetailerRowProps {
@@ -10,6 +10,7 @@ interface MultiRetailerRowProps {
   bnbUrl?: string;
   luluUrl?: string;
   ingramSparkUrl?: string;
+  price?: string;
 }
 
 export function MultiRetailerRow({
@@ -18,50 +19,34 @@ export function MultiRetailerRow({
   bnbUrl = "https://www.barnesandnoble.com/s/Farmer+Cindy",
   luluUrl = "https://www.lulu.com/spotlight/FarmerCindy",
   ingramSparkUrl = "https://www.ingramcontent.com/retailers",
+  price = "$14.99",
 }: MultiRetailerRowProps) {
   const [gateOpen, setGateOpen] = useState(false);
   const [selectedRetailer, setSelectedRetailer] = useState({ name: "", url: "" });
 
-  const retailers = [
-    {
-      name: "Amazon Prime",
-      badge: "⭐ Most Popular • Fast Delivery",
-      tagline: "Paperback, Hardcover & Kindle",
-      icon: ShoppingCart,
-      url: `https://www.amazon.com/dp/${asin}`,
-      isPrimary: true,
-      buttonStyle: "bg-gradient-to-br from-[#232F3E] via-[#1E293B] to-[#0F172A] text-white border-b-4 border-[#FF9900] ring-2 ring-[#FF9900]/50 sm:col-span-2 lg:col-span-1 shadow-lg",
-      badgeStyle: "bg-[#FF9900] text-black font-black",
-    },
+  const amazonUrl = `https://www.amazon.com/dp/${asin}`;
+
+  const secondaryRetailers = [
     {
       name: "Barnes & Noble",
-      badge: "In-Store & Online",
-      tagline: "B&N Member Points",
+      label: "B&N Member Perks",
       icon: BookOpen,
       url: bnbUrl,
-      isPrimary: false,
-      buttonStyle: "bg-[#002244] hover:bg-[#00172e] text-white border-b-4 border-emerald-400",
-      badgeStyle: "bg-emerald-500 text-white font-bold",
+      hoverClass: "hover:border-[#002244] hover:text-[#002244]",
     },
     {
       name: "Lulu Bookstore",
-      badge: "Author Direct",
-      tagline: "Signed Printings",
+      label: "Author Signed Edition",
       icon: ExternalLink,
       url: luluUrl,
-      isPrimary: false,
-      buttonStyle: "bg-[#E63946] hover:bg-[#B82835] text-white border-b-4 border-amber-300",
-      badgeStyle: "bg-white text-[#E63946] font-extrabold",
+      hoverClass: "hover:border-[#E63946] hover:text-[#E63946]",
     },
     {
       name: "IngramSpark",
-      badge: "Wholesale",
-      tagline: "Schools & Libraries",
+      label: "Schools & Libraries Wholesale",
       icon: School,
       url: ingramSparkUrl,
-      isPrimary: false,
-      buttonStyle: "bg-[#2A9D8F] hover:bg-[#1D6E64] text-white border-b-4 border-teal-200",
-      badgeStyle: "bg-[#E9C46A] text-[#264653] font-black",
+      hoverClass: "hover:border-[#2A9D8F] hover:text-[#2A9D8F]",
     },
   ];
 
@@ -76,53 +61,107 @@ export function MultiRetailerRow({
   };
 
   return (
-    <>
-      <div className="w-full my-6">
-        <div className="flex items-center gap-2 mb-3">
-          <Sparkles className="w-4 h-4 text-[#E9C46A]" />
-          <span className="text-xs font-black uppercase tracking-wider text-[#264653]">
-            Choose Your Preferred Bookstore:
-          </span>
-        </div>
+    <div className="w-full my-4">
+      {/* Primary Hero CTA: Amazon Prime 1-Tap Purchase */}
+      <div className="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent p-1 rounded-3xl border border-amber-200">
+        <button
+          type="button"
+          onClick={(e) => handleRetailerClick(e, "Amazon Prime", amazonUrl)}
+          className="w-full group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131921] via-[#1E293B] to-[#0F172A] text-white p-4 sm:p-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 border-b-4 border-[#FF9900]"
+        >
+          {/* Subtle Ambient Glow on Hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FF9900]/10 via-transparent to-[#FF9900]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-          {retailers.map((ret) => (
-            <button
-              key={ret.name}
-              type="button"
-              onClick={(e) => handleRetailerClick(e, ret.name, ret.url)}
-              className={`flex flex-col justify-between p-4 rounded-2xl shadow-md text-left transition-all duration-200 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 ${ret.buttonStyle}`}
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className={`text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full ${ret.badgeStyle}`}>
-                  {ret.badge}
-                </span>
-                <ret.icon className="w-4 h-4 opacity-80 shrink-0" />
+          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            {/* Left: Amazon Prime Branding & Proof */}
+            <div className="flex items-center gap-4 text-left">
+              <div className="w-12 h-12 rounded-xl bg-[#FF9900] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform duration-200">
+                <ShoppingCart className="w-6 h-6 stroke-[2.2]" />
               </div>
-
-              <div className="mt-4">
-                <div className="text-[11px] opacity-80 uppercase tracking-wide">Order Today On</div>
-                <div className="font-extrabold text-base leading-tight mt-0.5">{ret.name}</div>
-                <div className="text-xs opacity-75 mt-1">{ret.tagline}</div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-heading font-black text-lg sm:text-xl tracking-tight text-white">
+                    Order on Amazon Prime
+                  </span>
+                  <span className="bg-[#FF9900] text-slate-950 text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">
+                    Prime
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mt-0.5 text-xs text-slate-300">
+                  <div className="flex items-center text-[#FF9900]">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-slate-400">•</span>
+                  <span>Paperback & Hardcover</span>
+                  <span className="hidden sm:inline text-slate-400">•</span>
+                  <span className="hidden sm:inline text-emerald-400 font-bold">In Stock</span>
+                </div>
               </div>
-            </button>
-          ))}
-        </div>
+            </div>
 
-        <p className="mt-3 text-xs text-slate-500 text-center flex items-center justify-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 inline shrink-0" />
-          <span>Protected by COPPA Grown-Up Gate</span>
-          <span>•</span>
-          <span>100% of proceeds fund youth farming literacy</span>
-        </p>
+            {/* Right: Price & Direct Arrow */}
+            <div className="flex items-center justify-between sm:justify-end gap-3 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-700/60">
+              <div className="text-left sm:text-right">
+                <div className="text-[10px] uppercase tracking-wider text-slate-400">Starting at</div>
+                <div className="text-xl font-heading font-black text-[#FF9900]">{price}</div>
+              </div>
+              <div className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#FF9900] text-slate-950 font-black text-xs uppercase tracking-wider shadow group-hover:bg-[#ffaa22] transition-colors">
+                <span>Buy Now</span>
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              </div>
+            </div>
+          </div>
+        </button>
       </div>
 
+      {/* Secondary Retailers Bar: Clean, uncluttered, horizontal pills */}
+      <div className="mt-4 pt-3 border-t border-slate-200/80">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <span className="text-xs font-bold text-slate-500 uppercase tracking-wide">
+            Also Available At:
+          </span>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {secondaryRetailers.map((ret) => (
+              <button
+                key={ret.name}
+                type="button"
+                onClick={(e) => handleRetailerClick(e, ret.name, ret.url)}
+                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold text-slate-700 bg-white border border-slate-200/90 shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 active:translate-y-0 ${ret.hoverClass}`}
+              >
+                <ret.icon className="w-3.5 h-3.5 opacity-70 shrink-0" />
+                <span>{ret.name}</span>
+                <span className="text-[10px] text-slate-400 font-normal hidden md:inline">
+                  ({ret.label})
+                </span>
+                <ArrowUpRight className="w-3 h-3 opacity-50 shrink-0" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* COPPA Child Safety & 501(c)(3) Reassurance */}
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 text-center">
+        <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+          Protected by COPPA Grown-Up Gate
+        </span>
+        <span className="text-slate-300">•</span>
+        <span>100% of profits fund free youth farming kits</span>
+        <span className="text-slate-300">•</span>
+        <span className="text-slate-600 font-bold">ASIN: {asin}</span>
+      </div>
+
+      {/* Grown-Up Gate Modal Component */}
       <GrownUpGateModal
         isOpen={gateOpen}
         onClose={() => setGateOpen(false)}
         targetUrl={selectedRetailer.url}
         retailerName={selectedRetailer.name}
       />
-    </>
+    </div>
   );
 }
