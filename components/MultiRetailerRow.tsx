@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Star, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ShoppingBag, ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Star, ArrowUpRight, CheckCircle2, Sprout } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
+import { useCart } from "@/context/CartContext";
+import { PRODUCTS } from "@/lib/products";
 
 interface MultiRetailerRowProps {
   asin: string;
@@ -23,8 +25,15 @@ export function MultiRetailerRow({
 }: MultiRetailerRowProps) {
   const [gateOpen, setGateOpen] = useState(false);
   const [selectedRetailer, setSelectedRetailer] = useState({ name: "", url: "" });
+  const { addToCart } = useCart();
 
   const amazonUrl = `https://www.amazon.com/dp/${asin}`;
+
+  const product = PRODUCTS.find((p) => p.asin === asin) || PRODUCTS[0];
+
+  const handleDirectOrder = () => {
+    addToCart(product, "paperback", 1);
+  };
 
   const secondaryRetailers = [
     {
@@ -62,54 +71,65 @@ export function MultiRetailerRow({
 
   return (
     <div className="w-full my-4">
-      {/* Primary Hero CTA: Amazon Prime 1-Tap Purchase */}
-      <div className="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent p-1 rounded-3xl border border-amber-200">
+      {/* Dual Purchase Actions: Direct Website Order + Amazon Prime */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        {/* Option 1: Direct Non-Profit Website Order (With Free Seed Pack Bonus) */}
+        <button
+          type="button"
+          onClick={handleDirectOrder}
+          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#2A9D8F] via-[#1D6E64] to-[#264653] text-white p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border-b-4 border-[#84CC16]"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-[#84CC16] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">
+              <ShoppingBag className="w-6 h-6 stroke-[2.2]" />
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <span className="font-heading font-black text-base sm:text-lg tracking-tight text-white">
+                  Order Direct On Website
+                </span>
+                <span className="bg-[#84CC16] text-slate-950 text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">
+                  Bonus Gift
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5 mt-0.5 text-xs text-emerald-100 font-bold">
+                <Sprout className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
+                <span>Includes Free Heirloom Seeds</span>
+                <span>•</span>
+                <span className="text-[#E9C46A]">{price}</span>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        {/* Option 2: Amazon Prime 1-Tap Purchase */}
         <button
           type="button"
           onClick={(e) => handleRetailerClick(e, "Amazon Prime", amazonUrl)}
-          className="w-full group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131921] via-[#1E293B] to-[#0F172A] text-white p-4 sm:p-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 border-b-4 border-[#FF9900]"
+          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131921] via-[#1E293B] to-[#0F172A] text-white p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border-b-4 border-[#FF9900]"
         >
-          {/* Subtle Ambient Glow on Hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FF9900]/10 via-transparent to-[#FF9900]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            {/* Left: Amazon Prime Branding & Proof */}
-            <div className="flex items-center gap-4 text-left">
-              <div className="w-12 h-12 rounded-xl bg-[#FF9900] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform duration-200">
-                <ShoppingCart className="w-6 h-6 stroke-[2.2]" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="font-heading font-black text-lg sm:text-xl tracking-tight text-white">
-                    Order on Amazon Prime
-                  </span>
-                  <span className="bg-[#FF9900] text-slate-950 text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">
-                    Prime
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 mt-0.5 text-xs text-slate-300">
-                  <div className="flex items-center text-[#FF9900]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-slate-400">•</span>
-                  <span>Paperback & Hardcover</span>
-                  <span className="hidden sm:inline text-slate-400">•</span>
-                  <span className="hidden sm:inline text-emerald-400 font-bold">In Stock</span>
-                </div>
-              </div>
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-[#FF9900] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">
+              <ShoppingCart className="w-6 h-6 stroke-[2.2]" />
             </div>
-
-            {/* Right: Price & Direct Arrow */}
-            <div className="flex items-center justify-between sm:justify-end gap-3 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-700/60">
-              <div className="text-left sm:text-right">
-                <div className="text-[10px] uppercase tracking-wider text-slate-400">Starting at</div>
-                <div className="text-xl font-heading font-black text-[#FF9900]">{price}</div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <span className="font-heading font-black text-base sm:text-lg tracking-tight text-white">
+                  Order on Amazon Prime
+                </span>
+                <span className="bg-[#FF9900] text-slate-950 text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">
+                  Prime
+                </span>
               </div>
-              <div className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#FF9900] text-slate-950 font-black text-xs uppercase tracking-wider shadow group-hover:bg-[#ffaa22] transition-colors">
-                <span>Buy Now</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              <div className="flex items-center gap-2 mt-0.5 text-xs text-slate-300">
+                <div className="flex items-center text-[#FF9900]">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-current" />
+                  ))}
+                </div>
+                <span>Fast 1-2 Day Delivery</span>
+                <span>•</span>
+                <span className="text-[#FF9900] font-bold">{price}</span>
               </div>
             </div>
           </div>
@@ -129,13 +149,10 @@ export function MultiRetailerRow({
                 key={ret.name}
                 type="button"
                 onClick={(e) => handleRetailerClick(e, ret.name, ret.url)}
-                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold text-slate-700 bg-white border border-slate-200/90 shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 active:translate-y-0 ${ret.hoverClass}`}
+                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold text-slate-700 bg-white border border-slate-200/90 shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 active:translate-y-0 ${ret.hoverClass}`}
               >
                 <ret.icon className="w-3.5 h-3.5 opacity-70 shrink-0" />
                 <span>{ret.name}</span>
-                <span className="text-[10px] text-slate-400 font-normal hidden md:inline">
-                  ({ret.label})
-                </span>
                 <ArrowUpRight className="w-3 h-3 opacity-50 shrink-0" />
               </button>
             ))}

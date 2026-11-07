@@ -4,6 +4,7 @@ import Image from "next/image";
 import { BookOpen, Star, Sparkles, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRight, Library, Users, Award } from "lucide-react";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
+import { BundleOrderBanner } from "@/components/BundleOrderBanner";
 
 export const metadata = {
   title: "The Books | The Adventures of Farmer Cindy Picture Book Series",
@@ -192,6 +193,9 @@ export default function BooksPage() {
             Once Cindy proved that food could grow anywhere, she faced a bigger question: what happens when open farm fields begin to disappear?
           </p>
         </div>
+
+        {/* 2-Book Bundle Quick-Order Banner */}
+        <BundleOrderBanner />
 
         {/* =========================================================================
             BOOK 2 EDITORIAL SPREAD: WHAT'S HAPPENING TO OUR FARMING COMMUNITY?

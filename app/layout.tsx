@@ -3,6 +3,7 @@ import { Poppins, Nunito } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const poppins = Poppins({
   weight: ["600", "700", "800", "900"],
@@ -125,9 +126,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#264653]">
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

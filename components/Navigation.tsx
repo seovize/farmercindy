@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, Heart, Film, User, Menu, X, Sparkles, Sprout, Download, School } from "lucide-react";
+import { CartButton } from "@/components/CartButton";
+import { CartDrawer } from "@/components/CartDrawer";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -111,10 +113,13 @@ export function Navigation() {
               <BookOpen className="w-3.5 h-3.5" />
               <span>Get The Books</span>
             </Link>
+
+            <CartButton />
           </div>
 
           {/* Mobile Right Quick Action & Hamburger */}
           <div className="md:hidden flex items-center gap-2">
+            <CartButton />
             <Link
               href="/books"
               className="px-3 py-1.5 rounded-xl text-xs font-black text-white bg-[#E63946] shadow-sm"
@@ -182,6 +187,7 @@ export function Navigation() {
           </div>
         )}
       </header>
+      <CartDrawer />
     </>
   );
 }
