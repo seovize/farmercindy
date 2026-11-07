@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Heart, ShieldCheck, Sparkles, BookOpen, Users, Sprout, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Heart, ShieldCheck, Sparkles, BookOpen, Users, Sprout, ArrowRight, CheckCircle2, Award, School, Sun, Globe } from "lucide-react";
 import { DonationTierSelector } from "@/components/DonationTierSelector";
 import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 
@@ -11,119 +12,181 @@ export const metadata = {
 };
 
 export default function MissionPage() {
+  const steps = [
+    {
+      num: "01",
+      title: "You Order A Picture Book",
+      desc: "Families, schools, and libraries purchase Volume 1 or Volume 2 on Amazon Prime, Barnes & Noble, or Lulu.",
+      icon: BookOpen,
+      badge: "Direct Purchase",
+    },
+    {
+      num: "02",
+      title: "100% Profits Dedicated",
+      desc: "All author royalties flow directly into FarmerCindy, Inc., a registered 501(c)(3) public charity.",
+      icon: Heart,
+      badge: "100% Non-Profit",
+    },
+    {
+      num: "03",
+      title: "Heirloom Seed Kits Built",
+      desc: "We assemble organic non-GMO heirloom seeds, peat pots, and child-safe botanical journals for classrooms.",
+      icon: Sprout,
+      badge: "STEM Learning",
+    },
+    {
+      num: "04",
+      title: "Free Food is Harvested",
+      desc: "Students grow strawberries, sweet cherry tomatoes, and greens to share with their families and food pantries.",
+      icon: Sun,
+      badge: "Community Health",
+    },
+  ];
+
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20">
       <FloatingFarmElements />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-200 text-amber-950 mb-4 shadow-sm">
-            <Heart className="w-4 h-4 fill-[#E63946] text-[#E63946]" />
-            501(c)(3) Non-Profit Organization
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#264653] tracking-tight">
-            Our Mission: <span className="text-[#2A9D8F]">Growing Free Food</span> & Farm Literacy
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-red-100 text-[#E63946] border border-red-200 mb-4 shadow-sm">
+            <Heart className="w-4 h-4 fill-current" />
+            <span>FarmerCindy, Inc. • 501(c)(3) Non-Profit</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#264653] tracking-tight leading-[1.15]">
+            Planting Seeds of <span className="text-[#2A9D8F]">Free Food</span> & Living Nutrition
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Every child deserves to experience the magic of planting an heirloom seed, watching it sprout into food, and tasting real, nutrient-dense nutrition.
+          <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
+            Every child deserves to experience the wonder of planting an heirloom seed, watching it sprout into food, and tasting real, farm-fresh nutrition grown by their own hands.
           </p>
         </div>
 
-        {/* The Origin Story */}
-        <div className="rounded-4xl bg-[#FFF8F0] p-8 md:p-12 border-3 border-amber-200/80 shadow-tactile mb-16 max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-2xl bg-[#E63946] text-white flex items-center justify-center shadow">
-              <Sprout className="w-6 h-6 text-white" />
+        {/* The Origin Story & Founder's Letter */}
+        <section className="rounded-4xl bg-white/90 backdrop-blur-sm p-8 sm:p-12 lg:p-14 border-2 border-amber-200/90 shadow-tactile mb-20 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Visual Column: Cindy Avatar with Harvest Basket */}
+            <div className="lg:col-span-5 text-center">
+              <div className="relative mx-auto max-w-xs aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-200 group">
+                <Image
+                  src="/images/farmer_cindy_hero.jpg"
+                  alt="Farmer Cindy Founder"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-white text-center">
+                  <span className="text-xs font-black uppercase tracking-wider bg-[#2A9D8F] px-3 py-1 rounded-full shadow">
+                    Cindy • Founder & Author
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-4 p-3 rounded-2xl bg-amber-50 border border-amber-200/80 text-xs text-slate-600">
+                <strong className="text-[#264653] block">501(c)(3) Mission Pledge:</strong>
+                Zero corporate overhead. Every dollar funds seeds, books, and youth planter kits.
+              </div>
             </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-heading font-black text-[#264653]">
-                The Story of FarmerCindy, Inc.
-              </h2>
-              <span className="text-xs font-bold text-[#2A9D8F] uppercase tracking-wider">
-                Founded by Author & Educator Cindy
+
+            {/* Content Column */}
+            <div className="lg:col-span-7 space-y-4 text-base text-slate-700 leading-relaxed">
+              <span className="text-xs font-black uppercase tracking-wider text-[#2A9D8F] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
+                The Origin Story
               </span>
+
+              <h2 className="text-2xl sm:text-3xl font-heading font-black text-[#264653]">
+                Why We Started FarmerCindy, Inc.
+              </h2>
+
+              <p>
+                In our modern grocery-aisle world, millions of children grow up believing strawberries and sweet cherries simply come from plastic clamshell containers. They have never felt warm, living soil between their fingers or experienced the quiet thrill of seeing a tiny green sprout emerge after days of patient watering.
+              </p>
+
+              <div className="p-4 rounded-2xl bg-amber-50/80 border-l-4 border-[#E63946] italic text-slate-800 text-sm sm:text-base font-medium">
+                "When you teach a child how to grow their own food, you don't just teach a hobby—you grant them lifelong health, self-reliance, and deep respect for the planet."
+              </div>
+
+              <p>
+                Cindy created <em>The Adventures of Farmer Cindy</em> picture book series not merely to entertain, but to serve as a sustainable fundraising engine for agricultural literacy. <strong>One hundred percent of book royalties</strong> are channeled directly into providing free organic seeds, classroom planters, and literacy kits to Title I elementary schools and underserved communities.
+              </p>
             </div>
           </div>
+        </section>
 
-          <div className="space-y-4 text-base text-slate-700 leading-relaxed">
-            <p>
-              In our fast-paced modern world, many children grow up believing that strawberries, cherries, and vegetables simply come from plastic containers on grocery store shelves. They have never felt rich soil in their fingers, seen a honeybee pollinate a blossom, or experienced the patience of waiting for a tiny seed to become a meal.
-            </p>
-            <p>
-              <strong>FarmerCindy, Inc.</strong> was born out of a simple conviction: <em>When you teach a child how to grow their own food, you give them health, self-reliance, and respect for nature that lasts a lifetime.</em>
-            </p>
-            <p>
-              Cindy began writing <em>The Adventures of FarmerCindy</em> picture book series not just to tell heartwarming stories, but as a sustainable fundraising engine for agricultural literacy. **100% of book proceeds are reinvested directly into buying organic heirloom seeds, school garden supplies, and educational reading kits for underserved elementary classrooms.**
-            </p>
-          </div>
-        </div>
-
-        {/* The "Book-to-Seed" Educational Model Infographic */}
-        <div className="mb-16">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+        {/* The "Book-to-Seed" Educational Pipeline */}
+        <section className="mb-20">
+          <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200">
-              The Virtuous Cycle
+              Sustainable Social Impact
             </span>
-            <h3 className="mt-3 text-3xl font-heading font-black text-[#264653]">
+            <h3 className="mt-3 text-3xl sm:text-4xl font-heading font-black text-[#264653]">
               The "Book-to-Seed" Educational Engine
             </h3>
+            <p className="mt-2 text-sm sm:text-base text-slate-600">
+              See how a simple bedtime book purchase turns into real produce grown by young students.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="p-6 rounded-3xl bg-white border-2 border-amber-200 text-center shadow-md">
-              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mx-auto mb-4 font-black">
-                1
-              </div>
-              <h4 className="font-extrabold text-base text-[#264653] mb-2">You Order A Book</h4>
-              <p className="text-xs text-slate-600">
-                You purchase Book 1 or Book 2 on Amazon, Barnes & Noble, or Lulu.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {steps.map((s, idx) => {
+              const Icon = s.icon;
+              return (
+                <div
+                  key={s.num}
+                  className="relative p-6 rounded-3xl bg-white border-2 border-amber-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-black font-heading text-[#E9C46A] tracking-wider">
+                        {s.num}
+                      </span>
+                      <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900">
+                        {s.badge}
+                      </span>
+                    </div>
 
-            <div className="p-6 rounded-3xl bg-white border-2 border-amber-200 text-center shadow-md">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mx-auto mb-4 font-black">
-                2
-              </div>
-              <h4 className="font-extrabold text-base text-[#264653] mb-2">100% Direct Profit</h4>
-              <p className="text-xs text-slate-600">
-                All author royalties flow directly into FarmerCindy, Inc. 501(c)(3).
-              </p>
-            </div>
+                    <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#E63946] border border-amber-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <Icon className="w-6 h-6 stroke-[2.2]" />
+                    </div>
 
-            <div className="p-6 rounded-3xl bg-white border-2 border-amber-200 text-center shadow-md">
-              <div className="w-12 h-12 rounded-2xl bg-red-100 text-red-800 flex items-center justify-center text-2xl mx-auto mb-4 font-black">
-                3
-              </div>
-              <h4 className="font-extrabold text-base text-[#264653] mb-2">Heirloom Kits</h4>
-              <p className="text-xs text-slate-600">
-                We assemble organic heirloom seed kits and planter beds for Title I schools.
-              </p>
-            </div>
+                    <h4 className="font-heading font-black text-lg text-[#264653] mb-2 leading-tight">
+                      {s.title}
+                    </h4>
 
-            <div className="p-6 rounded-3xl bg-white border-2 border-amber-200 text-center shadow-md">
-              <div className="w-12 h-12 rounded-2xl bg-teal-100 text-teal-800 flex items-center justify-center text-2xl mx-auto mb-4 font-black">
-                4
-              </div>
-              <h4 className="font-extrabold text-base text-[#264653] mb-2">Free Food Grown</h4>
-              <p className="text-xs text-slate-600">
-                Kids grow fresh strawberries, cherries, and vegetables to share with families!
-              </p>
-            </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {s.desc}
+                    </p>
+                  </div>
+
+                  <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-[#2A9D8F] font-bold">
+                    <span>Step {idx + 1} of 4</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-60 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
+        </section>
 
-        {/* Direct Donation Tier Selector */}
-        <div id="donate" className="max-w-4xl mx-auto">
+        {/* Direct Donation Tier Selector Section */}
+        <section id="donate" className="max-w-5xl mx-auto mb-20 scroll-mt-24">
           <DonationTierSelector />
-        </div>
+        </section>
 
-        {/* 501(c)(3) IRS Confirmation & Disclosures */}
-        <div className="mt-12 p-6 rounded-3xl bg-white/80 border border-amber-200 text-xs text-slate-500 max-w-3xl mx-auto text-center leading-relaxed">
+        {/* 501(c)(3) Transparency & IRS Confirmation Notice */}
+        <section className="p-8 rounded-3xl bg-white/90 border-2 border-amber-200 text-xs text-slate-600 max-w-3xl mx-auto text-center leading-relaxed shadow-sm">
+          <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 mb-3">
+            <ShieldCheck className="w-6 h-6" />
+          </div>
+          <h4 className="font-heading font-black text-sm text-[#264653] uppercase tracking-wide mb-1">
+            Official Non-Profit Legal Notice
+          </h4>
           <p>
-            <strong>Official 501(c)(3) Notice:</strong> FarmerCindy, Inc. is a non-profit organization organized under Section 501(c)(3) of the Internal Revenue Code. Contributions are tax-deductible to the fullest extent permitted by U.S. federal and state law. Donors receive an automated electronic receipt for tax records immediately upon submission.
+            FarmerCindy, Inc. is an educational public charity recognized under Section 501(c)(3) of the Internal Revenue Code. All contributions are tax-deductible to the fullest extent permitted by U.S. federal and state laws. Electronic donation receipts with our non-profit EIN are automatically delivered upon submission for your tax accounting records.
           </p>
-        </div>
+        </section>
       </div>
     </div>
   );

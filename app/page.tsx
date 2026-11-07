@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, Sparkles, Heart, Play, ShieldCheck, ArrowRight, Star, Sprout, Users, Award } from "lucide-react";
+import { BookOpen, Sparkles, Heart, Play, ShieldCheck, ArrowRight, Star, Sprout, Users, Award, Sun, Bug, CheckCircle2, Download } from "lucide-react";
 import { TiltBookCard } from "@/components/TiltBookCard";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { ActivityKitLeadMagnet } from "@/components/ActivityKitLeadMagnet";
@@ -9,19 +9,48 @@ import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 
 export default function HomePage() {
+  const storyHighlights = [
+    {
+      title: "The Windowsill Farm",
+      book: "Volume 1 Spotlight",
+      desc: "Cindy proves that you don't need hundreds of rural acres to grow organic strawberries—you can build a thriving farm right on an apartment windowsill!",
+      tag: "Apartment Farming",
+      accent: "text-[#E63946] bg-red-50 border-red-200",
+      icon: Sun,
+    },
+    {
+      title: "The Honeybee Symphony",
+      book: "Volume 2 Spotlight",
+      desc: "When development encroaches on family pastures, Cindy teams up with wild honeybees and butterflies to demonstrate why pollinators are essential for our fruit.",
+      tag: "Pollinator Science",
+      accent: "text-[#2A9D8F] bg-emerald-50 border-emerald-200",
+      icon: Bug,
+    },
+    {
+      title: "The Living Soil Feast",
+      book: "STEM Learning",
+      desc: "Meet hardworking earthworms and soil microbes that aerate root systems, transforming kitchen scraps into sweet, vitamin-rich garden soil.",
+      tag: "Soil Ecology",
+      accent: "text-amber-800 bg-amber-50 border-amber-200",
+      icon: Sprout,
+    },
+  ];
+
   return (
     <div className="relative overflow-hidden paper-canvas">
       {/* Floating Animated Farm Elements */}
       <FloatingFarmElements />
 
-      {/* Hero Section ("The Digital Showroom") */}
-      <section className="relative pt-12 pb-20 md:pt-16 md:pb-28">
+      {/* =========================================================================
+          HERO SECTION ("The Digital Showroom")
+         ========================================================================= */}
+      <section className="relative pt-12 pb-16 md:pt-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Author Headline, Real Portrait Badge & Conversion Hooks */}
+            {/* Left Column: Author Headline, Social Proof Badge & Conversion CTAs */}
             <div className="lg:col-span-7 text-center lg:text-left z-10">
               {/* Badge with Mini Avatar */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-black uppercase tracking-wider mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-100 border border-amber-300 text-amber-950 text-xs font-black uppercase tracking-wider mb-6 shadow-sm">
                 <div className="relative w-6 h-6 rounded-full overflow-hidden border border-amber-400 shrink-0">
                   <Image
                     src="/images/farmer_cindy_hero.jpg"
@@ -35,7 +64,7 @@ export default function HomePage() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-heading font-black text-[#264653] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-heading font-black text-[#264653] tracking-tight leading-[1.1]">
                 Growing Healthy <br />
                 <span className="text-[#E63946] drop-shadow-sm">Imaginations</span> Through <br />
                 <span className="text-[#2A9D8F]">Farm-Fresh</span> Stories
@@ -47,13 +76,13 @@ export default function HomePage() {
               </p>
 
               {/* 501(c)(3) Callout Banner */}
-              <div className="mt-6 p-4 rounded-2xl bg-amber-50/90 border-2 border-amber-200/80 inline-flex items-center gap-3.5 text-left shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center shrink-0 font-bold text-lg shadow">
+              <div className="mt-6 p-4 rounded-2xl bg-amber-50/90 border-2 border-amber-200/80 inline-flex items-center gap-3.5 text-left shadow-sm max-w-xl">
+                <div className="w-10 h-10 rounded-xl bg-[#2A9D8F] text-white flex items-center justify-center shrink-0 font-bold shadow">
                   <Sprout className="w-5 h-5 text-white" />
                 </div>
-                <div className="text-xs text-slate-700">
+                <div className="text-xs text-slate-700 leading-relaxed">
                   <strong className="text-[#264653] font-black block">100% Non-Profit Proceeds:</strong>
-                  Every book purchased funds heirloom seed kits to grow free food for schools and families.
+                  Every book purchased funds heirloom seed kits to grow free food for Title I schools and families.
                 </div>
               </div>
 
@@ -64,42 +93,41 @@ export default function HomePage() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-white bg-[#E63946] hover:bg-[#B82835] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition active:translate-y-0"
                 >
                   <BookOpen className="w-5 h-5" />
-                  Explore The Adventures
+                  <span>Explore The Adventures</span>
                 </Link>
 
                 <Link
                   href="/theater"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl font-black text-[#264653] bg-white hover:bg-amber-50 border-2 border-amber-300 shadow-md transition hover:-translate-y-0.5"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl font-black text-[#264653] bg-white hover:bg-amber-50 border-2 border-amber-300 shadow-md transition hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <Play className="w-5 h-5 text-[#E63946] fill-[#E63946]" />
-                  Watch Cartoon Trailer
+                  <span>Watch Cartoon Trailer</span>
                 </Link>
               </div>
 
-              {/* Trust Badges */}
+              {/* Trust Proof Badges */}
               <div className="mt-10 pt-8 border-t border-amber-200/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs font-bold text-slate-500">
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#2A9D8F]" />
-                  COPPA Safe Kids Certified
+                  COPPA Certified Kid-Safe
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Star className="w-4 h-4 text-[#E9C46A] fill-current" />
-                  5-Star Early Reader Favorite
+                  <Star className="w-4 h-4 text-[#FF9900] fill-current" />
+                  5.0 ★★★★★ Verified Reader Favorite
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Heart className="w-4 h-4 text-[#E63946]" />
-                  501(c)(3) Non-Profit
+                  501(c)(3) Non-Profit Public Charity
                 </span>
               </div>
             </div>
 
-            {/* Right Column: High-Density 3D Book Showcase with Real Amazon Cover */}
+            {/* Right Column: 3D Perspective Tilt Card with Real Amazon Cover */}
             <div className="lg:col-span-5 relative z-10">
               <div className="relative mx-auto max-w-sm sm:max-w-md">
-                {/* Visual Glow Behind the Book */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-red-200/60 to-amber-200/60 rounded-full blur-3xl transform -rotate-6 scale-105 pointer-events-none" />
+                {/* Visual Ambient Glow */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-red-200/50 to-amber-200/50 rounded-full blur-3xl transform -rotate-6 scale-105 pointer-events-none" />
 
-                {/* 3D Tilt Card of Book 1 with Real Amazon Cover */}
                 <TiltBookCard
                   asin="B0HL5F734J"
                   volume="Book 1 Spotlight"
@@ -119,29 +147,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Multi-Retailer Row for Book 1 */}
+      {/* =========================================================================
+          HIGH-CONVERTING AMAZON PRIME INSTANT BUY BAR (BOOK 1)
+         ========================================================================= */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center mb-4">
-          <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3 py-1 rounded-full border border-red-200">
+          <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3.5 py-1 rounded-full border border-red-200">
             Official Retail Editions
           </span>
-          <h3 className="mt-2 text-xl sm:text-2xl font-black text-[#264653]">
+          <h3 className="mt-2 text-xl sm:text-2xl font-heading font-black text-[#264653]">
             Bring Volume 1 Home for Bedtime & Classroom Storytime
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-1">
-            Order directly on Amazon Prime for fast delivery, or choose our educational and direct print partners.
+            Order directly on Amazon Prime for fast 1-2 day delivery, or choose our educational and wholesale partners.
           </p>
         </div>
         <MultiRetailerRow
           asin="B0HL5F734J"
           bookTitle="The Adventures of FarmerCindy: FarmerCindy Finds a Farm"
+          price="$14.99"
         />
       </section>
 
-      {/* Author & Story World Spotlight with Real Illustration */}
-      <section className="py-16 bg-white border-y border-amber-200/60">
+      {/* =========================================================================
+          AUTHOR SPOTLIGHT (REAL WATERCOLOR ARTWORK & PHILOSOPHY)
+         ========================================================================= */}
+      <section className="py-20 bg-white border-y border-amber-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Real Hand-Crafted Illustration */}
             <div className="lg:col-span-5 text-center">
               <div className="relative mx-auto max-w-md aspect-square rounded-4xl overflow-hidden shadow-2xl border-4 border-amber-200 group">
@@ -154,8 +187,8 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-center">
-                  <span className="text-xs font-black uppercase tracking-wider bg-[#E63946] px-3.5 py-1 rounded-full shadow">
-                    Meet Author Cindy
+                  <span className="text-xs font-black uppercase tracking-wider bg-[#E63946] px-4 py-1.5 rounded-full shadow">
+                    Meet Author & Founder Cindy
                   </span>
                 </div>
               </div>
@@ -164,7 +197,7 @@ export default function HomePage() {
             {/* Content */}
             <div className="lg:col-span-7 space-y-4 text-slate-700 text-center lg:text-left">
               <span className="text-xs font-black uppercase tracking-wider text-[#2A9D8F] bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
-                Storybook Character & Real Mission
+                Author Mission & Vision
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#264653] leading-tight">
                 Teaching Kids That Real Nutrition Starts in the Soil
@@ -175,17 +208,17 @@ export default function HomePage() {
               <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-md transition"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-md transition"
                 >
                   <Users className="w-4 h-4" />
-                  Read Cindy's Full Bio & School Assemblies
+                  <span>Read Cindy's Bio & Book a School Visit</span>
                 </Link>
                 <Link
                   href="/mission"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[#264653] bg-amber-100 hover:bg-amber-200 transition"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-[#264653] bg-amber-100 hover:bg-amber-200 transition"
                 >
                   <Heart className="w-4 h-4 text-[#E63946]" />
-                  See Our 501(c)(3) Free Food Mission
+                  <span>Explore Our 501(c)(3) Giving Model</span>
                 </Link>
               </div>
             </div>
@@ -193,7 +226,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Spotlight: Dual Book Showcase Grid with Real Covers */}
+      {/* =========================================================================
+          DUAL BOOK SHOWCASE (BOTH OFFICIAL VOLUMES SIDE BY SIDE)
+         ========================================================================= */}
       <section className="py-20 bg-gradient-to-b from-[#FDFBF7] via-[#FFF8F0] to-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -201,10 +236,10 @@ export default function HomePage() {
               The Complete Adventure Series
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#264653]">
-              Meet The Adventures of Farmer Cindy
+              Two Wholesome Books for Curious Growing Minds
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-600">
-              Two inspiring picture books packed with cheerful illustrations, practical gardening wisdom, and wholesome values for curious growing minds.
+              Two inspiring picture books packed with cheerful illustrations, practical gardening wisdom, and wholesome values (Ages 3–9).
             </p>
           </div>
 
@@ -220,7 +255,7 @@ export default function HomePage() {
               coverImage="/images/book1_cover.jpg"
               gradient="from-[#E63946] via-[#B82835] to-[#264653]"
               accentColor="#E63946"
-              badgeText="Live on Amazon"
+              badgeText="Live on Amazon Prime"
               synopsis="Traveling the globe in search of open pastures, Cindy learns that real organic farming begins in your own home with a few heirloom seeds and love."
             />
 
@@ -243,21 +278,76 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/books"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl text-sm font-black text-[#264653] bg-white hover:bg-amber-100 border-2 border-amber-300 shadow-md transition"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-black text-[#264653] bg-white hover:bg-amber-100 border-2 border-amber-300 shadow-md transition hover:-translate-y-0.5"
             >
-              Explore Full Details, Sample Pages & Retailers
+              <span>Explore Complete Book Details, Sample Spreads & Retailers</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Free 12-Page Activity Kit Lead Magnet (Brevo CRM Engine) with Real Mockup */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* =========================================================================
+          STORYTELLING PILLARS ("Inside the Pages")
+         ========================================================================= */}
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200">
+            Inside The Stories
+          </span>
+          <h3 className="mt-3 text-3xl sm:text-4xl font-heading font-black text-[#264653]">
+            What Children Learn Through Farmer Cindy
+          </h3>
+          <p className="mt-2 text-sm sm:text-base text-slate-600">
+            More than just bedtime stories: accessible STEM botany and environmental respect wrapped in delightful humor.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {storyHighlights.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="p-6 rounded-3xl bg-white border-2 border-amber-200/90 shadow-sm hover:shadow-md transition flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border ${item.accent}`}>
+                      {item.tag}
+                    </span>
+                    <span className="text-xs font-bold text-slate-400">
+                      {item.book}
+                    </span>
+                  </div>
+
+                  <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#E63946] flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 stroke-[2.2]" />
+                  </div>
+
+                  <h4 className="font-heading font-black text-xl text-[#264653] mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* =========================================================================
+          FREE 12-PAGE ACTIVITY KIT LEAD MAGNET (BREVO CRM + REPORTLAB PDF)
+         ========================================================================= */}
+      <section id="activity-kit" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <ActivityKitLeadMagnet />
       </section>
 
-      {/* Video Theater & Cartoon Teaser */}
+      {/* =========================================================================
+          VIDEO THEATER & CARTOON TEASER
+         ========================================================================= */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="text-xs font-black uppercase tracking-wider text-[#E63946] bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200">
@@ -267,14 +357,16 @@ export default function HomePage() {
             Farmer Cindy Cartoon Theater
           </h2>
           <p className="mt-2 text-sm sm:text-base text-slate-600">
-            Enjoy safe, ad-free animated cartoon book trailers and read-aloud episodes.
+            Enjoy safe, ad-free animated cartoon book trailers and STEM read-aloud episodes.
           </p>
         </div>
 
         <KidSafeVideoPlayer />
       </section>
 
-      {/* 501(c)(3) Live Impact Metrics */}
+      {/* =========================================================================
+          501(c)(3) LIVE IMPACT METRICS
+         ========================================================================= */}
       <section className="py-20 bg-[#264653] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -282,7 +374,7 @@ export default function HomePage() {
               501(c)(3) Non-Profit Mission
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white">
-              Every Book Plants Seeds of Change
+              Every Book Plants Seeds of Real Change
             </h2>
             <p className="mt-4 text-base text-teal-100 leading-relaxed">
               FarmerCindy, Inc. is on a mission to reconnect the next generation with real nutrition. 100% of our book profits fund youth gardening kits and agricultural literacy in underserved elementary schools.
@@ -329,11 +421,11 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link
-              href="/mission"
+              href="/mission#donate"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-black text-amber-950 bg-[#E9C46A] hover:bg-[#dfb758] shadow-lg transition active:scale-95"
             >
               <Heart className="w-4 h-4 fill-[#E63946] text-[#E63946]" />
-              Learn About Our 501(c)(3) Mission & Donate
+              <span>Learn About Our 501(c)(3) Mission & Donate</span>
             </Link>
           </div>
         </div>
