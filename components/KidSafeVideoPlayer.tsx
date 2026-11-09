@@ -135,14 +135,14 @@ export function KidSafeVideoPlayer() {
                     <Film className="w-3.5 h-3.5" />
                     {activeVideo.episodeTag}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-black bg-[#E63946] text-white shadow">
+                  <span className="px-3 py-1 rounded-full text-xs font-black bg-[#2B6E4F] text-white shadow">
                     {activeVideo.curriculumBadge}
                   </span>
                 </div>
 
                 {/* Central Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-[#E63946] hover:bg-[#B82835] text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white/80">
+                  <div className="w-20 h-20 rounded-full bg-[#DDA15E] hover:bg-[#c99252] text-slate-950 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 border-4 border-white/80">
                     <Play className="w-8 h-8 fill-current translate-x-0.5" />
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export function KidSafeVideoPlayer() {
                     onClick={() => handleSelectVideo(video)}
                     className={`w-full p-3 rounded-2xl text-left transition-all duration-200 border-2 flex items-center gap-3.5 ${
                       isSelected
-                        ? "bg-amber-100/90 border-[#E63946] shadow-md"
+                        ? "bg-amber-100/90 border-[#2B6E4F] shadow-md"
                         : "bg-white hover:bg-amber-50/60 border-amber-200/50"
                     }`}
                   >

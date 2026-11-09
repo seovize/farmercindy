@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Download, Sparkles, CheckCircle2, ShieldCheck, Mail, Loader2, BookOpen, GraduationCap, User, FileText } from "lucide-react";
+import { Download, Sparkles, CheckCircle2, ShieldCheck, Mail, Loader2, User, GraduationCap } from "lucide-react";
 import confetti from "canvas-confetti";
 
 export function ActivityKitLeadMagnet() {
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState("Parent");
+  const [role, setRole] = useState<"Parent" | "Teacher">("Parent");
   const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -39,7 +39,7 @@ export function ActivityKitLeadMagnet() {
             particleCount: 80,
             spread: 70,
             origin: { y: 0.6 },
-            colors: ["#E63946", "#2A9D8F", "#E9C46A"],
+            colors: ["#0D3829", "#2B6E4F", "#DDA15E"],
           });
         } catch (e) {
           // ignore if canvas not supported
@@ -55,10 +55,10 @@ export function ActivityKitLeadMagnet() {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-[#FFF8F0] via-[#FDFBF7] to-amber-50/80 p-8 md:p-12 border-3 border-amber-200/80 shadow-tactile my-14">
+    <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF7F2] to-[#F4EFE6] p-8 md:p-12 border-2 border-[#DDA15E]/40 shadow-tactile my-14">
       {/* Decorative Farm Elements */}
-      <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-red-100/50 blur-2xl pointer-events-none" />
-      <div className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-emerald-100/50 blur-2xl pointer-events-none" />
+      <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-emerald-100/30 blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-amber-100/40 blur-2xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -75,41 +75,41 @@ export function ActivityKitLeadMagnet() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
-                <span className="text-[11px] font-black bg-amber-400 text-slate-900 px-3 py-1 rounded-full shadow">
+                <span className="text-[11px] font-black bg-[#DDA15E] text-slate-950 px-3 py-1 rounded-full shadow">
                   Free 12-Page Printable PDF
                 </span>
                 <span className="text-xs font-bold drop-shadow">Ages 3–9</span>
               </div>
             </div>
 
-            <p className="mt-3 text-xs font-bold text-slate-500">
-              Includes coloring sheets, heirloom seed identification & growth calendar
+            <p className="mt-3 text-xs font-bold text-slate-600">
+              Includes coloring sheets, heirloom seed identification &amp; growth calendar
             </p>
           </div>
 
           {/* Right Column: Copy & Email Form */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-200 text-amber-950 mb-3 shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#E63946]" />
-              Free Classroom & Home Activity Kit
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] mb-3 shadow-sm border border-emerald-500/30">
+              <Sparkles className="w-4 h-4 text-[#DDA15E]" />
+              Free Classroom &amp; Home Activity Kit
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-heading font-black text-[#264653] tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-4xl font-heading font-black text-[#0D3829] tracking-tight leading-tight">
               Download Farmer Cindy's <br />
-              <span className="text-[#E63946]">Strawberry Sprout & Seed Journal!</span>
+              <span className="text-[#2B6E4F]">Strawberry Sprout &amp; Seed Journal!</span>
             </h2>
 
             <p className="mt-3 text-sm md:text-base text-slate-600 leading-relaxed">
-              Packed with fun coloring sheets, heirloom vegetable identification puzzles, windowsill seed-planting guides, and recipe cards for families & classrooms!
+              Packed with fun coloring sheets, heirloom vegetable identification puzzles, windowsill seed-planting guides, and recipe cards for families &amp; classrooms!
             </p>
 
             {success ? (
               <div className="mt-6 p-6 rounded-3xl bg-emerald-50 border-2 border-emerald-300 text-center lg:text-left animate-in zoom-in-95 duration-300">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
-                    <CheckCircle2 className="w-6 h-6" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-[#0D3829]">
+                    <CheckCircle2 className="w-6 h-6 text-[#2B6E4F]" />
                   </div>
-                  <h3 className="text-xl font-black text-emerald-900">Your Activity Kit is Ready!</h3>
+                  <h3 className="text-xl font-black text-[#0D3829]">Your Activity Kit is Ready!</h3>
                 </div>
                 <p className="text-xs text-emerald-800 leading-relaxed">
                   We sent a confirmation copy to <strong>{email}</strong> via Brevo. You can also download your printable 12-page activity booklet immediately below:
@@ -118,7 +118,7 @@ export function ActivityKitLeadMagnet() {
                   <a
                     href="/downloads/farmer-cindy-activity-kit.pdf"
                     download="Farmer-Cindy-Strawberry-Journal-Kit.pdf"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-xs font-black text-white bg-[#2A9D8F] hover:bg-[#1D6E64] shadow-lg hover:shadow-xl transition transform active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-lg hover:shadow-xl transition transform active:scale-95"
                   >
                     <Download className="w-4 h-4" />
                     Download Printable Activity PDF Now (Instant)
@@ -140,10 +140,10 @@ export function ActivityKitLeadMagnet() {
                 {/* Role Radio Pills */}
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-4">
                   <label
-                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition ${
+                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition border-2 ${
                       role === "Parent"
-                        ? "bg-[#E63946] text-white shadow-md"
-                        : "bg-white text-slate-700 border border-slate-300 hover:bg-slate-100"
+                        ? "bg-[#0D3829] text-[#DDA15E] border-[#0D3829] shadow-md"
+                        : "bg-white text-slate-700 border-stone-200 hover:bg-stone-50"
                     }`}
                   >
                     <input
@@ -159,10 +159,10 @@ export function ActivityKitLeadMagnet() {
                   </label>
 
                   <label
-                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition ${
+                    className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition border-2 ${
                       role === "Teacher"
-                        ? "bg-[#2A9D8F] text-white shadow-md"
-                        : "bg-white text-slate-700 border border-slate-300 hover:bg-slate-100"
+                        ? "bg-[#0D3829] text-[#DDA15E] border-[#0D3829] shadow-md"
+                        : "bg-white text-slate-700 border-stone-200 hover:bg-stone-50"
                     }`}
                   >
                     <input
@@ -187,14 +187,14 @@ export function ActivityKitLeadMagnet() {
                       placeholder="Enter parent or teacher email..."
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-amber-300 focus:border-[#E63946] focus:outline-none bg-white font-medium text-slate-800 shadow-sm text-sm"
+                      className="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm text-sm"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-black text-white bg-[#E63946] hover:bg-[#B82835] shadow-lg transition active:scale-95 disabled:opacity-75 text-sm"
+                    className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-lg transition active:scale-95 disabled:opacity-75 text-sm"
                   >
                     {loading ? (
                       <>
@@ -211,12 +211,12 @@ export function ActivityKitLeadMagnet() {
                 </div>
 
                 {errorMsg && (
-                  <p className="mt-2 text-xs font-bold text-[#E63946] text-center lg:text-left">{errorMsg}</p>
+                  <p className="mt-2 text-xs font-bold text-amber-900 bg-amber-100 p-2 rounded-lg text-center lg:text-left">{errorMsg}</p>
                 )}
 
                 <p className="mt-3 text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>100% Kid-Safe & COPPA Compliant. Zero spam. Unsubscribe anytime.</span>
+                  <ShieldCheck className="w-4 h-4 text-[#2B6E4F]" />
+                  <span>100% Kid-Safe &amp; COPPA Compliant. Zero spam. Unsubscribe anytime.</span>
                 </p>
               </form>
             )}

@@ -8,13 +8,10 @@ export function FloatingFarmElements() {
   const elements = [
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-[#E63946]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2C8 2 4 6 4 11C4 16.5 12 22 12 22C12 22 20 16.5 20 11C20 6 16 2 12 2Z" fill="#E63946" fillOpacity="0.85" />
-          <path d="M12 2C10 5 7 5 6 6" stroke="#84CC16" strokeWidth="2.5" />
-          <path d="M12 2C14 5 17 5 18 6" stroke="#84CC16" strokeWidth="2.5" />
-          <circle cx="8" cy="10" r="1" fill="#FFF" />
-          <circle cx="12" cy="11" r="1" fill="#FFF" />
-          <circle cx="16" cy="10" r="1" fill="#FFF" />
+        // Golden Sunflower
+        <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-[#DDA15E]" stroke="currentColor" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="4" fill="#3B2314" stroke="#DDA15E" />
+          <path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.93 4.93L7.05 7.05M16.95 16.95L19.07 19.07M4.93 19.07L7.05 16.95M16.95 7.05L19.07 4.93" stroke="#DDA15E" strokeWidth="2.5" strokeLinecap="round" />
         </svg>
       ),
       top: "15%",
@@ -26,11 +23,9 @@ export function FloatingFarmElements() {
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-[#991B1B]" stroke="currentColor" strokeWidth="2">
-          <circle cx="8" cy="16" r="5" fill="#DC2626" />
-          <circle cx="16" cy="16" r="5" fill="#DC2626" />
-          <path d="M8 12C9 7 13 4 16 3" stroke="#84CC16" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M16 12C15 8 15 5 16 3" stroke="#84CC16" strokeWidth="2.5" strokeLinecap="round" />
+        // Fresh Leaf Sprout in Forest Green
+        <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-[#2B6E4F]" stroke="currentColor" strokeWidth="2">
+          <path d="M7 20h10M12 20v-8M12 12a5 5 0 0 1 5-5h1v1a5 5 0 0 1-5 5M12 12a5 5 0 0 0-5-5H6v1a5 5 0 0 0 5 5" fill="#2B6E4F" fillOpacity="0.25" stroke="#2B6E4F" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
       top: "25%",
@@ -41,7 +36,7 @@ export function FloatingFarmElements() {
       yRange: 18,
     },
     {
-      icon: <Sun className="w-9 h-9 text-amber-400" />,
+      icon: <Sun className="w-9 h-9 text-[#DDA15E]" />,
       top: "60%",
       left: "8%",
       delay: 2,
@@ -51,13 +46,14 @@ export function FloatingFarmElements() {
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7 text-amber-500" stroke="currentColor" strokeWidth="2">
-          <ellipse cx="12" cy="13" rx="6" ry="7" fill="#FBBF24" />
-          <line x1="6" y1="11" x2="18" y2="11" stroke="#451A03" strokeWidth="1.5" />
-          <line x1="6" y1="14" x2="18" y2="14" stroke="#451A03" strokeWidth="1.5" />
-          <line x1="8" y1="17" x2="16" y2="17" stroke="#451A03" strokeWidth="1.5" />
-          <path d="M10 7C8 4 6 5 7 7" stroke="#60A5FA" strokeWidth="1.5" fill="#93C5FD" fillOpacity="0.5" />
-          <path d="M14 7C16 4 18 5 17 7" stroke="#60A5FA" strokeWidth="1.5" fill="#93C5FD" fillOpacity="0.5" />
+        // Pollinator Honeybee
+        <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7 text-[#DDA15E]" stroke="currentColor" strokeWidth="2">
+          <ellipse cx="12" cy="13" rx="6" ry="7" fill="#DDA15E" />
+          <line x1="6" y1="11" x2="18" y2="11" stroke="#3B2314" strokeWidth="1.5" />
+          <line x1="6" y1="14" x2="18" y2="14" stroke="#3B2314" strokeWidth="1.5" />
+          <line x1="8" y1="17" x2="16" y2="17" stroke="#3B2314" strokeWidth="1.5" />
+          <path d="M10 7C8 4 6 5 7 7" stroke="#2B6E4F" strokeWidth="1.5" fill="#2B6E4F" fillOpacity="0.3" />
+          <path d="M14 7C16 4 18 5 17 7" stroke="#2B6E4F" strokeWidth="1.5" fill="#2B6E4F" fillOpacity="0.3" />
         </svg>
       ),
       top: "70%",
@@ -68,7 +64,7 @@ export function FloatingFarmElements() {
       yRange: 22,
     },
     {
-      icon: <Sprout className="w-8 h-8 text-emerald-500" />,
+      icon: <Sprout className="w-8 h-8 text-[#2B6E4F]" />,
       top: "45%",
       left: "3%",
       delay: 1.5,
@@ -101,7 +97,7 @@ export function FloatingFarmElements() {
             delay: el.delay,
             ease: "easeInOut",
           }}
-          className="opacity-35 hover:opacity-100 transition-opacity drop-shadow-sm"
+          className="opacity-30 hover:opacity-100 transition-opacity drop-shadow-sm"
         >
           {el.icon}
         </motion.div>

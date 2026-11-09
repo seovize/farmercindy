@@ -105,20 +105,20 @@ export function InstagramSocialFeed() {
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#FFFDF9] via-[#FFF9F2] to-[#FFFDF9] border-t-2 border-amber-200/60 overflow-hidden">
-      {/* Decorative background blurs */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-red-100/30 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative py-20 bg-[#FAF7F2] border-t-2 border-[#3B2314]/15 overflow-hidden">
+      {/* Decorative ambient gradients (Subtle olive and gold) */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-900/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#DDA15E]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Profile Card Header */}
-        <div className="rounded-4xl bg-white border-3 border-amber-200/90 p-6 sm:p-10 shadow-tactile mb-12">
+        <div className="rounded-3xl bg-white border-2 border-[#3B2314]/15 p-6 sm:p-10 shadow-tactile mb-12">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 sm:gap-8">
             {/* Avatar & Bio */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
-              {/* Instagram Avatar with Story Ring */}
-              <div className="relative p-1 rounded-full bg-gradient-to-tr from-amber-400 via-[#E63946] to-purple-600 shadow-md shrink-0">
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-3 border-white bg-amber-50">
+              {/* Instagram Avatar with Gold/Emerald Ring */}
+              <div className="relative p-1 rounded-full bg-gradient-to-tr from-[#DDA15E] via-[#2B6E4F] to-[#0D3829] shadow-md shrink-0">
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-3 border-white bg-[#FAF7F2]">
                   <Image
                     src="/images/instagram/avatar.jpg"
                     alt="Farmer Cindy Official Profile"
@@ -128,41 +128,41 @@ export function InstagramSocialFeed() {
                     priority
                   />
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center border-2 border-white shadow">
-                  <CheckCircle2 className="w-5 h-5 fill-emerald-600 text-white" />
+                <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-[#2B6E4F] text-white flex items-center justify-center border-2 border-white shadow">
+                  <CheckCircle2 className="w-5 h-5 fill-[#2B6E4F] text-white" />
                 </div>
               </div>
 
               {/* Handle & Credibility */}
               <div>
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-1.5">
-                  <h2 className="text-2xl sm:text-3xl font-heading font-black text-[#264653]">
+                  <h2 className="text-2xl sm:text-3xl font-heading font-black text-[#0D3829]">
                     FarmerCindy🍒🍓
                   </h2>
-                  <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-red-100 text-[#E63946] border border-red-200">
-                    <Instagram className="w-3.5 h-3.5" />
+                  <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-100 text-[#0D3829] border border-emerald-300">
+                    <Instagram className="w-3.5 h-3.5 text-[#2B6E4F]" />
                     @iamfarmercindy_
                   </span>
                 </div>
 
-                <p className="text-sm font-extrabold text-[#2A9D8F] mb-2">
+                <p className="text-sm font-extrabold text-[#2B6E4F] mb-2">
                   Author • Urban Horticulturist • 501(c)(3) Non-Profit Founder
                 </p>
 
-                <p className="text-xs sm:text-sm text-slate-600 max-w-xl leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#3B2314]/80 max-w-xl leading-relaxed">
                   "We are a registered 501(c)(3) Non-Profit organization. 100% of book and merchandise proceeds directly fund our heirloom farms and youth agricultural literacy programs."
                 </p>
 
                 {/* Proof Pills */}
-                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4 text-xs font-bold text-slate-600">
-                  <span className="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-950">
-                    <strong className="text-[#264653]">1,020+</strong> Community Followers
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4 text-xs font-bold text-[#3B2314]">
+                  <span className="px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#3B2314]/15 text-[#0D3829]">
+                    <strong className="text-[#0D3829]">1,020+</strong> Community Followers
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-950">
-                    <strong className="text-[#2A9D8F]">Official</strong> 501(c)(3) Non-Profit
+                  <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#0D3829]">
+                    <strong className="text-[#2B6E4F]">Official</strong> 501(c)(3) Non-Profit
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700">
-                    Daily Stories & Farm Updates
+                  <span className="px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#3B2314]/15 text-[#3B2314]">
+                    Daily Stories &amp; Farm Updates
                   </span>
                 </div>
               </div>
@@ -173,21 +173,21 @@ export function InstagramSocialFeed() {
               <button
                 type="button"
                 onClick={() => handleOpenExternal("https://www.instagram.com/iamfarmercindy_/")}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#E63946] to-[#C1121F] hover:brightness-105 text-white font-extrabold text-sm shadow-tactile transition-all duration-200 hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#0D3829] hover:bg-[#164E3D] text-white font-extrabold text-sm shadow-tactile transition-all duration-200 hover:-translate-y-0.5"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-[#DDA15E]" />
                 <span>Follow on Instagram</span>
                 <ExternalLink className="w-4 h-4 opacity-80" />
               </button>
-              <span className="text-[11px] text-slate-400 font-medium">
+              <span className="text-[11px] text-[#3B2314]/60 font-medium">
                 COPPA Protected • Opens Grown-Up Gate
               </span>
             </div>
           </div>
 
           {/* Story Highlights Bar */}
-          <div className="mt-8 pt-6 border-t border-amber-100 flex items-center gap-4 sm:gap-6 overflow-x-auto pb-2 scrollbar-none">
-            <span className="text-xs font-black uppercase tracking-wider text-slate-400 shrink-0">
+          <div className="mt-8 pt-6 border-t border-[#3B2314]/10 flex items-center gap-4 sm:gap-6 overflow-x-auto pb-2 scrollbar-none">
+            <span className="text-xs font-black uppercase tracking-wider text-[#3B2314]/60 shrink-0">
               Story Highlights:
             </span>
             {highlights.map((h, i) => (
@@ -195,7 +195,7 @@ export function InstagramSocialFeed() {
                 key={i}
                 type="button"
                 onClick={() => handleOpenExternal("https://www.instagram.com/iamfarmercindy_/")}
-                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFDF9] hover:bg-amber-100/60 border border-amber-200 text-xs font-bold text-[#264653] transition shrink-0 group"
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F2] hover:bg-emerald-50 border border-[#3B2314]/20 text-xs font-bold text-[#0D3829] transition shrink-0 group"
               >
                 <span className="text-base group-hover:scale-110 transition-transform">{h.emoji}</span>
                 <span>{h.name}</span>
@@ -206,14 +206,14 @@ export function InstagramSocialFeed() {
 
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300 mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#E63946]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-100 text-[#0D3829] border border-emerald-300 mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#DDA15E]" />
             <span>Live Social Stream</span>
           </div>
-          <h3 className="text-3xl sm:text-4xl font-heading font-black text-[#264653]">
-            Inside Cindy's <span className="text-[#E63946]">Farm & Reading Community</span>
+          <h3 className="text-3xl sm:text-4xl font-heading font-black text-[#0D3829]">
+            Inside Cindy's <span className="text-[#DDA15E]">Farm &amp; Reading Community</span>
           </h3>
-          <p className="mt-2 text-sm sm:text-base text-slate-600">
+          <p className="mt-2 text-sm sm:text-base text-[#3B2314]/80">
             Real snapshots, animated cartoon sneak-peeks, and heirloom gardening tips fresh from Cindy's garden journal.
           </p>
         </div>
@@ -224,7 +224,7 @@ export function InstagramSocialFeed() {
             <article
               key={post.id}
               onClick={() => handleOpenExternal(post.postUrl)}
-              className="group cursor-pointer rounded-3xl bg-white border-2 border-amber-200/80 overflow-hidden shadow-tactile hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group cursor-pointer rounded-3xl bg-white border-2 border-[#3B2314]/15 overflow-hidden shadow-tactile hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
               {/* Media Container with 1:1 Aspect Ratio */}
               <div className="relative aspect-square overflow-hidden bg-slate-900">
@@ -242,7 +242,7 @@ export function InstagramSocialFeed() {
                 {/* Top Badge: Type Indicator */}
                 <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
                   {post.type === "reel" ? (
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-black/70 backdrop-blur-md text-amber-300 border border-white/20 shadow">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-black/70 backdrop-blur-md text-[#DDA15E] border border-white/20 shadow">
                       <Play className="w-3 h-3 fill-current" />
                       Reel / Cartoon
                     </span>
@@ -255,12 +255,12 @@ export function InstagramSocialFeed() {
 
                 {/* Top Right: Instagram Icon */}
                 <div className="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-black/60 backdrop-blur text-white flex items-center justify-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition">
-                  <Instagram className="w-4 h-4" />
+                  <Instagram className="w-4 h-4 text-[#DDA15E]" />
                 </div>
 
                 {/* Hover Center Indicator */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 text-[#264653] font-black text-xs shadow-2xl">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 text-[#0D3829] font-black text-xs shadow-2xl">
                     View on Instagram
                     <ExternalLink className="w-3.5 h-3.5" />
                   </span>
@@ -270,7 +270,7 @@ export function InstagramSocialFeed() {
                 <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-bold text-white drop-shadow">
                   <div className="flex items-center gap-3">
                     <span className="flex items-center gap-1">
-                      <Heart className="w-3.5 h-3.5 fill-[#E63946] text-[#E63946]" />
+                      <Heart className="w-3.5 h-3.5 fill-[#DDA15E] text-[#DDA15E]" />
                       {post.likes}
                     </span>
                     <span className="flex items-center gap-1">
@@ -284,15 +284,15 @@ export function InstagramSocialFeed() {
 
               {/* Caption Card Body */}
               <div className="p-5 flex-1 flex flex-col justify-between bg-white">
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium line-clamp-3">
+                <p className="text-xs sm:text-sm text-[#3B2314]/90 leading-relaxed font-medium line-clamp-3">
                   {post.caption}
                 </p>
 
-                <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap items-center gap-1.5">
+                <div className="mt-3 pt-3 border-t border-[#3B2314]/10 flex flex-wrap items-center gap-1.5">
                   {post.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-[11px] font-bold text-[#2A9D8F] hover:underline"
+                      className="text-[11px] font-bold text-[#2B6E4F] hover:underline"
                     >
                       {tag}
                     </span>
@@ -305,16 +305,16 @@ export function InstagramSocialFeed() {
 
         {/* Bottom Conversion Strip */}
         <div className="mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-5 rounded-3xl bg-[#FFF8F0] border-2 border-amber-200 shadow-sm max-w-2xl mx-auto">
-            <span className="text-sm font-extrabold text-[#264653]">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white border-2 border-[#3B2314]/15 shadow-sm max-w-2xl mx-auto">
+            <span className="text-sm font-extrabold text-[#0D3829]">
               Tag us in your classroom and window-sill garden photos!
             </span>
             <button
               type="button"
               onClick={() => handleOpenExternal("https://www.instagram.com/iamfarmercindy_/")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2A9D8F] hover:bg-[#238276] text-white text-xs font-black shadow transition shrink-0"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2B6E4F] hover:bg-[#20533c] text-white text-xs font-black shadow transition shrink-0"
             >
-              <Instagram className="w-3.5 h-3.5" />
+              <Instagram className="w-3.5 h-3.5 text-[#DDA15E]" />
               <span>Tag @iamfarmercindy_</span>
             </button>
           </div>

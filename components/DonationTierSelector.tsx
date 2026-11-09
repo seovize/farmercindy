@@ -59,15 +59,15 @@ export function DonationTierSelector() {
 
   return (
     <>
-      <div className="rounded-4xl bg-gradient-to-br from-[#FFF8F0] via-[#FDFBF7] to-amber-50/70 p-6 sm:p-10 lg:p-12 border-3 border-amber-200/90 shadow-tactile my-8">
+      <div className="rounded-4xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF7F2] to-[#F4EFE6] p-6 sm:p-10 lg:p-12 border-2 border-[#DDA15E]/40 shadow-tactile my-8">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-100 text-amber-950 border border-amber-300 mb-3 shadow-sm">
-            <Heart className="w-3.5 h-3.5 fill-[#E63946] text-[#E63946]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 mb-3 shadow-sm">
+            <Heart className="w-3.5 h-3.5 fill-[#DDA15E] text-[#DDA15E]" />
             <span>Direct Tax-Deductible 501(c)(3) Giving</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-[#264653] tracking-tight">
-            Sponsor Free Food & Youth Farm Literacy
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-[#0D3829] tracking-tight">
+            Sponsor Free Food &amp; Youth Farm Literacy
           </h3>
 
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -81,7 +81,7 @@ export function DonationTierSelector() {
               onClick={() => setFrequency("one-time")}
               className={`px-5 py-2 rounded-xl text-xs font-black transition-all ${
                 frequency === "one-time"
-                  ? "bg-white text-[#264653] shadow-sm"
+                  ? "bg-white text-[#0D3829] shadow-sm"
                   : "text-slate-600 hover:text-slate-900"
               }`}
             >
@@ -92,68 +92,70 @@ export function DonationTierSelector() {
               onClick={() => setFrequency("monthly")}
               className={`px-5 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
                 frequency === "monthly"
-                  ? "bg-[#E63946] text-white shadow-sm"
+                  ? "bg-[#0D3829] text-[#DDA15E] shadow-sm"
                   : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <span>Monthly Seed Sustainer</span>
-              <span className="text-[10px] bg-amber-300 text-slate-950 px-1.5 py-0.2 rounded-full font-extrabold">
-                12× Impact
+              <span className="text-[10px] bg-[#DDA15E] text-slate-950 px-1.5 py-0.2 rounded-full font-extrabold">
+                Save
               </span>
             </button>
           </div>
         </div>
 
-        {/* Tiers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          {tiers.map((t) => {
-            const isSelected = selectedTier === t.id;
-            const Icon = t.icon;
+        {/* Giving Tiers Grid */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {tiers.map((tier) => {
+            const isSelected = selectedTier === tier.id;
+            const Icon = tier.icon;
             return (
               <div
-                key={t.id}
-                onClick={() => setSelectedTier(t.id)}
-                className={`cursor-pointer rounded-3xl p-5 transition-all duration-200 border-2 relative flex flex-col justify-between ${
+                key={tier.id}
+                onClick={() => setSelectedTier(tier.id)}
+                className={`relative rounded-3xl p-6 cursor-pointer transition-all duration-300 border-2 flex flex-col justify-between ${
                   isSelected
-                    ? "bg-white border-[#E63946] shadow-xl ring-2 ring-[#E63946]/30 -translate-y-1"
-                    : "bg-white/80 border-amber-200 hover:border-amber-300 hover:bg-white hover:-translate-y-0.5"
+                    ? "bg-white border-[#2B6E4F] shadow-xl ring-2 ring-[#2B6E4F]/30 -translate-y-1"
+                    : "bg-white/80 border-stone-200 hover:border-stone-300 hover:shadow-md"
                 }`}
               >
-                {t.recommended && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E63946] text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md whitespace-nowrap">
-                    {t.badge}
+                {tier.recommended && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0D3829] text-[#DDA15E] text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md whitespace-nowrap border border-emerald-500/30">
+                    {tier.badge}
                   </span>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-[#E63946]" />
+                    <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-[#2B6E4F]" />
                     </div>
-                    <span className="text-2xl font-black font-heading text-[#264653]">
-                      ${t.amount}
-                      <span className="text-xs font-bold text-slate-400 block -mt-1 text-right">
-                        {frequency === "monthly" ? "/mo" : "USD"}
-                      </span>
+                    <span className="text-2xl font-black font-heading text-[#0D3829]">
+                      ${tier.amount}
                     </span>
                   </div>
 
-                  <h4 className="font-extrabold text-sm text-[#264653] mb-1.5">
-                    {t.title}
+                  <h4 className="font-heading font-black text-base text-[#0D3829]">
+                    {tier.title}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-3">
-                    {t.desc}
+                  <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">
+                    {tier.desc}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-extrabold text-[#2A9D8F] bg-emerald-50 px-2 py-0.5 rounded-full">
-                    {t.impact}
-                  </span>
-                  <div className={`w-5 h-5 rounded-full flex items-center justify-center border-2 ${
-                    isSelected ? "bg-[#E63946] border-[#E63946] text-white" : "border-slate-300"
-                  }`}>
-                    {isSelected && <CheckCircle2 className="w-3.5 h-3.5" />}
+                <div className="mt-5 pt-3 border-t border-slate-100">
+                  <div className="text-[11px] font-extrabold text-[#2B6E4F] flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                    <span>{tier.impact}</span>
+                  </div>
+                  <div className="mt-3 flex items-center justify-center">
+                    <div
+                      className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
+                        isSelected ? "bg-[#0D3829] border-[#0D3829] text-[#DDA15E]" : "border-slate-300"
+                      }`}
+                    >
+                      {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#DDA15E]" />}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -161,53 +163,32 @@ export function DonationTierSelector() {
           })}
         </div>
 
-        {/* Custom Amount & Action Row */}
-        <div className="mt-8 max-w-lg mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-xs font-extrabold text-slate-600">Or choose your own amount:</span>
-            <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 font-black text-slate-500">$</span>
-              <input
-                type="number"
-                min="5"
-                placeholder="Other"
-                value={customAmount}
-                onChange={(e) => {
-                  setCustomAmount(e.target.value);
-                  setSelectedTier("custom");
-                }}
-                className="w-28 pl-7 pr-3 py-2 rounded-xl border-2 border-amber-300 font-bold text-sm text-center focus:border-[#E63946] focus:outline-none bg-white shadow-sm"
-              />
-            </div>
-            <span className="text-xs font-bold text-slate-400">USD</span>
-          </div>
-
+        {/* Action Button & Tax Note */}
+        <div className="mt-10 max-w-xl mx-auto text-center">
           <button
             type="button"
             onClick={handleDonateClick}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-2xl text-base font-black text-white bg-[#E63946] hover:bg-[#B82835] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition active:translate-y-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-2xl text-base font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition active:translate-y-0"
           >
-            <Heart className="w-5 h-5 fill-current" />
-            <span>Donate ${finalAmount} {frequency === "monthly" ? "/ Month" : "Today"}</span>
+            <Heart className="w-5 h-5 fill-slate-950" />
+            <span>
+              Contribute ${finalAmount} {frequency === "monthly" ? "/ month" : "Once"} to FarmerCindy, Inc.
+            </span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500">
-            <span className="flex items-center gap-1 text-emerald-700 font-medium">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Official 501(c)(3) Receipt Issued Instantly</span>
-            </span>
-            <span>•</span>
-            <span>Tax-Deductible to Legal Limit</span>
-          </div>
+          <p className="mt-3 text-xs text-slate-500 flex items-center justify-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#2B6E4F]" />
+            <span>100% Tax-Deductible 501(c)(3) Charitable Contribution • EIN Provided</span>
+          </p>
         </div>
       </div>
 
       <GrownUpGateModal
         isOpen={gateOpen}
         onClose={() => setGateOpen(false)}
-        targetUrl="https://donorbox.org/placeholder-farmercindy"
-        retailerName="Official 501(c)(3) Donation Processor (Donorbox / Stripe)"
+        targetUrl="https://donorbox.org/farmercindy"
+        retailerName="FarmerCindy 501(c)(3) Giving Portal"
       />
     </>
   );

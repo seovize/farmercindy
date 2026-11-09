@@ -74,7 +74,7 @@ export function TiltBookCard({
           <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
           {volume}
         </span>
-        <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-[#E63946] text-white shadow-sm">
+        <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-[#2B6E4F] text-white shadow-sm">
           {ageRange}
         </span>
       </div>
@@ -183,7 +183,7 @@ export function TiltBookCard({
           </span>
           <Link
             href="/books"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold text-white bg-[#E63946] hover:bg-[#B82835] shadow-md transition"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold text-white bg-[#0D3829] hover:bg-[#164E3D] shadow-md transition"
           >
             <BookOpen className="w-3.5 h-3.5" />
             View Book & Order

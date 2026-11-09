@@ -10,16 +10,22 @@ interface GrownUpGateProps {
   retailerName: string;
 }
 
-export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: GrownUpGateProps) {
-  const [num1, setNum1] = useState(4);
-  const [num2, setNum2] = useState(7);
+export function GrownUpGateModal({
+  isOpen,
+  onClose,
+  targetUrl,
+  retailerName,
+}: GrownUpGateProps) {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [error, setError] = useState(false);
 
+  // Generate a random simple math question whenever opened
   useEffect(() => {
     if (isOpen) {
-      setNum1(Math.floor(Math.random() * 6) + 3);
-      setNum2(Math.floor(Math.random() * 5) + 2);
+      setNum1(Math.floor(Math.random() * 8) + 4); // 4-11
+      setNum2(Math.floor(Math.random() * 8) + 3); // 3-10
       setUserAnswer("");
       setError(false);
     }
@@ -29,14 +35,17 @@ export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: G
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (parseInt(userAnswer.trim(), 10) === num1 + num2) {
+    const correctSum = num1 + num2;
+    if (parseInt(userAnswer.trim(), 10) === correctSum) {
+      // Store session verification so grown-ups aren't re-prompted every click
       if (typeof window !== "undefined") {
         sessionStorage.setItem("grownup_gate_verified", "true");
       }
-      window.open(targetUrl, "_blank", "noopener,noreferrer");
       onClose();
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
     } else {
       setError(true);
+      setUserAnswer("");
     }
   };
 
@@ -45,40 +54,40 @@ export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: G
       role="dialog"
       aria-modal="true"
       aria-labelledby="gate-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
     >
-      <div className="relative w-full max-w-md rounded-3xl bg-[#FDFBF7] p-7 md:p-8 shadow-2xl border-4 border-amber-200">
+      <div className="relative w-full max-w-md rounded-3xl bg-[#FAF7F2] p-7 md:p-8 shadow-2xl border-2 border-[#DDA15E]/40">
         <button
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-4 right-4 rounded-full p-1.5 text-slate-400 hover:bg-amber-100 hover:text-slate-700 transition"
+          className="absolute top-4 right-4 rounded-full p-1.5 text-slate-400 hover:bg-stone-200 hover:text-slate-700 transition"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 mb-4 shadow-sm">
-            <ShieldCheck className="w-8 h-8" />
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-[#0D3829] mb-4 shadow-sm border border-emerald-300">
+            <ShieldCheck className="w-8 h-8 text-[#2B6E4F]" />
           </div>
 
-          <span className="inline-block bg-amber-200/80 text-amber-900 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+          <span className="inline-block bg-[#0D3829] text-[#DDA15E] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-2 border border-emerald-500/30">
             COPPA Safe Kids Protection
           </span>
 
-          <h3 id="gate-title" className="font-extrabold text-2xl text-[#264653]">
+          <h3 id="gate-title" className="font-extrabold text-2xl text-[#0D3829]">
             Grown-Ups Only!
           </h3>
 
           <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-            You are leaving to visit <strong className="text-[#E63946]">{retailerName}</strong>. To keep our young readers safe, please ask a parent, guardian, or teacher to solve this quick problem:
+            You are leaving to visit <strong className="text-[#0D3829]">{retailerName}</strong>. To keep our young readers safe, please ask a parent, guardian, or teacher to solve this quick problem:
           </p>
 
           <form onSubmit={handleSubmit} className="mt-5">
-            <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200/70 inline-block w-full">
-              <span className="block text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">
+            <div className="bg-amber-50/80 rounded-2xl p-4 border border-amber-200/70 inline-block w-full">
+              <span className="block text-xs font-bold text-[#0D3829] uppercase tracking-wide mb-1">
                 Math Challenge:
               </span>
-              <div className="text-2xl font-black text-[#264653]">
+              <div className="text-2xl font-black text-[#0D3829]">
                 {num1} + {num2} = ?
               </div>
             </div>
@@ -93,13 +102,13 @@ export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: G
                   setError(false);
                 }}
                 placeholder="?"
-                className="w-32 text-center text-2xl font-black py-2.5 px-4 rounded-xl border-2 border-slate-300 focus:border-[#E63946] focus:outline-none bg-white shadow-inner"
+                className="w-32 text-center text-2xl font-black py-2.5 px-4 rounded-xl border-2 border-slate-300 focus:border-[#2B6E4F] focus:outline-none bg-white shadow-inner"
                 autoFocus
               />
             </div>
 
             {error && (
-              <p className="text-xs text-[#E63946] font-bold mt-2 animate-bounce">
+              <p className="text-xs text-amber-800 font-bold mt-2 animate-bounce">
                 That wasn't quite right. Please ask a grown-up for help!
               </p>
             )}
@@ -108,13 +117,13 @@ export function GrownUpGateModal({ isOpen, onClose, targetUrl, retailerName }: G
               <button
                 type="button"
                 onClick={onClose}
-                className="w-full sm:w-auto px-5 py-3 rounded-xl font-bold text-slate-600 bg-slate-200 hover:bg-slate-300 transition"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl font-bold text-slate-700 bg-stone-200 hover:bg-stone-300 transition"
               >
                 Stay on Farm Site
               </button>
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#E63946] hover:bg-[#B82835] shadow-md transition"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-md transition"
               >
                 Continue to Store
                 <ExternalLink className="w-4 h-4" />

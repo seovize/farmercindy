@@ -10,31 +10,36 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          red: "#E63946",
-          redDark: "#B82835",
-          green: "#2A9D8F",
-          forest: "#1D6E64",
-          olive: "#588157",
-          cream: "#FDFBF7",
-          creamWarm: "#FFF8F0",
-          slate: "#264653",
-          charcoal: "#1F2937",
-          gold: "#E9C46A",
-          goldDark: "#855F08",
+          pine: "#0D3829",
+          pineDark: "#08241A",
+          sprout: "#2B6E4F",
+          sproutLight: "#40916C",
+          soil: "#3B2314",
+          soilLight: "#5A3822",
+          gold: "#DDA15E",
+          goldDark: "#BC6C25",
+          cream: "#FAF7F2",
+          creamWarm: "#F3ECE1",
+          slate: "#1C3127",
+          charcoal: "#16201B",
+          // Mapped aliases for smooth transition
+          green: "#2B6E4F",
+          forest: "#0D3829",
+          olive: "#40916C",
         },
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Poppins", "Baloo 2", "sans-serif"],
-        body: ["var(--font-body)", "Nunito", "sans-serif"],
+        heading: ["var(--font-heading)", "Playfair Display", "Poppins", "serif"],
+        body: ["var(--font-body)", "Plus Jakarta Sans", "Inter", "sans-serif"],
       },
       borderRadius: {
         "3xl": "1.75rem",
         "4xl": "2.25rem",
       },
       boxShadow: {
-        tactile: "0 10px 30px -5px rgba(38, 70, 83, 0.08), 0 4px 6px -2px rgba(38, 70, 83, 0.04)",
-        "tactile-hover": "0 20px 40px -10px rgba(230, 57, 70, 0.15), 0 8px 12px -3px rgba(38, 70, 83, 0.06)",
-        storybook: "0 25px 50px -12px rgba(38, 70, 83, 0.18)",
+        tactile: "0 10px 30px -5px rgba(13, 56, 41, 0.08), 0 4px 6px -2px rgba(13, 56, 41, 0.04)",
+        "tactile-hover": "0 20px 40px -10px rgba(13, 56, 41, 0.15), 0 8px 12px -3px rgba(13, 56, 41, 0.06)",
+        storybook: "0 25px 50px -12px rgba(13, 56, 41, 0.22)",
       },
       animation: {
         "float-gentle": "floatGentle 4s ease-in-out infinite",
@@ -43,11 +48,11 @@ const config: Config = {
       keyframes: {
         floatGentle: {
           "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-          "50%": { transform: "translateY(-10px) rotate(3deg)" },
+          "50%": { transform: "translateY(-8px) rotate(2deg)" },
         },
         pulseSubtle: {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: "0.9", transform: "scale(1.03)" },
+          "50%": { opacity: "0.95", transform: "scale(1.02)" },
         },
       },
     },

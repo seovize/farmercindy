@@ -48,7 +48,7 @@ export function MultiRetailerRow({
       label: "Author Signed Edition",
       icon: ExternalLink,
       url: luluUrl,
-      hoverClass: "hover:border-[#E63946] hover:text-[#E63946]",
+      hoverClass: "hover:border-[#0D3829] hover:text-[#0D3829]",
     },
     {
       name: "IngramSpark",
