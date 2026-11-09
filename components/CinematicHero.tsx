@@ -1,71 +1,39 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Heart, BookOpen, Volume2, VolumeX, Sprout, ArrowRight, Play } from "lucide-react";
+import { ShieldCheck, Heart, BookOpen, Sprout, ArrowRight, Film, CheckCircle2 } from "lucide-react";
 
 export function CinematicHero() {
-  const [isMuted, setIsMuted] = useState(true);
-  const [isPlayingTrailer, setIsPlayingTrailer] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleSound = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
-
   return (
-    <section className="relative min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#08241A] text-white">
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#08241A] text-white">
       {/* =========================================================================
-          AMBIENT AUTOPLAYING BACKGROUND VIDEO LAYER (Kiss The Ground Benchmark)
+          1. AUTHENTIC DOCUMENTARY PHOTOGRAPHY BACKGROUND (Farmland.org Standard)
          ========================================================================= */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/generated/regenerative_farm_sunrise.jpg"
-          className="w-full h-full object-cover object-center scale-105 filter brightness-95"
-        >
-          <source src="/videos/cindy_farm_reel_2.mp4" type="video/mp4" />
-          <source src="/videos/cindy_farm_reel_1.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/images/generated/regenerative_farm_sunrise.jpg"
+          alt="African American community farmers joyfully harvesting organic strawberries and kale at sunrise"
+          fill
+          priority
+          sizes="100vw"
+          quality={90}
+          className="object-cover object-center filter brightness-90"
+        />
 
-        {/* Cinematic Vignette Overlay (Rich Pine Green Gradient for WCAG AAA Contrast) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08241A] via-[#0D3829]/75 to-[#08241A]/85 backdrop-blur-[1px]" />
+        {/* High-Contrast Editorial Vignette (WCAG AAA Compliance) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08241A] via-[#0D3829]/80 to-[#08241A]/85 backdrop-blur-[0.5px]" />
       </div>
 
-      {/* Floating Sound Toggle */}
-      <button
-        type="button"
-        onClick={toggleSound}
-        aria-label={isMuted ? "Unmute farm audio" : "Mute farm audio"}
-        className="absolute top-24 right-6 sm:top-28 sm:right-10 z-20 inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-black/60 hover:bg-black/80 text-emerald-200 border border-emerald-500/30 backdrop-blur-md text-xs font-bold transition shadow-lg"
-      >
-        {isMuted ? (
-          <>
-            <VolumeX className="w-4 h-4 text-emerald-300" />
-            <span className="hidden sm:inline">Sound Off</span>
-          </>
-        ) : (
-          <>
-            <Volume2 className="w-4 h-4 text-[#DDA15E]" />
-            <span className="hidden sm:inline">Sound On</span>
-          </>
-        )}
-      </button>
-
-      {/* Main Hero Content */}
+      {/* =========================================================================
+          2. MAIN EDITORIAL HERO CONTENT
+         ========================================================================= */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
         {/* Authoritative 501(c)(3) Federal Status Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs sm:text-sm font-black uppercase tracking-wider backdrop-blur-md shadow-lg mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/85 border border-emerald-500/40 text-emerald-200 text-xs sm:text-sm font-black uppercase tracking-wider backdrop-blur-md shadow-lg mb-6">
           <ShieldCheck className="w-4 h-4 text-emerald-400" />
-          <span>FarmerCindy, Inc. • Registered 501(c)(3) Non-Profit Organization</span>
+          <span>FarmerCindy, Inc. • Registered 501(c)(3) Non-Profit Public Charity</span>
         </div>
 
         {/* Master Headline (Literary & Environmental Authority) */}
@@ -76,25 +44,33 @@ export function CinematicHero() {
 
         {/* Mission Subtitle */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-emerald-100/90 font-medium leading-relaxed max-w-2xl drop-shadow">
-          Meet <strong>Farmer Cindy</strong>—author, urban agriculturist, and non-profit founder. We inspire youth in underserved communities to embrace heirloom gardening, natural nutrition, and environmental stewardship through storybooks and classroom garden kits.
+          Meet <strong>Farmer Cindy</strong>—author, urban agriculturist, and non-profit founder. We inspire youth across America to embrace heirloom gardening, natural nutrition, and environmental stewardship through children's picture books and Title I classroom garden kits.
         </p>
 
-        {/* Dual Primary Call-to-Action Row */}
+        {/* Triple Call-to-Action Row (High CRO) */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
           <Link
             href="/donate"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-[#1C3127] bg-[#DDA15E] hover:bg-[#c58b43] shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider border border-amber-400"
           >
-            <Heart className="w-4 h-4 fill-[#0D3829] text-[#0D3829]" />
+            <Heart className="w-4 h-4 fill-slate-950 text-slate-950" />
             <span>Make a 501(c)(3) Donation</span>
           </Link>
 
           <Link
             href="/books"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-extrabold text-white bg-emerald-900/70 hover:bg-emerald-800 border-2 border-emerald-400/50 backdrop-blur-md shadow-lg hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-white bg-emerald-900/80 hover:bg-emerald-850 border-2 border-emerald-400/50 backdrop-blur-md shadow-lg hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
           >
             <BookOpen className="w-4 h-4 text-[#DDA15E]" />
-            <span>Explore The Adventures</span>
+            <span>Order Books on Amazon</span>
+          </Link>
+
+          <Link
+            href="/theater"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold text-emerald-200 bg-black/40 hover:bg-black/60 border border-emerald-500/30 backdrop-blur-md transition text-xs sm:text-sm uppercase tracking-wider"
+          >
+            <Film className="w-4 h-4 text-[#DDA15E]" />
+            <span>Watch Cartoon Theater</span>
           </Link>
         </div>
 
