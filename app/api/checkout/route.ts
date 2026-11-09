@@ -57,10 +57,10 @@ export async function POST(request: Request) {
             subject: `Order Confirmation: ${orderId} - The Adventures of Farmer Cindy`,
             htmlContent: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
-                <h1 style="color: #264653;">Thank You for Your Order, ${customer.name}!</h1>
+                <h1 style="color: #0D3829;">Thank You for Your Order, ${customer.name}!</h1>
                 <p>Your order <strong>${orderId}</strong> has been received and is being hand-packed with care.</p>
-                <div style="background-color: #fdfbf7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="margin-top: 0; color: #e63946;">Order Details:</h3>
+                <div style="background-color: #FAF7F2; padding: 15px; border-radius: 8px; margin: 15px 0; border: 1px solid #DDA15E;">
+                  <h3 style="margin-top: 0; color: #0D3829;">Order Details:</h3>
                   <p><strong>Total:</strong> $${total.toFixed(2)} USD</p>
                   <p><strong>Shipping to:</strong> ${customer.address}, ${customer.city}, ${customer.state} ${customer.zip}</p>
                   <p><strong>Bonus Gift:</strong> Free Organic Heirloom Strawberry Seeds Included!</p>

@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div className="relative mx-auto max-w-sm rounded-4xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF7F2] to-[#F4EFE6] p-6 border-2 border-[#DDA15E]/40 shadow-tactile">
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border-2 border-[#DDA15E]/40">
                 <Image
-                  src="/images/farmer_cindy_author_portrait.jpg"
+                  src="/images/farmer_cindy_glam_square.jpg"
                   alt="Farmer Cindy Official Portrait - Author & Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"

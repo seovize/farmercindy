@@ -15,7 +15,7 @@ export function FounderSpotlight() {
             {/* Primary Portrait Card */}
             <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0D3829] bg-[#08241A]">
               <Image
-                src="/images/farmer_cindy_author_portrait.jpg"
+                src="/images/farmer_cindy_glam_portrait.jpg"
                 alt="Farmer Cindy Official Portrait - Author & 501(c)(3) Founder"
                 fill
                 sizes="(max-width: 1024px) 100vw, 420px"
