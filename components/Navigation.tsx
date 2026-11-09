@@ -16,6 +16,7 @@ export function Navigation() {
     { href: "/books", label: "The Books" },
     { href: "/theater", label: "Video Theater" },
     { href: "/mission", label: "501(c)(3) Mission" },
+    { href: "/donate", label: "Donate 501(c)(3)" },
     { href: "/about", label: "About Cindy" },
   ];
 
@@ -97,6 +98,18 @@ export function Navigation() {
               <span>Donate 501(c)(3)</span>
             </Link>
 
+            <CartButton />
+          </div>
+
+          {/* Tablet Action Buttons (768px - 1024px) */}
+          <div className="hidden md:flex lg:hidden items-center gap-2">
+            <Link
+              href="/donate"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] shadow-sm transition active:scale-95 uppercase tracking-wider border border-amber-400"
+            >
+              <Heart className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
+              <span>Donate</span>
+            </Link>
             <CartButton />
           </div>
 

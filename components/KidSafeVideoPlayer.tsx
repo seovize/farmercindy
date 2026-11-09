@@ -24,7 +24,7 @@ const defaultPlaylist: VideoItem[] = [
     episodeTag: "Official Cartoon #1 • Book 1 Finale",
     duration: "0:37",
     nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
-    thumbnail: "/images/cartoon_thumb_1.jpg",
+    thumbnail: "/images/book1_cindy_check_presentation.jpg",
     description: "Cindy's official animated cartoon! Watch Farmer Cindy's journey to find fertile earth, culminating in the heartwarming finale where she receives community donations to build her dream farm!",
     curriculumBadge: "Book 1 Finale: Community Giving",
   },

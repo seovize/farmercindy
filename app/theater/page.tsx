@@ -32,6 +32,13 @@ export default function TheaterPage() {
       badge: "Family Action",
       badgeColor: "bg-amber-100 text-amber-900",
     },
+    {
+      num: "04",
+      question: "How did neighbors help Farmer Cindy build her farm at the end of the animated cartoon?",
+      teachingTip: "Highlights the value of community giving and teamwork, connecting directly to Cindy's 501(c)(3) school garden programs.",
+      badge: "Community Giving",
+      badgeColor: "bg-[#DDA15E] text-slate-950",
+    },
   ];
 
   return (
@@ -72,7 +79,7 @@ export default function TheaterPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {discussionQuestions.map((q) => (
               <div
                 key={q.num}
@@ -101,23 +108,43 @@ export default function TheaterPage() {
             ))}
           </div>
 
-          {/* Activity Kit Cross-Promotion */}
-          <div className="mt-8 p-5 rounded-2xl bg-amber-50/90 border border-amber-300/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-left">
-              <div className="text-xs font-black uppercase tracking-wider text-[#0D3829]">
-                Companion Activity Sheet Available
+          {/* Activity Kit & 501(c)(3) Giving Cross-Promotions */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-5 rounded-2xl bg-amber-50/90 border border-amber-300/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-center sm:text-left">
+                <div className="text-xs font-black uppercase tracking-wider text-[#0D3829]">
+                  Free Companion Activity Sheet
+                </div>
+                <div className="text-xs text-slate-700 mt-0.5">
+                  Download the free 12-page Strawberry Sprout &amp; Seed Journal for printable coloring sheets!
+                </div>
               </div>
-              <div className="text-xs text-slate-700 mt-0.5">
-                Download the free 12-page Strawberry Sprout &amp; Seed Journal for printable anatomy coloring sheets!
-              </div>
+              <Link
+                href="/#activity-kit"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow transition shrink-0"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Get Free PDF Kit</span>
+              </Link>
             </div>
-            <Link
-              href="/#activity-kit"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow transition shrink-0"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Get Free PDF Kit</span>
-            </Link>
+
+            <div className="p-5 rounded-2xl bg-[#0D3829] text-white border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-center sm:text-left">
+                <div className="text-xs font-black uppercase tracking-wider text-[#DDA15E]">
+                  As Seen In Video Climax: Community Giving
+                </div>
+                <div className="text-xs text-emerald-100/90 mt-0.5">
+                  Just like neighbors gave to build the farm, your tax-deductible gift empowers Title I student gardens!
+                </div>
+              </div>
+              <Link
+                href="/donate"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow transition shrink-0"
+              >
+                <Heart className="w-3.5 h-3.5 fill-slate-950" />
+                <span>Donate 501(c)(3)</span>
+              </Link>
+            </div>
           </div>
         </section>
 
