@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Film, Sparkles, BookOpen, Heart, ShieldCheck, Lightbulb, Download, ArrowRight } from "lucide-react";
+import { Film, BookOpen, Heart, ShieldCheck, Lightbulb, Download, ArrowRight } from "lucide-react";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
-import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 
 export const metadata = {
   title: "Cartoon Video Theater | The Adventures of Farmer Cindy",
@@ -37,8 +36,6 @@ export default function TheaterPage() {
 
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
-      <FloatingFarmElements />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">

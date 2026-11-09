@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, Sparkles, ExternalLink } from "lucide-react";
+import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, ExternalLink } from "lucide-react";
 
 interface DonationTier {
   amount: number;

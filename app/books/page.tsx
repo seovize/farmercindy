@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, Star, Sparkles, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRight, Library, Users, Award, ShieldCheck } from "lucide-react";
+import { BookOpen, Star, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRight, Library, Users, Award, ShieldCheck } from "lucide-react";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
-import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 import { BundleOrderBanner } from "@/components/BundleOrderBanner";
 
 export const metadata = {
@@ -15,8 +14,6 @@ export const metadata = {
 export default function BooksPage() {
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
-      <FloatingFarmElements />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -113,56 +110,40 @@ export default function BooksPage() {
                   <span className="text-[#2B6E4F]">FarmerCindy Finds a Farm</span>
                 </h2>
 
-                {/* Author Excerpt Pull-Quote (Anti-Slop Editorial Touch) */}
-                <div className="my-5 p-4 rounded-2xl bg-amber-50/80 border-l-4 border-[#DDA15E] text-slate-700 italic font-medium text-sm sm:text-base leading-relaxed">
+                {/* Author Excerpt Pull-Quote (High-Craft Editorial Typography) */}
+                <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-relaxed">
                   "Desperate to find the perfect fertile soil to plant her rare heirloom seeds, Cindy traveled across the world visiting rolling valleys. In a heartwarming surprise, she discovered you don't need a hundred acres to grow an organic farm—you can build one right on your apartment windowsill!"
-                </div>
+                </blockquote>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                   A joyous, empowering story that demystifies where fresh food comes from. Children discover that with a sunny window ledge, recycled containers, and living seeds, anyone can become a farmer.
                 </p>
 
-                {/* Thematic Story Pillars */}
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-amber-50/70 border border-amber-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-amber-200 text-amber-900 flex items-center justify-center shrink-0 mt-0.5">
-                      <Sun className="w-4 h-4 text-[#DDA15E]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Urban Gardening</div>
-                      <div className="text-xs text-slate-600 mt-0.5">How windowsill sunlight &amp; patience turn tiny seeds into fresh strawberries.</div>
-                    </div>
+                {/* Literary Themes & Botanical Curriculum */}
+                <div className="mt-6 space-y-2.5">
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Sun className="w-4 h-4 text-[#DDA15E] shrink-0" />
+                    <span><strong>Urban Apartment Gardening:</strong> Proving fresh produce sprouts anywhere with sunlight and care.</span>
                   </div>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Sprout className="w-4 h-4 text-[#2B6E4F] shrink-0" />
+                    <span><strong>Heirloom Seed Anatomy:</strong> STEM plant science explaining roots, cotyledons, and natural biology.</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Heart className="w-4 h-4 text-[#3B2314] shrink-0" />
+                    <span><strong>501(c)(3) Mission Impact:</strong> 100% of author proceeds directly fund free youth garden kits in Title I schools.</span>
+                  </div>
+                </div>
 
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-200 text-emerald-900 flex items-center justify-center shrink-0 mt-0.5">
-                      <Sprout className="w-4 h-4 text-[#2B6E4F]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Heirloom Seed Science</div>
-                      <div className="text-xs text-slate-600 mt-0.5">STEM plant anatomy: roots, sprouts, and protecting botanical heritage.</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-stone-50 border border-stone-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-[#3B2314]/10 text-[#3B2314] flex items-center justify-center shrink-0 mt-0.5">
-                      <Heart className="w-4 h-4 text-[#3B2314]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Family Nutrition</div>
-                      <div className="text-xs text-slate-600 mt-0.5">Encourages kids to choose vibrant fruits and vegetables over processed snacks.</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-100 text-[#0D3829] flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-4 h-4 text-[#2B6E4F]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">501(c)(3) Giving</div>
-                      <div className="text-xs text-slate-600 mt-0.5">100% of author proceeds fund youth gardening kits in Title I schools.</div>
-                    </div>
-                  </div>
+                {/* Publisher Specifications Bar */}
+                <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-medium">
+                  <span><strong>Trim:</strong> 8.5 × 11 in</span>
+                  <span>•</span>
+                  <span><strong>Pages:</strong> 76 Pages</span>
+                  <span>•</span>
+                  <span><strong>Ages:</strong> 3–9 (Pre-K to 3rd)</span>
+                  <span>•</span>
+                  <span><strong>Publisher:</strong> FarmerCindy Books</span>
                 </div>
 
                 {/* Refined High-Converting Multi-Retailer Row */}
@@ -183,7 +164,7 @@ export default function BooksPage() {
            ========================================================================= */}
         <div className="my-16 md:my-20 text-center max-w-3xl mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0D3829] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-3 border border-emerald-500/30">
-            <Sparkles className="w-3.5 h-3.5 text-[#DDA15E]" />
+            <Sprout className="w-3.5 h-3.5 text-[#DDA15E]" />
             <span>The Journey Expands</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#0D3829]">
@@ -228,56 +209,40 @@ export default function BooksPage() {
                   <span className="text-[#2B6E4F]">What's Happening to Our Farming Community?</span>
                 </h2>
 
-                {/* Author Excerpt Pull-Quote */}
-                <div className="my-5 p-4 rounded-2xl bg-emerald-50/80 border-l-4 border-[#2B6E4F] text-slate-700 italic font-medium text-sm sm:text-base leading-relaxed">
+                {/* Author Excerpt Pull-Quote (High-Craft Editorial Typography) */}
+                <blockquote className="my-6 pl-6 border-l-2 border-[#2B6E4F] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-relaxed">
                   "When concrete begins replacing open green spaces, Cindy rallies friendly honeybees, hardworking earthworms, and local families to show why family farms are the living heartbeat of our food supply."
-                </div>
+                </blockquote>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                   An eye-opening, hope-filled sequel addressing modern agricultural changes in a gentle, age-appropriate way. It teaches children civic awareness, teamwork, and the vital role pollinators play in everyday fruit and vegetables.
                 </p>
 
-                {/* Thematic Story Pillars */}
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-200 text-emerald-900 flex items-center justify-center shrink-0 mt-0.5">
-                      <Bug className="w-4 h-4 text-[#2B6E4F]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Pollinator Protection</div>
-                      <div className="text-xs text-slate-600 mt-0.5">Why honeybees, bumblebees, and butterflies are required for 1-in-3 bites of food.</div>
-                    </div>
+                {/* Literary Themes & Botanical Curriculum */}
+                <div className="mt-6 space-y-2.5">
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Bug className="w-4 h-4 text-[#2B6E4F] shrink-0" />
+                    <span><strong>Pollinator Biodiversity:</strong> Teaching children why honeybees and butterflies are vital for 1-in-3 bites of food.</span>
                   </div>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Sprout className="w-4 h-4 text-amber-800 shrink-0" />
+                    <span><strong>Living Soil Ecology:</strong> How earthworms and natural compost nurture healthy root systems underground.</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
+                    <Users className="w-4 h-4 text-[#0D3829] shrink-0" />
+                    <span><strong>Community Action:</strong> Rallying neighbors and schools to preserve green spaces and support local growers.</span>
+                  </div>
+                </div>
 
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-amber-50/70 border border-amber-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-amber-200 text-amber-900 flex items-center justify-center shrink-0 mt-0.5">
-                      <Sprout className="w-4 h-4 text-amber-800" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Living Soil Ecology</div>
-                      <div className="text-xs text-slate-600 mt-0.5">How subterranean earthworms aerate soil and deliver nutrients to plant roots.</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-stone-50 border border-stone-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-[#3B2314]/10 text-[#3B2314] flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-4 h-4 text-[#3B2314]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Community Action</div>
-                      <div className="text-xs text-slate-600 mt-0.5">Rallying neighbors, teachers, and townspeople to protect agricultural heritage.</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200/80">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-100 text-[#0D3829] flex items-center justify-center shrink-0 mt-0.5">
-                      <Heart className="w-4 h-4 text-[#2B6E4F]" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-black text-[#0D3829] uppercase tracking-wide">Non-Profit Impact</div>
-                      <div className="text-xs text-slate-600 mt-0.5">Funds school garden plots and free produce distribution boxes for children.</div>
-                    </div>
-                  </div>
+                {/* Publisher Specifications Bar */}
+                <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-medium">
+                  <span><strong>Trim:</strong> 8.5 × 11 in</span>
+                  <span>•</span>
+                  <span><strong>Pages:</strong> 76 Pages</span>
+                  <span>•</span>
+                  <span><strong>Ages:</strong> 3–9 (Pre-K to 3rd)</span>
+                  <span>•</span>
+                  <span><strong>Publisher:</strong> FarmerCindy Books</span>
                 </div>
 
                 {/* Refined Multi-Retailer Row */}

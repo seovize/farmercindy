@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { User, School, Sparkles, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Sprout } from "lucide-react";
-import { FloatingFarmElements } from "@/components/FloatingFarmElements";
+import { User, School, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Sprout } from "lucide-react";
 
 export default function AboutPage() {
   const [formData, setFormData] = useState({
@@ -74,8 +73,6 @@ export default function AboutPage() {
 
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
-      <FloatingFarmElements />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -138,9 +135,9 @@ export default function AboutPage() {
               Cindy believes that inside every child lives an innate scientist and curious gardener. Observing how many children today grow up without understanding where real food comes from, she began authoring <em>The Adventures of Farmer Cindy</em> to bridge storytime entertainment with practical agricultural literacy.
             </p>
 
-            <div className="p-4 rounded-2xl bg-amber-50/80 border-l-4 border-[#DDA15E] italic text-slate-800 text-sm font-medium">
+            <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-slate-800 font-heading text-lg sm:text-xl italic font-bold leading-relaxed">
               "When a child plants a single seed, tends to it, and tastes the sweet harvest, their relationship with fresh food changes permanently."
-            </div>
+            </blockquote>
 
             <p>
               Through her foundation, <strong>FarmerCindy, Inc. (501c3)</strong>, Cindy personally oversees the distribution of heirloom seed packets, raised school garden beds, and classroom reading sets to Title I schools across the country.

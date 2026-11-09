@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ShoppingBag, Sparkles, CheckCircle2, Sprout, Heart, ArrowRight, ShieldCheck, Gift } from "lucide-react";
+import { ShoppingBag, CheckCircle2, Sprout, Heart, ArrowRight, ShieldCheck, Gift } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { PRODUCTS } from "@/lib/products";
 

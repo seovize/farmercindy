@@ -1,9 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Heart, ShieldCheck, Sparkles, BookOpen, Users, Sprout, ArrowRight, CheckCircle2, Award, School, Sun, Globe } from "lucide-react";
-import { DonationImpactModule } from "@/components/DonationImpactModule";
-import { FloatingFarmElements } from "@/components/FloatingFarmElements";
+import { Heart, ShieldCheck, BookOpen, Users, Sprout, ArrowRight, CheckCircle2, Award, School, Sun, Globe } from "lucide-react";
 
 export const metadata = {
   title: "501(c)(3) Non-Profit Mission | FarmerCindy, Inc.",
@@ -45,8 +43,6 @@ export default function MissionPage() {
 
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
-      <FloatingFarmElements />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -104,9 +100,9 @@ export default function MissionPage() {
                 In our modern grocery-aisle world, millions of children grow up believing strawberries and sweet cherries simply come from plastic clamshell containers. They have never felt warm, living soil between their fingers or experienced the quiet thrill of seeing a tiny green sprout emerge after days of patient watering.
               </p>
 
-              <div className="p-4 rounded-2xl bg-amber-50/80 border-l-4 border-[#DDA15E] italic text-slate-800 text-sm sm:text-base font-medium">
+              <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-slate-800 font-heading text-lg sm:text-xl italic font-bold leading-relaxed">
                 "When you teach a child how to grow their own food, you don't just teach a hobby—you grant them lifelong health, self-reliance, and deep respect for the planet."
-              </div>
+              </blockquote>
 
               <p>
                 Cindy created <em>The Adventures of Farmer Cindy</em> picture book series not merely to entertain, but to serve as a sustainable fundraising engine for agricultural literacy. <strong>One hundred percent of book royalties</strong> are channeled directly into providing free organic seeds, classroom planters, and literacy kits to Title I elementary schools and underserved communities.
@@ -170,10 +166,34 @@ export default function MissionPage() {
           </div>
         </section>
 
-        {/* Direct Donation Tier Selector Section */}
-        <div id="donate" className="scroll-mt-24">
-          <DonationImpactModule />
-        </div>
+        {/* Direct Donation Invitation (American Farmland Trust / Kiss The Ground Standard) */}
+        <section className="my-20 p-8 sm:p-12 lg:p-16 rounded-4xl bg-[#08241A] text-white border-2 border-[#DDA15E]/40 shadow-2xl text-center max-w-4xl mx-auto">
+          <div className="w-16 h-16 rounded-3xl bg-[#0D3829] text-[#DDA15E] flex items-center justify-center mx-auto mb-6 border border-emerald-500/30">
+            <Heart className="w-8 h-8 fill-[#DDA15E]" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white">
+            Support Our 501(c)(3) Agricultural Mission
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+            Your tax-deductible gift directly funds free windowsill seed kits, raised school garden beds, and author reading assemblies for Title I elementary classrooms.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/donate"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-[#0D3829] bg-[#DDA15E] hover:bg-[#c58b43] transition shadow-lg text-sm uppercase tracking-wider"
+            >
+              <span>Explore Giving Tiers &amp; Donate</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/books"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white bg-emerald-900/60 hover:bg-emerald-900 border border-emerald-400/40 transition text-sm"
+            >
+              <BookOpen className="w-4 h-4 text-[#DDA15E]" />
+              <span>Order Books (100% Profits Fund Mission)</span>
+            </Link>
+          </div>
+        </section>
 
         {/* 501(c)(3) Transparency & IRS Confirmation Notice */}
         <section className="p-8 rounded-3xl bg-white/95 border-2 border-[#DDA15E]/30 text-xs text-slate-600 max-w-3xl mx-auto text-center leading-relaxed shadow-sm mt-12">

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Download, Sparkles, CheckCircle2, ShieldCheck, Mail, Loader2, User, GraduationCap } from "lucide-react";
+import { Download, CheckCircle2, ShieldCheck, Mail, Loader2, User, GraduationCap, Sprout } from "lucide-react";
 import confetti from "canvas-confetti";
 
 export function ActivityKitLeadMagnet() {
@@ -90,7 +90,7 @@ export function ActivityKitLeadMagnet() {
           {/* Right Column: Copy & Email Form */}
           <div className="lg:col-span-7 text-center lg:text-left">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] mb-3 shadow-sm border border-emerald-500/30">
-              <Sparkles className="w-4 h-4 text-[#DDA15E]" />
+              <Sprout className="w-4 h-4 text-[#DDA15E]" />
               Free Classroom &amp; Home Activity Kit
             </span>
 

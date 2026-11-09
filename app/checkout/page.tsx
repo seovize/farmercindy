@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ShieldCheck, Lock, ArrowLeft, ArrowRight, CheckCircle2, Sprout, Heart, Truck, CreditCard, Sparkles, Loader2 } from "lucide-react";
+import { ShieldCheck, Lock, ArrowLeft, ArrowRight, CheckCircle2, Sprout, Heart, Truck, CreditCard, Loader2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 export default function CheckoutPage() {

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Heart, Film, User, Menu, X, Sparkles, Sprout, Download, School, ShieldCheck } from "lucide-react";
+import { BookOpen, Heart, Film, User, Menu, X, Sprout, Download, School, ShieldCheck } from "lucide-react";
 import { CartButton } from "@/components/CartButton";
 import { CartDrawer } from "@/components/CartDrawer";
 
@@ -14,9 +14,8 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/books", label: "The Books" },
-    { href: "/donate", label: "Donate 501(c)(3)" },
-    { href: "/mission", label: "Mission & Impact" },
     { href: "/theater", label: "Video Theater" },
+    { href: "/mission", label: "501(c)(3) Mission" },
     { href: "/about", label: "About Cindy" },
   ];
 
@@ -24,7 +23,7 @@ export function Navigation() {
     <>
       {/* Top Non-Profit Mission Announcement Bar (Kiss The Ground / Farmland.org Style) */}
       <div className="bg-[#08241A] text-emerald-100 text-xs font-black tracking-wide py-2.5 px-4 text-center border-b border-emerald-900/60 flex items-center justify-center gap-2 relative z-50">
-        <Sprout className="w-4 h-4 text-[#DDA15E] animate-pulse-subtle shrink-0" />
+        <Sprout className="w-4 h-4 text-[#DDA15E] shrink-0" />
         <span className="hidden sm:inline">
           FarmerCindy, Inc. is an official 501(c)(3) public charity. 100% of book proceeds and gifts directly fund heirloom gardens for Title I schools!
         </span>
@@ -64,16 +63,13 @@ export function Navigation() {
           <nav className="hidden md:flex items-center gap-1.5 lg:gap-2.5" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
-              const isDonate = link.href === "/donate";
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-black px-3 py-1.5 rounded-full transition-all duration-200 ${
+                  className={`text-sm font-black px-3.5 py-1.5 rounded-full transition-all duration-200 ${
                     isActive
                       ? "bg-[#0D3829] text-[#DDA15E] shadow-sm font-black"
-                      : isDonate
-                      ? "text-[#0D3829] bg-[#DDA15E]/30 hover:bg-[#DDA15E] hover:text-slate-950 border border-[#DDA15E]/60 font-black"
                       : "text-[#3B2314]/80 hover:text-[#0D3829] hover:bg-emerald-50"
                   }`}
                 >
@@ -98,15 +94,7 @@ export function Navigation() {
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] shadow-sm transition active:scale-95 uppercase tracking-wider border border-amber-400"
             >
               <Heart className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
-              <span>Donate</span>
-            </Link>
-
-            <Link
-              href="/books"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black text-white bg-[#0D3829] hover:bg-[#164E3D] shadow-md transition active:scale-95 uppercase tracking-wider border border-emerald-500/30"
-            >
-              <BookOpen className="w-3.5 h-3.5 text-[#DDA15E]" />
-              <span>The Books</span>
+              <span>Donate 501(c)(3)</span>
             </Link>
 
             <CartButton />

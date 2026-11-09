@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Heart, BookOpen, Volume2, VolumeX, Sparkles, Sprout, ArrowRight, Play } from "lucide-react";
+import { ShieldCheck, Heart, BookOpen, Volume2, VolumeX, Sprout, ArrowRight, Play } from "lucide-react";
 
 export function CinematicHero() {
   const [isMuted, setIsMuted] = useState(true);
@@ -98,42 +98,21 @@ export function CinematicHero() {
           </Link>
         </div>
 
-        {/* Proof Row (American Farmland Trust / Kiss The Ground Standard) */}
-        <div className="mt-14 pt-8 border-t border-emerald-500/20 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl">
-          <div className="flex flex-col items-center">
-            <span className="text-3xl sm:text-4xl font-heading font-black text-[#DDA15E]">
-              12,500+
-            </span>
-            <span className="text-xs uppercase tracking-wider font-extrabold text-emerald-200 mt-1">
-              Children Educated
-            </span>
-            <span className="text-[11px] text-emerald-300/70 mt-0.5">
-              Title I schools &amp; community readings
-            </span>
+        {/* Institutional Trust Bar (American Farmland Trust / Kiss The Ground Standard) */}
+        <div className="mt-14 pt-8 border-t border-emerald-500/20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm font-bold text-emerald-200">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#DDA15E]" />
+            <span>Official 501(c)(3) Non-Profit Public Charity</span>
           </div>
-
-          <div className="flex flex-col items-center">
-            <span className="text-3xl sm:text-4xl font-heading font-black text-[#DDA15E]">
-              100%
-            </span>
-            <span className="text-xs uppercase tracking-wider font-extrabold text-emerald-200 mt-1">
-              Tax-Deductible
-            </span>
-            <span className="text-[11px] text-emerald-300/70 mt-0.5">
-              Direct public charity funding
-            </span>
+          <span className="hidden sm:inline text-emerald-600">•</span>
+          <div className="flex items-center gap-2">
+            <Sprout className="w-4 h-4 text-[#DDA15E]" />
+            <span>Organic Heirloom Seeds for Title I Classrooms</span>
           </div>
-
-          <div className="flex flex-col items-center">
-            <span className="text-3xl sm:text-4xl font-heading font-black text-[#DDA15E]">
-              48+
-            </span>
-            <span className="text-xs uppercase tracking-wider font-extrabold text-emerald-200 mt-1">
-              Classroom Gardens
-            </span>
-            <span className="text-[11px] text-emerald-300/70 mt-0.5">
-              Heirloom seeds &amp; raised soil beds
-            </span>
+          <span className="hidden sm:inline text-emerald-600">•</span>
+          <div className="flex items-center gap-2">
+            <BookOpen className="w-4 h-4 text-[#DDA15E]" />
+            <span>100% of Royalties Dedicated to Youth Farming</span>
           </div>
         </div>
       </div>

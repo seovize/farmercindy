@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, BookOpen, Heart, Award, Sprout, CheckCircle2 } from "lucide-react";
+import { BookOpen, Heart, Award, Sprout, CheckCircle2, ArrowRight } from "lucide-react";
 
 export function FounderSpotlight() {
   return (
@@ -74,7 +74,7 @@ export function FounderSpotlight() {
               Farmer Cindy is an African American children's author, urban horticulturist, and the visionary founder of <strong>FarmerCindy, Inc. 501(c)(3)</strong>. Her journey began on a simple apartment windowsill, proving that you do not need hundreds of rural acres to grow wholesome, organic food and reconnect with the land.
             </p>
 
-            <blockquote className="my-6 pl-5 border-l-4 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-snug">
+            <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-lg sm:text-xl italic font-heading font-bold text-[#0D3829] leading-relaxed">
               "When a child plants a tiny seed in living soil, watches it sprout into sweet strawberries, and harvests it with their own hands—their entire relationship with food and health changes forever."
             </blockquote>
 

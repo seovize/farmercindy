@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Play, Pause, ShieldCheck, Film, Sparkles, RotateCcw, Volume2, VolumeX, Heart, ArrowRight } from "lucide-react";
+import { Play, Pause, ShieldCheck, Film, RotateCcw, Volume2, VolumeX, Heart, ArrowRight } from "lucide-react";
 
 interface VideoItem {
   id: string;
@@ -39,24 +39,24 @@ const defaultPlaylist: VideoItem[] = [
     curriculumBadge: "Community Farming",
   },
   {
-    id: "strawberries",
-    title: "How Do Strawberries Grow? (Farmer Cindy Classroom Edition)",
-    episodeTag: "Book 1 Companion",
-    duration: "4:12",
-    youtubeId: "ghbNc0IjAXA",
-    thumbnail: "/images/theater_thumbnail.jpg",
-    description: "Discover how tiny white flowers transform into juicy red strawberries! Learn how sunlight, water, and rich soil help plants grow.",
-    curriculumBadge: "Plant Life Cycle (Pre-K to 2nd)",
+    id: "cindy-farm-reel-1",
+    title: "Farmer Cindy in the Garden: Growing Fresh Food (Official Farm Reel)",
+    episodeTag: "Farm Journey #1",
+    duration: "0:15",
+    nativeVideo: "/videos/cindy_farm_reel_1.mp4",
+    thumbnail: "/images/farmer_cindy_harvest.jpg",
+    description: "Join Farmer Cindy live in the greenhouse! Watch real crops thriving under organic care and living nutrition.",
+    curriculumBadge: "Real Food Farming",
   },
   {
-    id: "pollinators",
-    title: "Like Fruit? Thank a Bee! (Community Farming Edition)",
-    episodeTag: "Book 2 Companion",
-    duration: "3:48",
-    youtubeId: "ta154f5Rp5Y",
-    thumbnail: "https://img.youtube.com/vi/ta154f5Rp5Y/hqdefault.jpg",
-    description: "Explore why honeybees, bumblebees, and butterflies are vital friends for community gardens and fruit orchards.",
-    curriculumBadge: "Pollinators & Biodiversity",
+    id: "cindy-farm-reel-2",
+    title: "Farmer Cindy's Harvest Journey: Living Soil in Action (Official Farm Reel)",
+    episodeTag: "Farm Journey #2",
+    duration: "0:22",
+    nativeVideo: "/videos/cindy_farm_reel_2.mp4",
+    thumbnail: "/images/farmer_cindy_author_portrait.jpg",
+    description: "Experience the magic of living soil and healthy plants with Cindy as she harvests fresh produce.",
+    curriculumBadge: "Living Soil Ecology",
   },
 ];
 
@@ -215,9 +215,9 @@ export function KidSafeVideoPlayer() {
         {/* Playlist Selector */}
         <div className="lg:w-1/3 flex flex-col justify-between">
           <div>
-            <h4 className="font-heading font-black text-xl text-[#264653] flex items-center gap-2 mb-4">
-              <Sparkles className="w-5 h-5 text-[#E9C46A]" />
-              Animation & Story Playlist
+            <h4 className="font-heading font-black text-xl text-[#0D3829] flex items-center gap-2 mb-4">
+              <Film className="w-5 h-5 text-[#2B6E4F]" />
+              Animation &amp; Story Playlist
             </h4>
 
             <div className="space-y-3">

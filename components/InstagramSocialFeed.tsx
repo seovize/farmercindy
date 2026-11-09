@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Instagram, Heart, MessageCircle, Play, ExternalLink, Sparkles, CheckCircle2 } from "lucide-react";
+import { Instagram, Heart, MessageCircle, Play, ExternalLink, CheckCircle2 } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 interface InstagramPost {
@@ -207,7 +207,7 @@ export function InstagramSocialFeed() {
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-100 text-[#0D3829] border border-emerald-300 mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#DDA15E]" />
+            <Instagram className="w-3.5 h-3.5 text-[#2B6E4F]" />
             <span>Live Social Stream</span>
           </div>
           <h3 className="text-3xl sm:text-4xl font-heading font-black text-[#0D3829]">

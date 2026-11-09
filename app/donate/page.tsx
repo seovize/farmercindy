@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, Sparkles, ArrowRight, Award, Users, Download, Film, Lock, HelpCircle } from "lucide-react";
+import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, ArrowRight, Award, Users, Download, Film, Lock, HelpCircle } from "lucide-react";
 import { DonationImpactModule } from "@/components/DonationImpactModule";
-import { FloatingFarmElements } from "@/components/FloatingFarmElements";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 
 export const metadata = {
@@ -22,8 +21,6 @@ export default function DonatePage() {
 
   return (
     <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
-      <FloatingFarmElements />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
@@ -72,7 +69,7 @@ export default function DonatePage() {
             {/* Narrative Context: Linking Book 1 Finale to Real Giving */}
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-black uppercase tracking-wider text-[#0D3829] bg-emerald-100/80 px-3.5 py-1 rounded-full border border-emerald-300/60 inline-flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#2B6E4F]" />
+                <Sprout className="w-3.5 h-3.5 text-[#2B6E4F]" />
                 <span>As Seen in Book 1 &amp; Our Cartoon Finale</span>
               </span>
 
@@ -84,10 +81,10 @@ export default function DonatePage() {
                 At the conclusion of <em>FarmerCindy Finds a Farm</em>, Farmer Cindy discovers that true agriculture isn't about vast empty acreage—it's about the heart of a community coming together. When neighbors gave what they could, her seeds sprouted into an abundance that fed everyone.
               </p>
 
-              <div className="p-4 rounded-2xl bg-amber-50/80 border-l-4 border-[#DDA15E] text-xs sm:text-sm text-slate-800 italic leading-relaxed">
+              <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-relaxed">
                 "When a child watches a seed grow into food with their own hands, hunger loses its grip, and confidence takes root for life."
-                <span className="block mt-1 font-black not-italic text-[#0D3829]">— Farmer Cindy, Founder</span>
-              </div>
+                <span className="block mt-1 font-black not-italic text-sm text-[#2B6E4F]">— Farmer Cindy, Founder &amp; Author</span>
+              </blockquote>
 
               <div className="pt-2 flex items-center gap-4 text-xs font-bold text-slate-600">
                 <div className="flex items-center gap-1.5">
@@ -104,27 +101,41 @@ export default function DonatePage() {
           </div>
         </section>
 
-        {/* Impact By The Numbers */}
-        <section className="mb-20">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {impactStats.map((stat, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-white border-2 border-stone-200/90 shadow-sm text-center flex flex-col justify-between"
-              >
-                <div>
-                  <div className="text-3xl sm:text-4xl font-heading font-black text-[#0D3829] tracking-tight">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs font-black uppercase tracking-wider text-[#2B6E4F] mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-                <div className="text-xs text-slate-600 mt-2">
-                  {stat.desc}
-                </div>
-              </div>
-            ))}
+        {/* Where Every Dollar Goes: Transparent Financial Ledger */}
+        <section className="mb-20 rounded-3xl bg-white p-6 sm:p-10 border-2 border-stone-200/90 shadow-sm max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h3 className="text-2xl font-heading font-black text-[#0D3829]">
+              How Your Tax-Deductible Gift Translates to Real Food
+            </h3>
+            <p className="mt-1 text-xs sm:text-sm text-slate-600">
+              100% of public contributions directly purchase seeds, living compost, and student planters for Title I classrooms.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-amber-200/80">
+              <span className="text-2xl font-black font-heading text-[#DDA15E] block">$25</span>
+              <span className="text-xs font-black uppercase text-[#0D3829] block mt-1">5 Student Seed Kits</span>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">Supplies 5 elementary students with personal windowsill seed discs and planting guides.</p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-emerald-200/80">
+              <span className="text-2xl font-black font-heading text-[#2B6E4F] block">$50</span>
+              <span className="text-xs font-black uppercase text-[#0D3829] block mt-1">Classroom Soil &amp; Seeds</span>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">Provides 12 heirloom seed varieties and 40 lbs of nutrient-dense organic soil.</p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-emerald-200/80">
+              <span className="text-2xl font-black font-heading text-[#0D3829] block">$100</span>
+              <span className="text-xs font-black uppercase text-[#0D3829] block mt-1">Library &amp; School Reading</span>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">Sponsors an author reading assembly and donates 10 hardcover picture books to a Title I library.</p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-stone-300">
+              <span className="text-2xl font-black font-heading text-[#3B2314] block">$250</span>
+              <span className="text-xs font-black uppercase text-[#0D3829] block mt-1">Full Raised Garden Bed</span>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">Funds construction of a full cedar garden plot, compost, and pollinator plants for a public school.</p>
+            </div>
           </div>
         </section>
 

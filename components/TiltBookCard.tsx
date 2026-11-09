@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Star, BookOpen, Sparkles, Sun, Sprout } from "lucide-react";
+import { BookOpen, Sun, Sprout } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,45 +32,14 @@ export function TiltBookCard({
   synopsis,
   badgeText,
 }: TiltBookCardProps) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x, { stiffness: 120, damping: 18 });
-  const mouseYSpring = useSpring(y, { stiffness: 120, damping: 18 });
-
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    x.set(mouseX / width - 0.5);
-    y.set(mouseY / height - 0.5);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
   return (
-    <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-      className="relative rounded-3xl p-6 bg-gradient-to-b from-[#FFF8F0] to-[#FDFBF7] border-2 border-amber-200/60 shadow-tactile hover:shadow-tactile-hover transition-all duration-300 group flex flex-col justify-between"
+    <div
+      className="relative rounded-3xl p-6 bg-gradient-to-b from-[#FFFDF9] to-[#FAF7F2] border-2 border-amber-200/60 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between"
     >
       {/* Top Meta Header */}
-      <div style={{ transform: "translateZ(30px)" }} className="flex items-center justify-between mb-4">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-white shadow-sm border border-amber-200 text-[#264653]">
-          <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
+      <div className="flex items-center justify-between mb-4">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-white shadow-sm border border-amber-200 text-[#0D3829]">
+          <BookOpen className="w-3.5 h-3.5 text-[#2B6E4F]" />
           {volume}
         </span>
         <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-[#2B6E4F] text-white shadow-sm">
@@ -79,10 +47,9 @@ export function TiltBookCard({
         </span>
       </div>
 
-      {/* Book Cover Container with 3D Depth */}
+      {/* Book Cover Container with Flat Tactile Depth */}
       <div
-        style={{ transform: "translateZ(50px)" }}
-        className="relative my-2 aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-storybook flex flex-col justify-between border-2 border-white/60 bg-slate-900"
+        className="relative my-2 aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between border-2 border-white/80 bg-slate-900"
       >
         {coverImage ? (
           <div className="relative w-full h-full">
@@ -102,7 +69,7 @@ export function TiltBookCard({
               <span className="text-[11px] font-black text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20">
                 Official Edition
               </span>
-              <span className="text-[10px] font-black bg-amber-400 text-slate-900 px-2.5 py-1 rounded-full shadow">
+              <span className="text-[10px] font-black bg-[#DDA15E] text-[#0D3829] px-2.5 py-1 rounded-full shadow">
                 {badgeText}
               </span>
             </div>
@@ -127,14 +94,7 @@ export function TiltBookCard({
             <div className="relative z-10 my-auto text-center py-4">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 shadow-xl group-hover:scale-110 transition-transform duration-300 p-4">
                 {asin === "B0HL5F734J" ? (
-                  <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2C8 2 4 6 4 11C4 16.5 12 22 12 22C12 22 20 16.5 20 11C20 6 16 2 12 2Z" fill="#FFF" fillOpacity="0.4" />
-                    <path d="M12 2C10 5 7 5 6 6" stroke="#84CC16" strokeWidth="2.5" />
-                    <path d="M12 2C14 5 17 5 18 6" stroke="#84CC16" strokeWidth="2.5" />
-                    <circle cx="8" cy="10" r="1.2" fill="#FFF" />
-                    <circle cx="12" cy="11" r="1.2" fill="#FFF" />
-                    <circle cx="16" cy="10" r="1.2" fill="#FFF" />
-                  </svg>
+                  <Sprout className="w-10 h-10 text-emerald-200" />
                 ) : (
                   <Sun className="w-10 h-10 text-amber-200" />
                 )}
@@ -147,7 +107,7 @@ export function TiltBookCard({
                 <div className="font-extrabold text-sm text-white">Farmer Cindy</div>
               </div>
               <div className="text-right">
-                <span className="text-[10px] font-black bg-amber-400 text-slate-900 px-2.5 py-1 rounded-full shadow">
+                <span className="text-[10px] font-black bg-[#DDA15E] text-[#0D3829] px-2.5 py-1 rounded-full shadow">
                   {badgeText}
                 </span>
               </div>
@@ -156,40 +116,24 @@ export function TiltBookCard({
         )}
       </div>
 
-      {/* Book Synopsis & Details */}
-      <div style={{ transform: "translateZ(25px)" }} className="mt-4 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="flex items-center gap-1 text-[#E9C46A] mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-current" />
-            ))}
-            <span className="text-xs font-bold text-slate-600 ml-1.5">
-              5.0 (Early Reader Favorite)
-            </span>
-          </div>
+      {/* Book Metadata & Synopsis */}
+      <div className="mt-4">
+        <h3 className="font-heading font-black text-xl text-[#0D3829] leading-snug">
+          {title}
+        </h3>
+        <p className="text-xs font-bold text-[#2B6E4F] mt-0.5">
+          {subtitle}
+        </p>
 
-          <h4 className="font-heading font-black text-lg text-[#264653] mb-1">
-            {title}
-          </h4>
+        <p className="mt-3 text-xs text-slate-600 line-clamp-3 leading-relaxed">
+          {synopsis}
+        </p>
 
-          <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-            {synopsis}
-          </p>
-        </div>
-
-        <div className="mt-5 pt-4 border-t border-amber-200/60 flex items-center justify-between">
-          <span className="text-xs font-bold text-slate-500">
-            {pages} Full-Color Pages
-          </span>
-          <Link
-            href="/books"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold text-white bg-[#0D3829] hover:bg-[#164E3D] shadow-md transition"
-          >
-            <BookOpen className="w-3.5 h-3.5" />
-            View Book & Order
-          </Link>
+        <div className="mt-4 pt-3 border-t border-amber-200/60 flex items-center justify-between text-xs text-slate-500 font-bold">
+          <span>{pages} Illustrated Pages</span>
+          <span className="text-[#0D3829] font-black">ASIN: {asin}</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

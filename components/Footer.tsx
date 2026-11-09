@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Heart, ShieldCheck, Mail, Sparkles, Sprout, BookOpen, School, Film, ExternalLink } from "lucide-react";
+import { Heart, ShieldCheck, Mail, Sprout, BookOpen, School, Film, ExternalLink } from "lucide-react";
 
 export function Footer() {
   return (
@@ -66,7 +66,7 @@ export function Footer() {
           {/* Quick Platform Links */}
           <div>
             <h4 className="font-extrabold text-xs uppercase tracking-wider text-[#DDA15E] mb-4 flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-[#DDA15E]" />
+              <Sprout className="w-4 h-4 text-[#DDA15E]" />
               <span>Explore &amp; Support</span>
             </h4>
             <ul className="space-y-2.5 text-xs text-emerald-200/90">

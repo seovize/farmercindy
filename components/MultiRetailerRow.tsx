@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShoppingBag, ShoppingCart, BookOpen, ExternalLink, School, Sparkles, ShieldCheck, Star, ArrowUpRight, CheckCircle2, Sprout } from "lucide-react";
+import { ShoppingBag, ShoppingCart, BookOpen, ExternalLink, School, ShieldCheck, Star, ArrowUpRight, CheckCircle2, Sprout } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 import { useCart } from "@/context/CartContext";
 import { PRODUCTS } from "@/lib/products";
@@ -77,7 +77,7 @@ export function MultiRetailerRow({
         <button
           type="button"
           onClick={handleDirectOrder}
-          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#2A9D8F] via-[#1D6E64] to-[#264653] text-white p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border-b-4 border-[#84CC16]"
+          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#2A9D8F] via-[#1D6E64] to-[#264653] text-white p-4 sm:p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border border-emerald-400/30"
         >
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-xl bg-[#84CC16] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">
@@ -106,7 +106,7 @@ export function MultiRetailerRow({
         <button
           type="button"
           onClick={(e) => handleRetailerClick(e, "Amazon Prime", amazonUrl)}
-          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131921] via-[#1E293B] to-[#0F172A] text-white p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border-b-4 border-[#FF9900]"
+          className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#131921] via-[#1E293B] to-[#0F172A] text-white p-4 sm:p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-left border border-amber-400/30"
         >
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-xl bg-[#FF9900] text-slate-950 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Heart, CheckCircle2, ShieldCheck, Sparkles, Sprout, BookOpen, School, ArrowRight, Award } from "lucide-react";
+import { Heart, CheckCircle2, ShieldCheck, Sprout, BookOpen, School, ArrowRight, Award } from "lucide-react";
 import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 export function DonationTierSelector() {

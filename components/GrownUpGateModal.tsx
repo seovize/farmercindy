@@ -108,7 +108,7 @@ export function GrownUpGateModal({
             </div>
 
             {error && (
-              <p className="text-xs text-amber-800 font-bold mt-2 animate-bounce">
+              <p className="text-xs text-amber-800 font-bold mt-2">
                 That wasn't quite right. Please ask a grown-up for help!
               </p>
             )}
