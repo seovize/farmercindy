@@ -91,9 +91,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/#donate-section" className="hover:text-white transition">
-                  Make a Tax-Deductible Donation
-                </a>
+                <Link href="/donate" className="hover:text-white transition font-black text-[#DDA15E]">
+                  Make a 501(c)(3) Donation
+                </Link>
               </li>
             </ul>
           </div>

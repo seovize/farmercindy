@@ -2,7 +2,8 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Play, Pause, ShieldCheck, Film, Sparkles, RotateCcw, Volume2, VolumeX } from "lucide-react";
+import Link from "next/link";
+import { Play, Pause, ShieldCheck, Film, Sparkles, RotateCcw, Volume2, VolumeX, Heart, ArrowRight } from "lucide-react";
 
 interface VideoItem {
   id: string;
@@ -19,13 +20,13 @@ interface VideoItem {
 const defaultPlaylist: VideoItem[] = [
   {
     id: "cindy-cartoon-1",
-    title: "The Adventures of Farmer Cindy: Finding the Patch (Official Animation)",
-    episodeTag: "Official Cartoon #1",
+    title: "The Adventures of Farmer Cindy: Finding the Patch & Community Donations (Official Animation)",
+    episodeTag: "Official Cartoon #1 • Book 1 Finale",
     duration: "0:37",
     nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
     thumbnail: "/images/cartoon_thumb_1.jpg",
-    description: "Cindy's official animated cartoon! Join Farmer Cindy on her joyful journey to find the perfect patch of earth to plant her precious heirloom seeds.",
-    curriculumBadge: "Cindy's Original Animation",
+    description: "Cindy's official animated cartoon! Watch Farmer Cindy's journey to find fertile earth, culminating in the heartwarming finale where she receives community donations to build her dream farm!",
+    curriculumBadge: "Book 1 Finale: Community Giving",
   },
   {
     id: "cindy-cartoon-2",
@@ -184,6 +185,30 @@ export function KidSafeVideoPlayer() {
               <span>•</span>
               <span className="text-emerald-700 font-black">Official Cindy Animation</span>
             </div>
+          </div>
+
+          {/* Book 1 Finale Giving Connection Spotlight */}
+          <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#0D3829] text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-emerald-500/30 shadow-md">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#DDA15E] text-slate-950 flex items-center justify-center shrink-0">
+                <Heart className="w-5 h-5 fill-slate-950" />
+              </div>
+              <div className="text-left">
+                <span className="text-xs font-black uppercase tracking-wider text-[#DDA15E] block">
+                  Book 1 Finale Connection
+                </span>
+                <p className="text-xs text-emerald-100 font-medium mt-0.5">
+                  At the end of Book 1, Farmer Cindy receives community donations that bring her farm dream to life. Your 501(c)(3) tax-deductible gift empowers this exact dream for real school children!
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/donate"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow transition shrink-0"
+            >
+              <span>Sponsor Seeds &amp; Books</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
 

@@ -81,13 +81,13 @@ export function CinematicHero() {
 
         {/* Dual Primary Call-to-Action Row */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-          <a
-            href="#donate-section"
+          <Link
+            href="/donate"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-[#1C3127] bg-[#DDA15E] hover:bg-[#c58b43] shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
           >
             <Heart className="w-4 h-4 fill-[#0D3829] text-[#0D3829]" />
-            <span>Support Our 501(c)(3) Mission</span>
-          </a>
+            <span>Make a 501(c)(3) Donation</span>
+          </Link>
 
           <Link
             href="/books"

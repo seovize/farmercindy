@@ -111,13 +111,13 @@ export function FounderSpotlight() {
                 <BookOpen className="w-4 h-4 text-[#DDA15E]" />
               </Link>
 
-              <a
-                href="#donate-section"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#FAF7F2] hover:bg-emerald-50 border-2 border-[#2B6E4F] text-[#0D3829] font-black text-sm transition"
+              <Link
+                href="/donate"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#DDA15E] hover:bg-[#c58b43] text-slate-950 font-black text-sm transition shadow-md"
               >
-                <Heart className="w-4 h-4 text-[#2B6E4F]" />
-                <span>Support Her 501(c)(3) Mission</span>
-              </a>
+                <Heart className="w-4 h-4 fill-slate-950 text-slate-950" />
+                <span>Make a Tax-Deductible Donation</span>
+              </Link>
             </div>
           </div>
         </div>
