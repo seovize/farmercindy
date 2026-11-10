@@ -52,9 +52,9 @@ export function Navigation() {
               <div className="font-heading font-black text-xl md:text-2xl leading-none text-[#0D3829] tracking-tight group-hover:text-[#2B6E4F] transition-colors">
                 Farmer Cindy
               </div>
-              <div className="text-[10px] font-black uppercase tracking-wider text-[#2B6E4F] flex items-center gap-1.5 mt-0.5">
-                <span>FarmerCindy, Inc.</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DDA15E]" />
+              <div className="text-[10px] font-black uppercase tracking-wider text-[#2B6E4F] flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+                <span className="hidden sm:inline">FarmerCindy, Inc.</span>
+                <span className="hidden sm:inline w-1.5 h-1.5 rounded-full bg-[#DDA15E]" />
                 <span className="text-[#3B2314] font-extrabold">501(c)(3) Non-Profit</span>
               </div>
             </div>
