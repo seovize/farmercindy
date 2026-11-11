@@ -13,8 +13,6 @@ export function Navigation() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/books", label: "The Books" },
-    { href: "/theater", label: "Video Theater" },
     { href: "/mission", label: "Our Mission" },
     { href: "/books", label: "The Books" },
     { href: "/theater", label: "Watch" },
