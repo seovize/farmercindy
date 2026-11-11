@@ -3,92 +3,98 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Heart, BookOpen, Sprout, ArrowRight, Film, CheckCircle2 } from "lucide-react";
+import { Heart, BookOpen, Sprout, ArrowRight, Play, Sun } from "lucide-react";
 
 export function CinematicHero() {
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#08241A] text-white">
+    <section className="relative min-h-[75vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden bg-[#EAF4FA] text-[#173D57]">
       {/* =========================================================================
-          1. AUTHENTIC DOCUMENTARY PHOTOGRAPHY BACKGROUND (Farmland.org Standard)
+          1. NATURAL AGRICULTURAL & SKY BACKGROUND (Lighter, Open Atmosphere)
          ========================================================================= */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/generated/regenerative_farm_sunrise.jpg"
-          alt="African American community farmers joyfully harvesting organic strawberries and kale at sunrise"
+          alt="Lush heirloom farm with morning sky, vibrant tomatoes, strawberries, and sunbeams"
           fill
           priority
           sizes="100vw"
           quality={90}
-          className="object-cover object-center filter brightness-90"
+          className="object-cover object-center filter brightness-95 opacity-85"
         />
 
-        {/* High-Contrast Editorial Vignette (WCAG AAA Compliance) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08241A] via-[#0D3829]/80 to-[#08241A]/85 backdrop-blur-[0.5px]" />
+        {/* Lighter Sky Blue & Cream Gradient Wash (Replaces Heavy Dark Green Overlay) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4FA]/90 via-[#FAF7F2]/85 to-[#FAF7F2] backdrop-blur-[0.5px]" />
       </div>
 
       {/* =========================================================================
-          2. MAIN EDITORIAL HERO CONTENT
+          2. MAIN NATURE-LED EDITORIAL HERO CONTENT
          ========================================================================= */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
-        {/* Authoritative 501(c)(3) Federal Status Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/85 border border-emerald-500/40 text-emerald-200 text-xs sm:text-sm font-black uppercase tracking-wider backdrop-blur-md shadow-lg mb-6">
-          <ShieldCheck className="w-4 h-4 text-emerald-400" />
-          <span>FarmerCindy, Inc. • Registered 501(c)(3) Non-Profit Public Charity</span>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center flex flex-col items-center">
+        {/* Subtle Nature Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#173D57]/15 text-[#173D57] text-xs sm:text-sm font-bold uppercase tracking-wider shadow-sm mb-6 backdrop-blur-sm">
+          <Sprout className="w-4 h-4 text-[#2B6E4F]" />
+          <span>Heirloom Farming &amp; Community Nutrition</span>
         </div>
 
-        {/* Master Headline (Literary & Environmental Authority) */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-[1.1] max-w-4xl drop-shadow-md">
-          Cultivating Healthy Minds &amp; Nourishing Generations Through{" "}
-          <span className="text-[#DDA15E]">Living Soil</span>
+        {/* Master Headline (Short, Direct, Nature-Led) */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-[#173D57] tracking-tight leading-[1.1] max-w-3xl">
+          Growing food. <br />
+          <span className="text-[#2B6E4F]">Sharing abundance.</span>
         </h1>
 
-        {/* Mission Subtitle */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-emerald-100/90 font-medium leading-relaxed max-w-2xl drop-shadow">
-          Meet <strong>Farmer Cindy</strong>—author, urban agriculturist, and non-profit founder. We inspire youth across America to embrace heirloom gardening, natural nutrition, and environmental stewardship through children's picture books and Title I classroom garden kits.
+        {/* Supporting Narrative */}
+        <p className="mt-5 text-base sm:text-lg md:text-xl text-[#173D57]/85 font-medium leading-relaxed max-w-2xl">
+          Explore FarmerCindy's heirloom farming mission and the wholesome stories that help support a community where food is shared for free.
         </p>
 
-        {/* Triple Call-to-Action Row (High CRO) */}
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        {/* Dual Primary Actions + Direct Watch Link */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
           <Link
             href="/donate"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider border border-amber-400"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider border border-amber-400"
           >
             <Heart className="w-4 h-4 fill-slate-950 text-slate-950" />
-            <span>Make a 501(c)(3) Donation</span>
+            <span>Support the Farm</span>
           </Link>
 
           <Link
             href="/books"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-white bg-emerald-900/80 hover:bg-emerald-850 border-2 border-emerald-400/50 backdrop-blur-md shadow-lg hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold text-[#173D57] bg-white hover:bg-slate-50 border-2 border-[#173D57]/20 shadow-sm hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
           >
-            <BookOpen className="w-4 h-4 text-[#DDA15E]" />
-            <span>Order Books on Amazon</span>
-          </Link>
-
-          <Link
-            href="/theater"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold text-emerald-200 bg-black/40 hover:bg-black/60 border border-emerald-500/30 backdrop-blur-md transition text-xs sm:text-sm uppercase tracking-wider"
-          >
-            <Film className="w-4 h-4 text-[#DDA15E]" />
-            <span>Watch Cartoon Theater</span>
+            <BookOpen className="w-4 h-4 text-[#2B6E4F]" />
+            <span>Explore the Books</span>
           </Link>
         </div>
 
-        {/* Institutional Trust Bar (American Farmland Trust / Kiss The Ground Standard) */}
-        <div className="mt-14 pt-8 border-t border-emerald-500/20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm font-bold text-emerald-200">
+        {/* Direct Link to the Animated Story Film */}
+        <div className="mt-6">
+          <Link
+            href="#story-film"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#173D57] hover:text-[#2B6E4F] transition-colors py-1 px-3 rounded-full hover:bg-white/60"
+          >
+            <span className="w-6 h-6 rounded-full bg-[#173D57] text-[#DDA15E] flex items-center justify-center shadow-xs">
+              <Play className="w-3 h-3 fill-[#DDA15E] translate-x-0.5" />
+            </span>
+            <span>Watch the Book 1 Cartoon &amp; Giving Story</span>
+            <ArrowRight className="w-3.5 h-3.5 text-[#2B6E4F]" />
+          </Link>
+        </div>
+
+        {/* Grounded Agricultural Pillars */}
+        <div className="mt-12 pt-6 border-t border-[#173D57]/15 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs sm:text-sm font-semibold text-[#173D57]/80">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#DDA15E]" />
-            <span>Official 501(c)(3) Non-Profit Public Charity</span>
+            <Sprout className="w-4 h-4 text-[#2B6E4F]" />
+            <span>Organic Heirloom Seeds</span>
           </div>
-          <span className="hidden sm:inline text-emerald-600">•</span>
+          <span className="hidden sm:inline text-[#173D57]/30">•</span>
           <div className="flex items-center gap-2">
-            <Sprout className="w-4 h-4 text-[#DDA15E]" />
-            <span>Organic Heirloom Seeds for Title I Classrooms</span>
+            <Sun className="w-4 h-4 text-[#DDA15E]" />
+            <span>Community-Grown Fresh Produce</span>
           </div>
-          <span className="hidden sm:inline text-emerald-600">•</span>
+          <span className="hidden sm:inline text-[#173D57]/30">•</span>
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-[#DDA15E]" />
-            <span>100% of Royalties Dedicated to Youth Farming</span>
+            <BookOpen className="w-4 h-4 text-[#2B6E4F]" />
+            <span>Book Sales Support Free Food</span>
           </div>
         </div>
       </div>

@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, ExternalLink } from "lucide-react";
+import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, ExternalLink, ArrowRight } from "lucide-react";
+import { GivingModal } from "@/components/GivingModal";
 
 interface DonationTier {
   amount: number;
@@ -53,13 +54,14 @@ export function DonationImpactModule() {
   const [isMonthly, setIsMonthly] = useState<boolean>(false);
   const [customAmount, setCustomAmount] = useState<string>("");
   const [isCustom, setIsCustom] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const currentTier = tiers.find((t) => t.amount === selectedAmount) || {
     amount: parseInt(customAmount, 10) || selectedAmount,
     label: `$${customAmount || selectedAmount}`,
     badge: "Custom Generosity",
-    impactTitle: "Heirloom Farm & Literacy Support",
-    impactDesc: "Your generous gift directly empowers youth agricultural literacy and expands our 501(c)(3) free food growing programs across the nation.",
+    impactTitle: "Heirloom Farm & Community Food Support",
+    impactDesc: "Your generous contribution directly funds heirloom seeds, living soil, and organic garden beds to help feed families and neighbors in need.",
     icon: Heart,
   };
 
@@ -230,13 +232,14 @@ export function DonationImpactModule() {
 
             {/* Primary Action Button */}
             <div className="mt-7">
-              <a
-                href="mailto:giving@farmercindy.org?subject=FarmerCindy%20501(c)(3)%20Donation&body=I%20would%20like%20to%20support%20FarmerCindy%20Inc%20with%20a%20gift."
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[#DDA15E] hover:bg-[#c58b43] text-[#0D3829] font-black text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all"
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[#DDA15E] hover:bg-[#c58b43] text-slate-950 font-black text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all active:scale-95 cursor-pointer"
               >
-                <Heart className="w-4 h-4 fill-[#0D3829] text-[#0D3829]" />
+                <Heart className="w-4 h-4 fill-slate-950 text-slate-950" />
                 <span>Complete ${isCustom ? customAmount || "0" : selectedAmount} Contribution</span>
-              </a>
+              </button>
               <span className="block text-center text-[10px] text-emerald-300/80 mt-2">
                 Secure 256-Bit SSL Encryption • Instant IRS Deduction Receipt
               </span>
@@ -244,6 +247,15 @@ export function DonationImpactModule() {
           </div>
         </div>
       </div>
+
+      {/* Interactive In-App Giving Modal */}
+      <GivingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        initialAmount={isCustom ? parseInt(customAmount, 10) || 50 : selectedAmount}
+        initialMonthly={isMonthly}
+        impactTitle={currentTier.impactTitle}
+      />
     </section>
   );
 }

@@ -47,10 +47,8 @@ export function TiltBookCard({
         </span>
       </div>
 
-      {/* Book Cover Container with Flat Tactile Depth */}
-      <div
-        className="relative my-2 aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between border-2 border-white/80 bg-slate-900"
-      >
+      {/* Book Cover Container: Clean, Untouched, Zero Obscuring Overlays */}
+      <div className="relative my-2 aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200 bg-slate-900">
         {coverImage ? (
           <div className="relative w-full h-full">
             <Image
@@ -58,80 +56,70 @@ export function TiltBookCard({
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, 400px"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-102 transition-transform duration-500"
               priority={asin === "B0HL5F734J"}
             />
-            {/* Book Spine Highlight Overlay */}
-            <div className="absolute left-0 top-0 bottom-0 w-5 bg-gradient-to-r from-black/50 via-white/20 to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-
-            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-              <span className="text-[11px] font-black text-white bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20">
-                Official Edition
-              </span>
-              <span className="text-[10px] font-black bg-[#DDA15E] text-[#0D3829] px-2.5 py-1 rounded-full shadow">
-                {badgeText}
-              </span>
-            </div>
+            {/* Subtle Realistic Book Spine Highlight */}
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-black/30 via-white/10 to-transparent pointer-events-none" />
           </div>
         ) : (
           <div className={`relative w-full h-full p-6 text-white bg-gradient-to-br ${gradient} flex flex-col justify-between`}>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/25 via-transparent to-black/30 pointer-events-none" />
-            <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-black/40 via-white/20 to-transparent pointer-events-none" />
-
             <div className="relative z-10">
-              <div className="inline-block px-3 py-1 rounded-lg bg-black/30 backdrop-blur-sm text-[10px] font-black uppercase tracking-widest text-amber-200 border border-white/20">
+              <div className="inline-block px-3 py-1 rounded-lg bg-black/30 text-[10px] font-black uppercase tracking-widest text-amber-200">
                 The Adventures of Farmer Cindy
               </div>
-              <h3 className="mt-3 text-2xl sm:text-3xl font-black leading-tight drop-shadow-md">
+              <h3 className="mt-3 text-2xl font-black leading-tight">
                 {title}
               </h3>
-              <p className="mt-1 text-xs text-amber-100 font-bold opacity-90 drop-shadow">
-                {subtitle}
-              </p>
-            </div>
-
-            <div className="relative z-10 my-auto text-center py-4">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 shadow-xl group-hover:scale-110 transition-transform duration-300 p-4">
-                {asin === "B0HL5F734J" ? (
-                  <Sprout className="w-10 h-10 text-emerald-200" />
-                ) : (
-                  <Sun className="w-10 h-10 text-amber-200" />
-                )}
-              </div>
-            </div>
-
-            <div className="relative z-10 flex items-end justify-between border-t border-white/20 pt-3">
-              <div>
-                <div className="text-[10px] uppercase tracking-wider text-amber-200 font-bold">Author</div>
-                <div className="font-extrabold text-sm text-white">Farmer Cindy</div>
-              </div>
-              <div className="text-right">
-                <span className="text-[10px] font-black bg-[#DDA15E] text-[#0D3829] px-2.5 py-1 rounded-full shadow">
-                  {badgeText}
-                </span>
-              </div>
             </div>
           </div>
         )}
       </div>
 
       {/* Book Metadata & Synopsis */}
-      <div className="mt-4">
-        <h3 className="font-heading font-black text-xl text-[#0D3829] leading-snug">
-          {title}
-        </h3>
-        <p className="text-xs font-bold text-[#2B6E4F] mt-0.5">
-          {subtitle}
-        </p>
+      <div className="mt-4 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <h3 className="font-heading font-black text-xl text-[#173D57] leading-snug">
+              {title}
+            </h3>
+            <span className="text-[10px] font-black bg-[#EAF4FA] text-[#173D57] border border-sky-200 px-2.5 py-0.5 rounded-full shrink-0">
+              {badgeText}
+            </span>
+          </div>
 
-        <p className="mt-3 text-xs text-slate-600 line-clamp-3 leading-relaxed">
-          {synopsis}
-        </p>
+          <p className="text-xs font-bold text-[#2B6E4F]">
+            {subtitle}
+          </p>
 
-        <div className="mt-4 pt-3 border-t border-amber-200/60 flex items-center justify-between text-xs text-slate-500 font-bold">
-          <span>{pages} Illustrated Pages</span>
-          <span className="text-[#0D3829] font-black">ASIN: {asin}</span>
+          <p className="mt-3 text-xs text-slate-600 leading-relaxed font-medium">
+            {synopsis}
+          </p>
+        </div>
+
+        {/* Dedicated Retailer Links for this specific book */}
+        <div className="mt-5 pt-4 border-t border-stone-200/80 space-y-2.5">
+          <div className="flex items-center justify-between text-xs text-slate-500 font-bold mb-1">
+            <span>{pages} Illustrated Pages</span>
+            <span className="text-[#173D57] font-black">ASIN: {asin}</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href={`https://www.amazon.com/dp/${asin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2 px-3 rounded-xl bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 text-xs font-black text-center transition flex items-center justify-center gap-1 shadow-2xs"
+            >
+              <span>Amazon Prime</span>
+            </a>
+            <Link
+              href={`/books#${asin}`}
+              className="py-2 px-3 rounded-xl bg-[#173D57] hover:bg-[#112d40] text-white text-xs font-bold text-center transition flex items-center justify-center gap-1 shadow-2xs"
+            >
+              <span>View Edition</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
