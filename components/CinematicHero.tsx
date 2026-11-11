@@ -13,17 +13,17 @@ export function CinematicHero() {
          ========================================================================= */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/generated/regenerative_farm_sunrise.jpg"
-          alt="Lush heirloom farm with morning sky, vibrant tomatoes, strawberries, and sunbeams"
+          src="/images/generated/open_sky_heirloom_farm.jpg"
+          alt="Lush heirloom farm with morning open blue sky, raised cedar beds of strawberries and greens, and blooming sunflowers"
           fill
           priority
           sizes="100vw"
-          quality={90}
-          className="object-cover object-center filter brightness-95 opacity-85"
+          quality={95}
+          className="object-cover object-center filter brightness-95 opacity-90"
         />
 
-        {/* Lighter Sky Blue & Cream Gradient Wash (Replaces Heavy Dark Green Overlay) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4FA]/90 via-[#FAF7F2]/85 to-[#FAF7F2] backdrop-blur-[0.5px]" />
+        {/* Lighter Sky Blue & Cream Gradient Wash (Allows Open Blue Sky to Shine Through) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4FA]/80 via-[#FAF7F2]/75 to-[#FAF7F2] backdrop-blur-[0.3px]" />
       </div>
 
       {/* =========================================================================

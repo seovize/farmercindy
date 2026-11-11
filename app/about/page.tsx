@@ -81,19 +81,19 @@ export default function AboutPage() {
       tag: "Founder & Author",
     },
     {
-      src: "/images/farmer_cindy_harvest.jpg",
-      caption: "Fresh Heirloom Greens Harvest",
+      src: "/images/generated/heirloom_harvest_basket.jpg",
+      caption: "Fresh Heirloom Produce Harvest",
       tag: "Living Produce",
     },
     {
-      src: "/images/client_media/1000190732.jpg",
-      caption: "Summer Sunflowers & Soil",
-      tag: "Community Garden",
+      src: "/images/generated/community_harvest_solidarity.jpg",
+      caption: "Sharing Free Food with Families",
+      tag: "Community Solidarity",
     },
     {
-      src: "/images/client_media/1000185179.jpg",
-      caption: "Orchard & Heritage Crops",
-      tag: "Heirloom Varieties",
+      src: "/images/generated/heirloom_seedlings_living_soil.jpg",
+      caption: "Heirloom Seedlings & Living Soil",
+      tag: "Heritage Stewardship",
     },
   ];
 

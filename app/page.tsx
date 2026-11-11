@@ -90,6 +90,53 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* High-Impact Visual Produce & Harvest Solidarity Showcase */}
+          <div className="mt-14 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="group relative aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border-2 border-stone-200 bg-slate-900">
+              <Image
+                src="/images/generated/heirloom_harvest_basket.jpg"
+                alt="Wooden basket overflowing with fresh heirloom tomatoes, strawberries, and swiss chard"
+                fill
+                sizes="(max-width: 768px) 100vw, 550px"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="text-[10px] font-black uppercase tracking-wider text-[#DDA15E] block">
+                  Living Produce
+                </span>
+                <div className="text-sm sm:text-base font-black font-heading mt-0.5">
+                  Heirloom Harvest Grown in Living Soil
+                </div>
+                <p className="text-xs text-stone-200 line-clamp-1 mt-0.5">
+                  Vibrant Cherokee purple tomatoes, sweet sungolds, and sun-warmed strawberries.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border-2 border-stone-200 bg-slate-900">
+              <Image
+                src="/images/generated/community_harvest_solidarity.jpg"
+                alt="Community volunteers sharing fresh organic produce with families for free"
+                fill
+                sizes="(max-width: 768px) 100vw, 550px"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="text-[10px] font-black uppercase tracking-wider text-[#DDA15E] block">
+                  Free Community Harvest
+                </span>
+                <div className="text-sm sm:text-base font-black font-heading mt-0.5">
+                  Feeding Neighbors &amp; Families for Free
+                </div>
+                <p className="text-xs text-stone-200 line-clamp-1 mt-0.5">
+                  Growing food as a community and sharing abundance with open hands.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
