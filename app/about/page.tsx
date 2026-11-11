@@ -3,16 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { User, School, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Sprout } from "lucide-react";
+import { User, Sprout, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Users, Sparkles } from "lucide-react";
 
 export default function AboutPage() {
   const [formData, setFormData] = useState({
     name: "",
     organization: "",
     email: "",
-    gradeLevel: "Pre-K to 1st",
-    visitType: "Virtual Zoom Reading",
-    preferredDate: "",
+    inquiryType: "Community Farm Partnership",
+    region: "",
     message: "",
     honeypot: "",
   });
@@ -24,8 +23,8 @@ export default function AboutPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.organization) {
-      setErrorMsg("Please fill in your name, organization, and email.");
+    if (!formData.name || !formData.email) {
+      setErrorMsg("Please fill in your name and email.");
       return;
     }
 
@@ -36,14 +35,18 @@ export default function AboutPage() {
       const res = await fetch("/api/school-visit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          visitType: formData.inquiryType,
+          preferredDate: formData.region,
+        }),
       });
 
       const data = await res.json();
       if (res.ok && data.success) {
         setSuccess(true);
       } else {
-        setErrorMsg(data.error || "Could not submit inquiry. Please try again.");
+        setErrorMsg(data.error || "Could not submit message. Please try again.");
       }
     } catch (err: any) {
       setErrorMsg("Network error. Please try again later.");
@@ -54,20 +57,43 @@ export default function AboutPage() {
 
   const faqs = [
     {
-      q: "What inspired the character of Farmer Cindy?",
-      a: "Cindy realized that many modern children living in apartments or suburbs have rarely seen a living food plant grow. She created Farmer Cindy to prove that you do not need a 100-acre rural farm to grow fresh food—you can start on a sunny windowsill, an apartment balcony, or a classroom ledge!",
+      q: "What is the core mission of FarmerCindy, Inc.?",
+      a: "FarmerCindy, Inc. is a registered 501(c)(3) non-profit organization dedicated to heirloom farming, living soil stewardship, and cultivating fresh, nutrient-dense organic produce to share with neighbors and families in need for free.",
     },
     {
-      q: "What age group are the books and school assemblies designed for?",
-      a: "The Adventures of Farmer Cindy picture book series is tailored for children ages 3 to 9 (Pre-K through 3rd grade). The stories incorporate simple STEM botanical concepts, plant life cycles, pollinator biodiversity, and themes of community kindness.",
+      q: "How do the picture books and merchandise fund the farm?",
+      a: "Cindy created 'The Adventures of Farmer Cindy' series to educate the next generation about nature and self-reliance. One hundred percent of book royalties and merchandise sales flow directly into purchasing non-GMO heirloom seeds, rich organic compost, drip irrigation, and expanding community farm plots.",
     },
     {
-      q: "How do Virtual Zoom Readings work for elementary schools?",
-      a: "Virtual visits run 40 to 45 minutes and include an animated screen-share read-aloud with Cindy, a live demonstration of heirloom seed anatomy, and a moderated Q&A session where students ask their own farm questions. All registered classrooms receive free printable activity booklets in advance.",
+      q: "Why does Farmer Cindy emphasize heirloom varieties and living soil?",
+      a: "Heirloom seeds are heritage open-pollinated varieties passed down through generations for outstanding flavor, resilience, and natural nutrition. When grown in living soil full of beneficial microorganisms rather than synthetic chemical fertilizers, the harvest feeds the body with true vitality.",
     },
     {
-      q: "Can school districts purchase books with tax-exempt purchase orders?",
-      a: "Yes! Both volumes are registered with IngramSpark Wholesale and major distributors, making them fully eligible for district purchase orders, Title I funding, and library acquisitions with standard tax exemption.",
+      q: "How can community members, families, and organizations get involved?",
+      a: "You can support our mission in three powerful ways: order Cindy's picture books on Amazon, make a tax-deductible 501(c)(3) gift through our Giving Portal, or reach out to partner on community planting days and seed exchanges.",
+    },
+  ];
+
+  const galleryPhotos = [
+    {
+      src: "/images/client_media/1000436572.jpg",
+      caption: "Farmer Cindy in the Field",
+      tag: "Founder & Author",
+    },
+    {
+      src: "/images/farmer_cindy_harvest.jpg",
+      caption: "Fresh Heirloom Greens Harvest",
+      tag: "Living Produce",
+    },
+    {
+      src: "/images/client_media/1000190732.jpg",
+      caption: "Summer Sunflowers & Soil",
+      tag: "Community Garden",
+    },
+    {
+      src: "/images/client_media/1000185179.jpg",
+      caption: "Orchard & Heritage Crops",
+      tag: "Heirloom Varieties",
     },
   ];
 
@@ -76,15 +102,15 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 mb-4 shadow-sm">
-            <User className="w-4 h-4 text-[#DDA15E]" />
-            <span>Author, Educator &amp; 501(c)(3) Founder</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 mb-4 shadow-sm">
+            <Sprout className="w-4 h-4 text-[#DDA15E]" />
+            <span>Heirloom Farmer, Author &amp; 501(c)(3) Founder</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
             Meet <span className="text-[#2B6E4F]">Farmer Cindy</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
-            Storyteller, agricultural educator, and non-profit advocate on a nationwide mission to help young minds discover the joy of heirloom farming and healthy nutrition.
+            Heirloom farmer, author, and community advocate on a heartfelt mission to grow living food from healthy soil and share the harvest with families for free.
           </p>
         </div>
 
@@ -105,17 +131,17 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-6 text-center">
-                <h3 className="text-2xl font-black font-heading text-[#0D3829]">Farmer Cindy</h3>
+                <h3 className="text-2xl font-black font-heading text-[#173D57]">Farmer Cindy</h3>
                 <span className="text-xs font-black uppercase tracking-wider text-[#2B6E4F] block mt-0.5">
-                  Author &amp; Founder • FarmerCindy, Inc.
+                  Heirloom Farmer &amp; Author • FarmerCindy, Inc.
                 </span>
                 <p className="mt-2 text-xs text-slate-600">
-                  Creator of <em>FarmerCindy Finds a Farm</em> and <em>What's Happening to Our Farming Community?</em>
+                  Author of <em>FarmerCindy Finds a Farm</em> and <em>What's Happening to Our Farming Community?</em>
                 </p>
 
-                <div className="mt-4 pt-3 border-t border-amber-200/80 flex items-center justify-center gap-2 text-xs font-bold text-[#0D3829]">
+                <div className="mt-4 pt-3 border-t border-amber-200/80 flex items-center justify-center gap-2 text-xs font-bold text-[#173D57]">
                   <Sprout className="w-3.5 h-3.5 text-[#2B6E4F]" />
-                  <span>100% of Royalties Fund Free Youth Seeds</span>
+                  <span>100% Book Royalties Support Free Community Food</span>
                 </div>
               </div>
             </div>
@@ -123,24 +149,24 @@ export default function AboutPage() {
 
           {/* Biography Content */}
           <div className="lg:col-span-7 space-y-4 text-base text-slate-700 leading-relaxed">
-            <span className="text-xs font-black uppercase tracking-wider text-[#0D3829] bg-emerald-100/80 px-3.5 py-1 rounded-full border border-emerald-300/60">
-              Author Journey
+            <span className="text-xs font-black uppercase tracking-wider text-[#173D57] bg-sky-100/80 px-3.5 py-1 rounded-full border border-sky-300/60">
+              The Living Mission
             </span>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-[#0D3829] leading-tight">
-              Inspiring the Next Generation to Grow Living Food
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-[#173D57] leading-tight">
+              Cultivating Real Food &amp; Community Solidarity
             </h2>
 
             <p>
-              Cindy believes that inside every child lives an innate scientist and curious gardener. Observing how many children today grow up without understanding where real food comes from, she began authoring <em>The Adventures of Farmer Cindy</em> to bridge storytime entertainment with practical agricultural literacy.
+              Cindy believes that wholesome, nutrient-dense food grown from living soil is a birthright, not a luxury. Having observed how disconnected our modern world has become from the earth, she set out to build an heirloom farming community where neighbors come together to plant heritage crops and share harvest abundance freely.
             </p>
 
-            <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-slate-800 font-heading text-lg sm:text-xl italic font-bold leading-relaxed">
-              "When a child plants a single seed, tends to it, and tastes the sweet harvest, their relationship with fresh food changes permanently."
+            <blockquote className="my-6 pl-6 border-l-4 border-[#DDA15E] text-[#173D57] font-heading text-lg sm:text-xl italic font-bold leading-relaxed bg-white/60 p-4 rounded-r-2xl">
+              "When you build a community around living soil and heirloom seeds, you don't just grow fresh food—you feed people for free and restore human connection to the land."
             </blockquote>
 
             <p>
-              Through her foundation, <strong>FarmerCindy, Inc. (501c3)</strong>, Cindy personally oversees the distribution of heirloom seed packets, raised school garden beds, and classroom reading sets to Title I schools across the country.
+              Through her 501(c)(3) non-profit, <strong>FarmerCindy, Inc.</strong>, Cindy channels book proceeds and public support directly into organic seeds, cedar raised garden beds, and community plots that feed families with dignity.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-3">
@@ -153,25 +179,67 @@ export default function AboutPage() {
               </Link>
 
               <Link
-                href="/mission"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#0D3829] hover:bg-[#165B3F] transition border border-emerald-500/30"
+                href="/donate"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#173D57] hover:bg-[#1A4563] transition border border-sky-300/30"
               >
-                <Sprout className="w-4 h-4 text-[#DDA15E]" />
-                <span>Learn About Our 501(c)(3)</span>
+                <Heart className="w-4 h-4 text-[#DDA15E]" />
+                <span>Support Our 501(c)(3) Farm</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Authentic Farm & Field Gallery */}
+        <section className="max-w-5xl mx-auto mb-20">
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 mb-2">
+              <Sun className="w-4 h-4 text-[#DDA15E]" />
+              <span>Real Earth &amp; Real Produce</span>
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+              Life in the Garden &amp; On the Land
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto">
+              Behind every book and every page is genuine devotion to heirloom crops, healthy soil, and community sharing.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {galleryPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="group relative rounded-3xl overflow-hidden border-2 border-stone-200/90 shadow-sm aspect-[4/5] bg-slate-900"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.caption}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-85" />
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[#DDA15E] block">
+                    {photo.tag}
+                  </span>
+                  <span className="text-xs font-bold leading-tight line-clamp-1">
+                    {photo.caption}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* Author Q&A Accordion */}
         <section className="max-w-4xl mx-auto mb-20">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 mb-2">
               <HelpCircle className="w-4 h-4 text-[#DDA15E]" />
               <span>Common Questions</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#0D3829]">
-              Frequently Asked by Parents &amp; Teachers
+            <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+              Frequently Asked About Farmer Cindy's Mission
             </h3>
           </div>
 
@@ -186,7 +254,7 @@ export default function AboutPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-black text-base text-[#0D3829] hover:text-[#2B6E4F] transition-colors"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-black text-base text-[#173D57] hover:text-[#2B6E4F] transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
@@ -207,32 +275,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* School Visits & Reading Assemblies Section */}
+        {/* Community Farm & Collaboration Inquiry Section */}
         <section className="rounded-4xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF7F2] to-[#F4EFE6] p-6 sm:p-10 lg:p-14 border-2 border-[#DDA15E]/40 shadow-tactile max-w-5xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] mb-3 shadow-sm border border-emerald-500/30">
-              <School className="w-4 h-4 text-[#DDA15E]" />
-              Classroom &amp; Library Assemblies
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] mb-3 shadow-sm border border-sky-300/30">
+              <Users className="w-4 h-4 text-[#DDA15E]" />
+              Community Partnerships &amp; Speaking
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#0D3829]">
-              Book an Author Reading with Farmer Cindy
+            <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#173D57]">
+              Connect with Farmer Cindy &amp; Our Farm
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-              Invite Farmer Cindy to your elementary school, public library, or homeschool co-op for an unforgettable agricultural storytime, heirloom seed show-and-tell, and interactive Q&amp;A!
+              Whether you are looking to partner on a community garden, volunteer for harvest days, invite Cindy for an inspirational reading or talk, or collaborate with our 501(c)(3) mission—we would love to hear from you.
             </p>
           </div>
 
           {/* Form */}
           {success ? (
             <div className="p-8 rounded-3xl bg-emerald-50 border-2 border-emerald-300 text-center animate-in zoom-in-95 duration-300 max-w-lg mx-auto">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-[#0D3829] mb-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-[#173D57] mb-4">
                 <CheckCircle2 className="w-10 h-10 text-[#2B6E4F]" />
               </div>
-              <h3 className="text-2xl font-black text-[#0D3829]">
-                School Reading Request Received!
+              <h3 className="text-2xl font-black text-[#173D57]">
+                Community Message Received!
               </h3>
               <p className="mt-2 text-sm text-emerald-800 leading-relaxed">
-                Thank you for inviting Farmer Cindy to your school or library! Our coordinator has received your information and will reply to <strong>{formData.email}</strong> within 24 to 48 hours to confirm availability and schedule your assembly.
+                Thank you for reaching out to Farmer Cindy! Our team has received your message and will reply to <strong>{formData.email}</strong> within 24 to 48 hours.
               </p>
             </div>
           ) : (
@@ -254,7 +322,7 @@ export default function AboutPage() {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Mrs. Sarah Johnson"
+                    placeholder="e.g. Sarah Johnson"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
@@ -263,12 +331,11 @@ export default function AboutPage() {
 
                 <div>
                   <label className="block text-xs font-black uppercase text-slate-700 mb-1">
-                    School or Organization *
+                    Organization / Community Group
                   </label>
                   <input
                     type="text"
-                    required
-                    placeholder="e.g. Oakridge Elementary School"
+                    placeholder="e.g. Green Valley Garden Club"
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
@@ -284,7 +351,7 @@ export default function AboutPage() {
                   <input
                     type="email"
                     required
-                    placeholder="teacher@school.edu"
+                    placeholder="yourname@domain.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
@@ -293,58 +360,42 @@ export default function AboutPage() {
 
                 <div>
                   <label className="block text-xs font-black uppercase text-slate-700 mb-1">
-                    Target Grade Level
+                    Inquiry Type
                   </label>
                   <select
-                    value={formData.gradeLevel}
-                    onChange={(e) => setFormData({ ...formData, gradeLevel: e.target.value })}
+                    value={formData.inquiryType}
+                    onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
                   >
-                    <option value="Pre-K to Kinder">Pre-K to Kindergarten</option>
-                    <option value="1st to 2nd Grade">1st to 2nd Grade</option>
-                    <option value="3rd to 4th Grade">3rd to 4th Grade</option>
-                    <option value="All Elementary">Entire Elementary School</option>
+                    <option value="Community Farm Partnership">Community Farm Partnership</option>
+                    <option value="Volunteer Harvest & Planting Day">Volunteer Harvest &amp; Planting Day</option>
+                    <option value="Heirloom Seed & Soil Workshop">Heirloom Seed &amp; Soil Workshop</option>
+                    <option value="Author Event & Community Talk">Author Event &amp; Community Talk</option>
+                    <option value="501(c)(3) Grant or Donor Collaboration">501(c)(3) Grant / Donor Collaboration</option>
                   </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-black uppercase text-slate-700 mb-1">
-                    Visit Format
-                  </label>
-                  <select
-                    value={formData.visitType}
-                    onChange={(e) => setFormData({ ...formData, visitType: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
-                  >
-                    <option value="Virtual Zoom Reading">Virtual Reading (Zoom / Meet • 45 Mins)</option>
-                    <option value="In-Person Assembly">In-Person Assembly (All-School)</option>
-                    <option value="Classroom Seed Workshop">Classroom Seed Workshop</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-black uppercase text-slate-700 mb-1">
-                    Preferred Time of Year / Month
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. Spring 2026 / Earth Day"
-                    value={formData.preferredDate}
-                    onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
-                  />
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-black uppercase text-slate-700 mb-1">
-                  Message or Special Requests (Optional)
+                  City, State or Region
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Atlanta, GA"
+                  value={formData.region}
+                  onChange={(e) => setFormData({ ...formData, region: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                  Message or How We Can Help (Optional)
                 </label>
                 <textarea
                   rows={3}
-                  placeholder="Tell us about your classroom, student count, or reading goals..."
+                  placeholder="Tell us about your community garden, ideas, or event..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
@@ -364,12 +415,12 @@ export default function AboutPage() {
                   {loading ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Submitting Request...</span>
+                      <span>Sending Message...</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      <span>Submit Author Reading Request</span>
+                      <span>Send Community Message</span>
                     </>
                   )}
                 </button>
@@ -377,7 +428,7 @@ export default function AboutPage() {
 
               <p className="text-xs text-slate-500 text-center flex items-center justify-center gap-1.5 pt-2">
                 <ShieldCheck className="w-4 h-4 text-[#2B6E4F] shrink-0" />
-                <span>Protected by COPPA guidelines. We only contact verified adult educators.</span>
+                <span>We respect your privacy. Zero spam, ever.</span>
               </p>
             </form>
           )}

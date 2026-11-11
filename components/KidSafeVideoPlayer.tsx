@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Pause, ShieldCheck, Film, RotateCcw, Volume2, VolumeX, Heart, ArrowRight } from "lucide-react";
@@ -20,22 +20,22 @@ interface VideoItem {
 const defaultPlaylist: VideoItem[] = [
   {
     id: "cindy-cartoon-1",
-    title: "The Adventures of Farmer Cindy: Finding the Patch & Community Donations (Official Animation)",
-    episodeTag: "Official Cartoon #1 • Book 1 Finale",
+    title: "Book 1: Finding the Farm & The Giving Climax (Narrated Edition)",
+    episodeTag: "Official Cartoon #1 • Narrated Edition",
     duration: "0:37",
     nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
     thumbnail: "/images/book1_cindy_check_presentation.jpg",
-    description: "Cindy's official animated cartoon! Watch Farmer Cindy's journey to find fertile earth, culminating in the heartwarming finale where the neighborhood presents her with donations and tools to build the farm.",
-    curriculumBadge: "Book 1 Climax: Community Giving",
+    description: "Cindy's official Book 1 cartoon! Watch Cindy find fertile earth, culminating in the heartwarming finale where the neighborhood rallies together to present donations, heirloom seeds, and tools to build the farm.",
+    curriculumBadge: "Book 1: Community Giving",
   },
   {
     id: "cindy-cartoon-2",
-    title: "Farmer Cindy & The Farming Community (Official Animation)",
-    episodeTag: "Official Cartoon #2",
+    title: "Book 2: What's Happening to Our Farming Community? (Voiced by Farmer Cindy)",
+    episodeTag: "Official Cartoon #2 • Cindy's Voice",
     duration: "0:32",
     nativeVideo: "/videos/farmer_cindy_cartoon_2.mp4",
     thumbnail: "/images/cartoon_thumb_2.jpg",
-    description: "Cindy's second animated cartoon short! Watch what happens when friends and neighbors join hands to help community gardens bloom.",
+    description: "Cindy's official Book 2 cartoon voiced by Farmer Cindy herself! A wholesome story showing what happens when neighbors and families join hands to protect green spaces and cultivate heirloom gardens.",
     curriculumBadge: "Book 2: Community Farming",
   },
 ];
@@ -45,6 +45,16 @@ export function KidSafeVideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // If visitor clicked "Watch" with ?play=1 or #video-theater, activate playback
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("play") === "1" || params.get("autoplay") === "1" || window.location.hash === "#watch") {
+        setIsPlaying(true);
+      }
+    }
+  }, []);
 
   const handleSelectVideo = (video: VideoItem) => {
     setActiveVideo(video);
@@ -168,17 +178,17 @@ export function KidSafeVideoPlayer() {
           </div>
 
           {/* Book 1 Finale Giving Connection Spotlight */}
-          <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#0D3829] text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-emerald-500/30 shadow-md">
+          <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#173D57] via-[#1A4563] to-[#0F2D42] text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-sky-300/30 shadow-md">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#DDA15E] text-slate-950 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#DDA15E] text-slate-950 flex items-center justify-center shrink-0 shadow">
                 <Heart className="w-5 h-5 fill-slate-950" />
               </div>
               <div className="text-left">
                 <span className="text-xs font-black uppercase tracking-wider text-[#DDA15E] block">
-                  Book 1 Finale Connection
+                  Book 1 Climax Connection
                 </span>
-                <p className="text-xs text-emerald-100 font-medium mt-0.5">
-                  At the end of Book 1, Farmer Cindy receives community donations that bring her farm dream to life. Your 501(c)(3) tax-deductible gift empowers this exact dream for real school children!
+                <p className="text-xs text-sky-100 font-medium mt-0.5">
+                  At the climax of Book 1, neighbors present Cindy with donations and seeds to build the farm. Your tax-deductible gift empowers this living mission: growing fresh food to feed families for free!
                 </p>
               </div>
             </div>
@@ -186,7 +196,7 @@ export function KidSafeVideoPlayer() {
               href="/donate"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow transition shrink-0"
             >
-              <span>Sponsor Seeds &amp; Books</span>
+              <span>Support the Farm</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

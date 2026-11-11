@@ -17,15 +17,15 @@ export default function BooksPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 shadow-sm mb-4">
             <BookOpen className="w-4 h-4 text-[#DDA15E]" />
             <span>Official Author Catalog • Volumes 1 &amp; 2</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
             Stories of <span className="text-[#3B2314]">Living Soil</span>, <span className="text-[#2B6E4F]">Heirloom Seeds</span> &amp; <span className="text-[#DDA15E]">Community</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
-            Richly illustrated, character-driven picture books created by Farmer Cindy to spark bedtime smiles, classroom circle times, and budding little windowsill gardeners (Ages 3–9).
+            Richly illustrated, character-driven picture books created by Farmer Cindy to spark family smiles and inspire little gardeners. 100% of author profits directly fund community heirloom farming and free food.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function BooksPage() {
               {/* Right Column: Narrative Storytelling & Conversion Logic */}
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                  <span className="bg-[#0D3829] text-[#DDA15E] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-500/30">
+                  <span className="bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-sky-300/30">
                     Series Debut
                   </span>
                   <span className="text-xs font-bold text-slate-500">
@@ -105,13 +105,13 @@ export default function BooksPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
                   The Adventures of FarmerCindy: <br />
                   <span className="text-[#2B6E4F]">FarmerCindy Finds a Farm</span>
                 </h2>
 
                 {/* Author Excerpt Pull-Quote (High-Craft Editorial Typography) */}
-                <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-relaxed">
+                <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#173D57] leading-relaxed">
                   "Desperate to find the perfect fertile soil to plant her rare heirloom seeds, Cindy traveled across the world visiting rolling valleys. In a heartwarming surprise, she discovered you don't need a hundred acres to grow an organic farm—you can build one right on your apartment windowsill!"
                 </blockquote>
 
@@ -163,11 +163,11 @@ export default function BooksPage() {
             EDITORIAL INTERMISSION / STORY PROGRESSION CALLOUT
            ========================================================================= */}
         <div className="my-16 md:my-20 text-center max-w-3xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0D3829] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-3 border border-emerald-500/30">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-3 border border-sky-300/30">
             <Sprout className="w-3.5 h-3.5 text-[#DDA15E]" />
             <span>The Journey Expands</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#0D3829]">
+          <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
             From Windowsill Sprouts to Protecting Our Shared Planet
           </h3>
           <p className="mt-2 text-sm sm:text-base text-slate-600">
@@ -191,7 +191,7 @@ export default function BooksPage() {
               {/* Desktop Left / Mobile Bottom: Narrative Content */}
               <div className="lg:col-span-7 order-2 lg:order-1">
                 <div className="flex flex-wrap items-center gap-2.5 mb-3">
-                  <span className="bg-[#0D3829] text-[#DDA15E] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-500/30">
+                  <span className="bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-sky-300/30">
                     Series Sequel • Volume 2
                   </span>
                   <span className="text-xs font-bold text-slate-500">
@@ -204,7 +204,7 @@ export default function BooksPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
                   The Adventures of FarmerCindy: <br />
                   <span className="text-[#2B6E4F]">What's Happening to Our Farming Community?</span>
                 </h2>

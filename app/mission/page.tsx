@@ -46,15 +46,15 @@ export default function MissionPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 mb-4 shadow-sm">
             <Heart className="w-4 h-4 fill-current text-[#DDA15E]" />
             <span>FarmerCindy, Inc. • 501(c)(3) Non-Profit</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
             Planting Seeds of <span className="text-[#2B6E4F]">Free Food</span> &amp; Living Nutrition
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
-            Every child deserves to experience the wonder of planting an heirloom seed, watching it sprout into food, and tasting real, farm-fresh nutrition grown by their own hands.
+            Our mission is cultivating an heirloom farming community dedicated to growing wholesome food from living soil and sharing fresh harvest abundance with families for free.
           </p>
         </div>
 
@@ -166,31 +166,31 @@ export default function MissionPage() {
           </div>
         </section>
 
-        {/* Direct Donation Invitation (American Farmland Trust / Kiss The Ground Standard) */}
-        <section className="my-20 p-8 sm:p-12 lg:p-16 rounded-4xl bg-[#08241A] text-white border-2 border-[#DDA15E]/40 shadow-2xl text-center max-w-4xl mx-auto">
-          <div className="w-16 h-16 rounded-3xl bg-[#0D3829] text-[#DDA15E] flex items-center justify-center mx-auto mb-6 border border-emerald-500/30">
-            <Heart className="w-8 h-8 fill-[#DDA15E]" />
+        {/* Direct Donation Invitation */}
+        <section className="my-20 p-8 sm:p-12 lg:p-16 rounded-4xl bg-gradient-to-br from-[#173D57] via-[#1A4563] to-[#0F2D42] text-white border-2 border-sky-300/30 shadow-2xl text-center max-w-4xl mx-auto">
+          <div className="w-16 h-16 rounded-3xl bg-[#DDA15E] text-slate-950 flex items-center justify-center mx-auto mb-6 shadow-md">
+            <Heart className="w-8 h-8 fill-slate-950" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white">
-            Support Our 501(c)(3) Agricultural Mission
+            Support Our Heirloom Farming Community
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-emerald-100 max-w-2xl mx-auto leading-relaxed">
-            Your tax-deductible gift directly funds free windowsill seed kits, raised school garden beds, and author reading assemblies for Title I elementary classrooms.
+          <p className="mt-4 text-base sm:text-lg text-sky-100 max-w-2xl mx-auto leading-relaxed">
+            Your tax-deductible 501(c)(3) gift directly finances organic heirloom seeds, rich living compost, drip irrigation, and community plots dedicated to growing food and sharing harvest abundance for free.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/donate"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-[#0D3829] bg-[#DDA15E] hover:bg-[#c58b43] transition shadow-lg text-sm uppercase tracking-wider"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c58b43] transition shadow-lg text-sm uppercase tracking-wider"
             >
               <span>Explore Giving Tiers &amp; Donate</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/books"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white bg-emerald-900/60 hover:bg-emerald-900 border border-emerald-400/40 transition text-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition text-sm"
             >
               <BookOpen className="w-4 h-4 text-[#DDA15E]" />
-              <span>Order Books (100% Profits Fund Mission)</span>
+              <span>Order Books (100% Profits Fund the Land)</span>
             </Link>
           </div>
         </section>

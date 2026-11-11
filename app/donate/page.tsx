@@ -51,25 +51,25 @@ export default function DonatePage() {
             1. SECTION HERO & EDITORIAL BADGE
            ========================================================================= */}
         <div className="text-center max-w-4xl mx-auto mb-14 md:mb-18">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/30 shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 shadow-sm mb-4">
             <Heart className="w-4 h-4 fill-[#DDA15E] text-[#DDA15E]" />
             <span>Official 501(c)(3) Public Charity Giving • IRS Recognized</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#0D3829] tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
             Where Community Support Builds Real Farms: <br />
             <span className="text-[#2B6E4F]">The Book 1 Giving Story in Real Life</span>
           </h1>
 
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
-            At the heartwarming climax of <em>The Adventures of FarmerCindy: FarmerCindy Finds a Farm</em> (Book 1), Cindy's dream blossomed because neighbors rallied together to donate seeds, tools, and farm funds. <strong>FarmerCindy, Inc. 501(c)(3)</strong> was founded to bring that exact storybook blessing to Title I elementary school children across America.
+            At the heartwarming climax of <em>The Adventures of FarmerCindy: FarmerCindy Finds a Farm</em> (Book 1), Cindy's dream blossomed because neighbors rallied together to donate seeds, tools, and farm funds. <strong>FarmerCindy, Inc. 501(c)(3)</strong> was founded to bring that exact storybook blessing to life: cultivating living soil, growing heirloom produce, and sharing food with families for free!
           </p>
 
           {/* Quick Metrics Banner */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {impactStats.map((stat) => (
               <div key={stat.label} className="p-3.5 rounded-2xl bg-white border border-[#3B2314]/15 shadow-sm text-center">
-                <div className="text-xl sm:text-2xl font-black font-heading text-[#0D3829]">{stat.value}</div>
+                <div className="text-xl sm:text-2xl font-black font-heading text-[#173D57]">{stat.value}</div>
                 <div className="text-[11px] font-black uppercase tracking-wider text-[#2B6E4F] mt-0.5">{stat.label}</div>
               </div>
             ))}
@@ -84,7 +84,7 @@ export default function DonatePage() {
             
             {/* Visual: Authentic Book 1 Video Climax Presentation Frame */}
             <div className="lg:col-span-7 space-y-4">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0D3829] bg-slate-900 group">
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#173D57]/30 bg-slate-900 group">
                 <Image
                   src="/images/book1_cindy_check_presentation.jpg"
                   alt="Farmer Cindy Receiving the Community Farm Fund Donation Check in Book 1 Official Cartoon Climax"
@@ -97,9 +97,9 @@ export default function DonatePage() {
                 
                 {/* Top Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] border border-emerald-500/40 shadow-md">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/40 shadow-md">
                     <Film className="w-3.5 h-3.5 text-[#DDA15E]" />
-                    <span>Official Cartoon #1 Climax Scene (Sec 25–37)</span>
+                    <span>Official Cartoon #1 Climax Scene (Sec 25 to 37)</span>
                   </span>
                 </div>
 
@@ -177,13 +177,13 @@ export default function DonatePage() {
                     />
                   </div>
                   <div>
-                    <div className="font-heading font-black text-sm text-[#0D3829]">Farmer Cindy</div>
+                    <div className="font-heading font-black text-sm text-[#173D57]">Farmer Cindy</div>
                     <div className="text-[11px] font-black uppercase tracking-wider text-[#2B6E4F]">Author &amp; 501(c)(3) Founder</div>
                   </div>
                 </div>
 
-                <blockquote className="text-xs sm:text-sm italic font-heading font-bold text-[#0D3829] leading-relaxed">
-                  "When I wrote the ending of Book 1 where the community gives Cindy donations to build the farm, that wasn't just fiction. It was my promise. Through our 501(c)(3) public charity, your donation directly puts heirloom seeds, living soil, and garden beds into Title I classrooms so every child learns where real food comes from."
+                <blockquote className="text-xs sm:text-sm italic font-heading font-bold text-[#173D57] leading-relaxed">
+                  "When I wrote the climax of Book 1 where the community gives Cindy donations to build the farm, that was my living promise. Through our 501(c)(3) foundation, your tax-deductible gift directly funds organic heirloom seeds, living soil, and community plots so we can grow wholesome food and share it with families in need for free."
                 </blockquote>
               </div>
 
