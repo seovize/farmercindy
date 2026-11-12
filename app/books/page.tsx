@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, Star, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRight, Library, Users, Award, ShieldCheck } from "lucide-react";
+import { BookOpen, Star, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRight, Library, Users, Award, ShieldCheck, Film } from "lucide-react";
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { BundleOrderBanner } from "@/components/BundleOrderBanner";
+import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 
 export const metadata = {
   title: "The Books | The Adventures of Farmer Cindy Picture Book Series",
@@ -156,6 +157,24 @@ export default function BooksPage() {
                 </div>
               </div>
             </div>
+
+            {/* Book 1 Dedicated Animated Story Film */}
+            <div className="mt-12 pt-10 border-t-2 border-stone-200">
+              <div className="text-center max-w-2xl mx-auto mb-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-2 border border-sky-300/30">
+                  <Film className="w-3.5 h-3.5 text-[#DDA15E]" />
+                  <span>Official Animated Short • Book 1 Narrated Edition</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+                  Watch Book 1: Farmer Cindy Finds a Farm
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+                  Watch Cindy's official animated short! See Cindy discover urban window farming, leading into the inspiring finale where the community gathers with donations to build the farm.
+                </p>
+              </div>
+
+              <KidSafeVideoPlayer initialVideoId="cindy-cartoon-1" standalone={true} />
+            </div>
           </div>
         </section>
 
@@ -303,6 +322,24 @@ export default function BooksPage() {
                   </span>
                 </div>
               </div>
+            </div>
+
+            {/* Book 2 Dedicated Animated Story Film */}
+            <div className="mt-12 pt-10 border-t-2 border-emerald-200">
+              <div className="text-center max-w-2xl mx-auto mb-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-2 border border-sky-300/30">
+                  <Film className="w-3.5 h-3.5 text-[#DDA15E]" />
+                  <span>Official Animated Short • Book 2 (Voiced by Farmer Cindy)</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+                  Watch Book 2: What's Happening to Our Farming Community?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+                  Narrated by Farmer Cindy herself! See how friendly honeybees, earthworms, and community teamwork show the vital importance of protecting local organic farming.
+                </p>
+              </div>
+
+              <KidSafeVideoPlayer initialVideoId="cindy-cartoon-2" standalone={true} />
             </div>
           </div>
         </section>

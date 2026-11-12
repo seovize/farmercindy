@@ -329,7 +329,7 @@ export default function DonatePage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <KidSafeVideoPlayer />
+            <KidSafeVideoPlayer initialVideoId="cindy-cartoon-1" standalone={true} />
           </div>
         </section>
 

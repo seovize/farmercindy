@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
+import { MobileFloatingActions } from "@/components/MobileFloatingActions";
 
 const poppins = Poppins({
   weight: ["600", "700", "800", "900"],
@@ -20,32 +21,32 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Farmer Cindy | Wholesome Children's Books & 501(c)(3) Farm Literacy",
+  title: "Farmer Cindy | Heirloom Farming Community & Stories of Living Soil",
   description:
-    "Inspiring children (Ages 3-9) to love heirloom farming, nature, and fresh nutrition. Official author platform of Farmer Cindy and FarmerCindy, Inc. 501(c)(3).",
+    "Building an heirloom farming community dedicated to growing wholesome organic food from living soil and sharing harvest abundance for free. Supported by Cindy's picture books and 501(c)(3) mission.",
   keywords: [
     "Farmer Cindy",
     "FarmerCindy Finds a Farm",
     "What's Happening to Our Farming Community",
+    "heirloom farming",
+    "living soil",
+    "free community food",
     "children's picture books",
-    "heirloom seeds",
-    "farm books for kids",
-    "agricultural literacy",
     "501c3 non-profit",
   ],
   authors: [{ name: "Farmer Cindy" }],
   openGraph: {
-    title: "Farmer Cindy | Farm-Fresh Adventures for Growing Imaginations",
+    title: "Farmer Cindy | Heirloom Farming Community & Living Soil",
     description:
-      "Join Farmer Cindy on sweet strawberry adventures and farm community mysteries! 100% of book proceeds support youth farming literacy and free food.",
+      "Join Farmer Cindy's heirloom farming mission: growing real food from living soil and sharing abundance for free. Supported by Book 1 & Book 2.",
     url: "https://farmercindy.vercel.app",
     siteName: "Farmer Cindy Flagship",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+        url: "https://farmercindy.vercel.app/images/generated/open_sky_heirloom_farm.jpg",
         width: 1200,
         height: 630,
-        alt: "Farmer Cindy Children's Books and Farm Adventures",
+        alt: "Farmer Cindy Community Farm with Sunflowers and Heirloom Crops",
       },
     ],
     locale: "en_US",
@@ -130,6 +131,7 @@ export default function RootLayout({
           <Navigation />
           <main className="flex-1">{children}</main>
           <Footer />
+          <MobileFloatingActions />
         </CartProvider>
       </body>
     </html>
