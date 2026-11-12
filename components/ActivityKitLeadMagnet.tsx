@@ -55,52 +55,52 @@ export function ActivityKitLeadMagnet() {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF7F2] to-[#F4EFE6] p-8 md:p-12 border-2 border-[#DDA15E]/40 shadow-tactile my-14">
+    <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-[#0B1524] via-[#0F243E] to-[#08101A] p-8 md:p-12 border-2 border-sky-400/30 shadow-2xl my-14 text-white">
       {/* Decorative Farm Elements */}
-      <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-emerald-100/30 blur-2xl pointer-events-none" />
-      <div className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-amber-100/40 blur-2xl pointer-events-none" />
+      <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-emerald-500/15 blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-sky-500/15 blur-2xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Visual Mockup of the Activity Booklet */}
           <div className="lg:col-span-5 text-center">
-            <div className="relative mx-auto max-w-sm aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+            <div className="relative mx-auto max-w-sm aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-400/30 group bg-black">
               <Image
                 src="/images/activity_kit_preview.jpg"
-                alt="Farmer Cindy's Strawberry Sprout & Seed Journal Activity Kit"
+                alt="FarmerCindy's Strawberry Sprout & Seed Journal Activity Kit"
                 fill
                 sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
-                <span className="text-[11px] font-black bg-[#DDA15E] text-slate-950 px-3 py-1 rounded-full shadow">
+                <span className="text-[11px] font-black bg-[#FACC15] text-black px-3 py-1 rounded-full shadow">
                   Free 12-Page Printable PDF
                 </span>
                 <span className="text-xs font-bold drop-shadow">Ages 3–9</span>
               </div>
             </div>
 
-            <p className="mt-3 text-xs font-bold text-slate-600">
+            <p className="mt-3 text-xs font-bold text-slate-300">
               Includes coloring sheets, heirloom seed identification &amp; growth calendar
             </p>
           </div>
 
           {/* Right Column: Copy & Email Form */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0D3829] text-[#DDA15E] mb-3 shadow-sm border border-emerald-500/30">
-              <Sprout className="w-4 h-4 text-[#DDA15E]" />
-              Free Classroom &amp; Home Activity Kit
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#1E5AA8] text-[#FACC15] mb-3 shadow-sm border border-sky-400/30">
+              <Sprout className="w-4 h-4 text-emerald-400" />
+              Free Family &amp; Community Activity Kit
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-heading font-black text-[#0D3829] tracking-tight leading-tight">
-              Download Farmer Cindy's <br />
-              <span className="text-[#2B6E4F]">Strawberry Sprout &amp; Seed Journal!</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-black text-white tracking-tight leading-tight">
+              Download FarmerCindy's <br />
+              <span className="text-emerald-400">Strawberry Sprout &amp; Seed Journal!</span>
             </h2>
 
-            <p className="mt-3 text-sm md:text-base text-slate-600 leading-relaxed">
-              Packed with fun coloring sheets, heirloom vegetable identification puzzles, windowsill seed-planting guides, and recipe cards for families &amp; classrooms!
+            <p className="mt-3 text-sm md:text-base text-slate-300 leading-relaxed">
+              Packed with colorful activity sheets, heirloom vegetable identification puzzles, windowsill seed-planting guides, and recipe cards for families!
             </p>
 
             {success ? (
@@ -214,8 +214,8 @@ export function ActivityKitLeadMagnet() {
                   <p className="mt-2 text-xs font-bold text-amber-900 bg-amber-100 p-2 rounded-lg text-center lg:text-left">{errorMsg}</p>
                 )}
 
-                <p className="mt-3 text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#2B6E4F]" />
+                <p className="mt-3 text-xs text-slate-400 flex items-center justify-center lg:justify-start gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <span>100% Kid-Safe &amp; COPPA Compliant. Zero spam. Unsubscribe anytime.</span>
                 </p>
               </form>

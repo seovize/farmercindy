@@ -21,11 +21,11 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Farmer Cindy | Heirloom Farming Community & Stories of Living Soil",
+  title: "FarmerCindy 🍒🍓 | Heirloom Farming Community & Stories of Living Soil",
   description:
-    "Building an heirloom farming community dedicated to growing wholesome organic food from living soil and sharing harvest abundance for free. Supported by Cindy's picture books and 501(c)(3) mission.",
+    "Building an heirloom farming community dedicated to growing wholesome organic food from living soil and sharing harvest abundance for free. Supported by FarmerCindy's picture books and 501(c)(3) mission.",
   keywords: [
-    "Farmer Cindy",
+    "FarmerCindy",
     "FarmerCindy Finds a Farm",
     "What's Happening to Our Farming Community",
     "heirloom farming",
@@ -34,19 +34,19 @@ export const metadata: Metadata = {
     "children's picture books",
     "501c3 non-profit",
   ],
-  authors: [{ name: "Farmer Cindy" }],
+  authors: [{ name: "FarmerCindy" }],
   openGraph: {
-    title: "Farmer Cindy | Heirloom Farming Community & Living Soil",
+    title: "FarmerCindy 🍒🍓 | Heirloom Farming Community & Living Soil",
     description:
-      "Join Farmer Cindy's heirloom farming mission: growing real food from living soil and sharing abundance for free. Supported by Book 1 & Book 2.",
+      "Join FarmerCindy's heirloom farming mission: growing vibrant real food from living soil and sharing abundance for free. Supported by Book 1 & Book 2.",
     url: "https://farmercindy.vercel.app",
-    siteName: "Farmer Cindy Flagship",
+    siteName: "FarmerCindy Flagship",
     images: [
       {
-        url: "https://farmercindy.vercel.app/images/generated/open_sky_heirloom_farm.jpg",
+        url: "https://farmercindy.vercel.app/images/generated/vibrant_produce_black_hero.jpg",
         width: 1200,
         height: 630,
-        alt: "Farmer Cindy Community Farm with Sunflowers and Heirloom Crops",
+        alt: "FarmerCindy Vibrant Heirloom Produce and Living Foliage on Black Backdrop",
       },
     ],
     locale: "en_US",
@@ -126,7 +126,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#264653]">
+      <body className="min-h-screen flex flex-col bg-[#06080A] text-slate-100">
         <CartProvider>
           <Navigation />
           <main className="flex-1">{children}</main>

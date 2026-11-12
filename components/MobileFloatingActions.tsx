@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { BookOpen, Heart, ArrowRight } from "lucide-react";
+import { BookOpen, Heart } from "lucide-react";
 
 export function MobileFloatingActions() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,20 +24,20 @@ export function MobileFloatingActions() {
 
   return (
     <div className="fixed bottom-4 inset-x-3 z-40 md:hidden animate-in slide-in-from-bottom-5 duration-300">
-      <div className="p-2 rounded-2xl bg-[#FAF7F2]/95 backdrop-blur-md border-2 border-[#173D57]/20 shadow-2xl flex items-center justify-between gap-2 max-w-sm mx-auto">
+      <div className="p-2 rounded-2xl bg-[#0B1017]/95 backdrop-blur-md border border-sky-400/30 shadow-2xl flex items-center justify-between gap-2 max-w-sm mx-auto">
         <Link
           href="/books"
-          className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-white hover:bg-slate-50 text-[#173D57] font-extrabold text-xs uppercase tracking-wider border border-stone-200 shadow-xs"
+          className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#1E5AA8] hover:bg-[#2563EB] text-white font-extrabold text-xs uppercase tracking-wider border border-sky-400/30 shadow-xs"
         >
-          <BookOpen className="w-3.5 h-3.5 text-[#2B6E4F]" />
+          <BookOpen className="w-3.5 h-3.5 text-[#FACC15]" />
           <span>The Books</span>
         </Link>
 
         <Link
           href="/donate"
-          className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#DDA15E] hover:bg-[#c58b43] text-slate-950 font-black text-xs uppercase tracking-wider shadow-sm border border-amber-400"
+          className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#E11D48] hover:bg-[#F43F5E] text-white font-black text-xs uppercase tracking-wider shadow-sm border border-rose-400/40"
         >
-          <Heart className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
+          <Heart className="w-3.5 h-3.5 fill-white text-white" />
           <span>Support Farm</span>
         </Link>
       </div>

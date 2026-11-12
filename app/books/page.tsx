@@ -7,38 +7,36 @@ import { BundleOrderBanner } from "@/components/BundleOrderBanner";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 
 export const metadata = {
-  title: "The Books | The Adventures of Farmer Cindy Picture Book Series",
+  title: "The Books | The Adventures of FarmerCindy Picture Book Series",
   description:
-    "Explore Book 1: FarmerCindy Finds a Farm and Book 2: What's Happening to Our Farming Community. Wholesome children's picture books on Amazon Prime, Barnes & Noble, and IngramSpark.",
+    "Explore Book 1: FarmerCindy Finds a Farm and Book 2: What's Happening to Our Farming Community. Colorful picture books by FarmerCindy on Amazon Prime, Barnes & Noble, and IngramSpark.",
 };
 
 export default function BooksPage() {
   return (
-    <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#FAF7F2]">
+    <div className="relative overflow-hidden paper-canvas py-12 md:py-20 bg-[#06080A] text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#173D57] text-[#DDA15E] border border-sky-300/30 shadow-sm mb-4">
-            <BookOpen className="w-4 h-4 text-[#DDA15E]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0F3D6E] text-[#FACC15] border border-sky-400/30 shadow-sm mb-4">
+            <BookOpen className="w-4 h-4 text-[#FACC15]" />
             <span>Official Author Catalog • Volumes 1 &amp; 2</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
-            Stories of <span className="text-[#3B2314]">Living Soil</span>, <span className="text-[#2B6E4F]">Heirloom Seeds</span> &amp; <span className="text-[#DDA15E]">Community</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-white tracking-tight leading-[1.15]">
+            Stories of <span className="text-emerald-400">Living Soil</span>, <span className="text-[#FACC15]">Heirloom Seeds</span> &amp; <span className="text-rose-400">Community</span>
           </h1>
-          <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
-            Richly illustrated, character-driven picture books created by Farmer Cindy to spark family smiles and inspire little gardeners. 100% of author profits directly fund community heirloom farming and free food.
+          <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+            Richly illustrated, colorful picture books created by FarmerCindy 🍒🍓 to spark family smiles and inspire growers. 100% of author profits directly fund community heirloom farming and free food.
           </p>
         </div>
 
         {/* =========================================================================
             BOOK 1 EDITORIAL SPREAD: FARMERCINDY FINDS A FARM
-            Theme: Warm Sunlight, Heirloom Seeds & Urban Apartment Gardening
            ========================================================================= */}
         <section className="relative mb-24 md:mb-32">
-          {/* Subtle Organic Background Glow */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-amber-100/40 via-emerald-50/30 to-amber-50/40 rounded-4xl -z-10 blur-xl opacity-70" />
+          <div className="absolute -inset-4 bg-gradient-to-r from-sky-500/10 via-emerald-500/10 to-rose-500/10 rounded-4xl -z-10 blur-xl opacity-80" />
 
-          <div className="bg-white/95 backdrop-blur-sm rounded-4xl p-6 sm:p-10 lg:p-14 border-2 border-[#DDA15E]/30 shadow-tactile">
+          <div className="bg-[#0D131C] rounded-4xl p-6 sm:p-10 lg:p-14 border border-sky-400/30 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               {/* Left Column: 3D Hardcover Physical Book Showcase */}
               <div className="lg:col-span-5 text-center">
@@ -106,38 +104,38 @@ export default function BooksPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white tracking-tight leading-[1.15]">
                   The Adventures of FarmerCindy: <br />
-                  <span className="text-[#2B6E4F]">FarmerCindy Finds a Farm</span>
+                  <span className="text-emerald-400">FarmerCindy Finds a Farm</span>
                 </h2>
 
-                {/* Author Excerpt Pull-Quote (High-Craft Editorial Typography) */}
-                <blockquote className="my-6 pl-6 border-l-2 border-[#DDA15E] text-base sm:text-lg italic font-heading font-bold text-[#173D57] leading-relaxed">
+                {/* Author Excerpt Pull-Quote */}
+                <blockquote className="my-6 pl-6 border-l-4 border-[#FACC15] text-base sm:text-lg italic font-heading font-bold text-sky-200 leading-relaxed">
                   "Desperate to find the perfect fertile soil to plant her rare heirloom seeds, Cindy traveled across the world visiting rolling valleys. In a heartwarming surprise, she discovered you don't need a hundred acres to grow an organic farm—you can build one right on your apartment windowsill!"
                 </blockquote>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                   A joyous, empowering story that demystifies where fresh food comes from. Children discover that with a sunny window ledge, recycled containers, and living seeds, anyone can become a farmer.
                 </p>
 
                 {/* Literary Themes & Botanical Curriculum */}
                 <div className="mt-6 space-y-2.5">
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Sun className="w-4 h-4 text-[#DDA15E] shrink-0" />
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Sun className="w-4 h-4 text-[#FACC15] shrink-0" />
                     <span><strong>Urban Apartment Gardening:</strong> Proving fresh produce sprouts anywhere with sunlight and care.</span>
                   </div>
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Sprout className="w-4 h-4 text-[#2B6E4F] shrink-0" />
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Sprout className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span><strong>Heirloom Seed Anatomy:</strong> STEM plant science explaining roots, cotyledons, and natural biology.</span>
                   </div>
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Heart className="w-4 h-4 text-[#3B2314] shrink-0" />
-                    <span><strong>501(c)(3) Mission Impact:</strong> 100% of author proceeds directly fund free youth garden kits in Title I schools.</span>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Heart className="w-4 h-4 text-rose-400 shrink-0" />
+                    <span><strong>501(c)(3) Mission Impact:</strong> 100% of author proceeds directly fund heirloom seeds and free community food.</span>
                   </div>
                 </div>
 
                 {/* Publisher Specifications Bar */}
-                <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-medium">
+                <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 font-medium">
                   <span><strong>Trim:</strong> 8.5 × 11 in</span>
                   <span>•</span>
                   <span><strong>Pages:</strong> 76 Pages</span>
@@ -159,17 +157,17 @@ export default function BooksPage() {
             </div>
 
             {/* Book 1 Dedicated Animated Story Film */}
-            <div className="mt-12 pt-10 border-t-2 border-stone-200">
+            <div className="mt-12 pt-10 border-t border-white/15">
               <div className="text-center max-w-2xl mx-auto mb-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-2 border border-sky-300/30">
-                  <Film className="w-3.5 h-3.5 text-[#DDA15E]" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3D6E] text-[#FACC15] text-xs font-black uppercase tracking-wider mb-2 border border-sky-400/30">
+                  <Film className="w-3.5 h-3.5 text-[#FACC15]" />
                   <span>Official Animated Short • Book 1 Narrated Edition</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
-                  Watch Book 1: Farmer Cindy Finds a Farm
+                <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
+                  Watch Book 1: FarmerCindy Finds a Farm
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
-                  Watch Cindy's official animated short! See Cindy discover urban window farming, leading into the inspiring finale where the community gathers with donations to build the farm.
+                <p className="text-xs sm:text-sm text-slate-300 mt-1.5">
+                  Watch FarmerCindy's official animated short! See Cindy discover urban window farming, leading into the inspiring finale where the community gathers with donations to build the farm.
                 </p>
               </div>
 
@@ -182,14 +180,14 @@ export default function BooksPage() {
             EDITORIAL INTERMISSION / STORY PROGRESSION CALLOUT
            ========================================================================= */}
         <div className="my-16 md:my-20 text-center max-w-3xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-3 border border-sky-300/30">
-            <Sprout className="w-3.5 h-3.5 text-[#DDA15E]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0F3D6E] text-[#FACC15] text-xs font-black uppercase tracking-wider mb-3 border border-sky-400/30">
+            <Sprout className="w-3.5 h-3.5 text-emerald-400" />
             <span>The Journey Expands</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+          <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
             From Windowsill Sprouts to Protecting Our Shared Planet
           </h3>
-          <p className="mt-2 text-sm sm:text-base text-slate-600">
+          <p className="mt-2 text-sm sm:text-base text-slate-300">
             Once Cindy proved that food could grow anywhere, she faced a bigger question: what happens when open farm fields begin to disappear?
           </p>
         </div>
@@ -199,13 +197,11 @@ export default function BooksPage() {
 
         {/* =========================================================================
             BOOK 2 EDITORIAL SPREAD: WHAT'S HAPPENING TO OUR FARMING COMMUNITY?
-            Theme: Living Soil, Pollinator Guardians & Community Preservation
            ========================================================================= */}
         <section className="relative mb-24 md:mb-32">
-          {/* Subtle Organic Meadow Glow */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-emerald-100/40 via-amber-50/30 to-emerald-50/40 rounded-4xl -z-10 blur-xl opacity-70" />
+          <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-emerald-500/10 rounded-4xl -z-10 blur-xl opacity-80" />
 
-          <div className="bg-white/95 backdrop-blur-sm rounded-4xl p-6 sm:p-10 lg:p-14 border-2 border-emerald-300/60 shadow-tactile">
+          <div className="bg-[#0D131C] rounded-4xl p-6 sm:p-10 lg:p-14 border border-emerald-400/30 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               {/* Desktop Left / Mobile Bottom: Narrative Content */}
               <div className="lg:col-span-7 order-2 lg:order-1">
@@ -223,38 +219,38 @@ export default function BooksPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#173D57] tracking-tight leading-[1.15]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white tracking-tight leading-[1.15]">
                   The Adventures of FarmerCindy: <br />
-                  <span className="text-[#2B6E4F]">What's Happening to Our Farming Community?</span>
+                  <span className="text-emerald-400">What's Happening to Our Farming Community?</span>
                 </h2>
 
-                {/* Author Excerpt Pull-Quote (High-Craft Editorial Typography) */}
-                <blockquote className="my-6 pl-6 border-l-2 border-[#2B6E4F] text-base sm:text-lg italic font-heading font-bold text-[#0D3829] leading-relaxed">
+                {/* Author Excerpt Pull-Quote */}
+                <blockquote className="my-6 pl-6 border-l-4 border-emerald-400 text-base sm:text-lg italic font-heading font-bold text-sky-200 leading-relaxed">
                   "When concrete begins replacing open green spaces, Cindy rallies friendly honeybees, hardworking earthworms, and local families to show why family farms are the living heartbeat of our food supply."
                 </blockquote>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                   An eye-opening, hope-filled sequel addressing modern agricultural changes in a gentle, age-appropriate way. It teaches children civic awareness, teamwork, and the vital role pollinators play in everyday fruit and vegetables.
                 </p>
 
                 {/* Literary Themes & Botanical Curriculum */}
                 <div className="mt-6 space-y-2.5">
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Bug className="w-4 h-4 text-[#2B6E4F] shrink-0" />
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Bug className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span><strong>Pollinator Biodiversity:</strong> Teaching children why honeybees and butterflies are vital for 1-in-3 bites of food.</span>
                   </div>
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Sprout className="w-4 h-4 text-amber-800 shrink-0" />
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Sprout className="w-4 h-4 text-[#FACC15] shrink-0" />
                     <span><strong>Living Soil Ecology:</strong> How earthworms and natural compost nurture healthy root systems underground.</span>
                   </div>
-                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
-                    <Users className="w-4 h-4 text-[#0D3829] shrink-0" />
-                    <span><strong>Community Action:</strong> Rallying neighbors and schools to preserve green spaces and support local growers.</span>
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                    <Users className="w-4 h-4 text-sky-400 shrink-0" />
+                    <span><strong>Community Action:</strong> Rallying neighbors and families to preserve green spaces and support local growers.</span>
                   </div>
                 </div>
 
                 {/* Publisher Specifications Bar */}
-                <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-medium">
+                <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 font-medium">
                   <span><strong>Trim:</strong> 8.5 × 11 in</span>
                   <span>•</span>
                   <span><strong>Pages:</strong> 76 Pages</span>
@@ -325,17 +321,17 @@ export default function BooksPage() {
             </div>
 
             {/* Book 2 Dedicated Animated Story Film */}
-            <div className="mt-12 pt-10 border-t-2 border-emerald-200">
+            <div className="mt-12 pt-10 border-t border-white/15">
               <div className="text-center max-w-2xl mx-auto mb-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#173D57] text-[#DDA15E] text-xs font-black uppercase tracking-wider mb-2 border border-sky-300/30">
-                  <Film className="w-3.5 h-3.5 text-[#DDA15E]" />
-                  <span>Official Animated Short • Book 2 (Voiced by Farmer Cindy)</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3D6E] text-[#FACC15] text-xs font-black uppercase tracking-wider mb-2 border border-sky-400/30">
+                  <Film className="w-3.5 h-3.5 text-[#FACC15]" />
+                  <span>Official Animated Short • Book 2 (Voiced by FarmerCindy)</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#173D57]">
+                <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
                   Watch Book 2: What's Happening to Our Farming Community?
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
-                  Narrated by Farmer Cindy herself! See how friendly honeybees, earthworms, and community teamwork show the vital importance of protecting local organic farming.
+                <p className="text-xs sm:text-sm text-slate-300 mt-1.5">
+                  Narrated by FarmerCindy herself! See how friendly honeybees, earthworms, and community teamwork show the vital importance of protecting local organic farming.
                 </p>
               </div>
 
