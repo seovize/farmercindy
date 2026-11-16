@@ -31,7 +31,7 @@ export const cartoonVideos: VideoItem[] = [
     id: "cindy-cartoon-2",
     title: "Book 2: What's Happening to Our Farming Community? (Voiced by FarmerCindy)",
     episodeTag: "Official Cartoon #2 • FarmerCindy's Voice",
-    duration: "0:32",
+    duration: "0:37",
     nativeVideo: "/videos/farmer_cindy_cartoon_2.mp4",
     thumbnail: "/images/cartoon_thumb_2.jpg",
     description: "FarmerCindy's official Book 2 cartoon voiced by FarmerCindy herself! A wholesome story showing what happens when neighbors and families join hands to protect green spaces and cultivate heirloom gardens.",
