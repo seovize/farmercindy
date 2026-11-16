@@ -2,13 +2,11 @@
 
 import React, { useState } from "react";
 import { Heart, CheckCircle2, ShieldCheck, Sprout, BookOpen, School, ArrowRight, Award } from "lucide-react";
-import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 export function DonationTierSelector() {
   const [selectedTier, setSelectedTier] = useState("50");
   const [frequency, setFrequency] = useState<"one-time" | "monthly">("one-time");
   const [customAmount, setCustomAmount] = useState("");
-  const [gateOpen, setGateOpen] = useState(false);
 
   const tiers = [
     {
@@ -52,7 +50,9 @@ export function DonationTierSelector() {
 
   const handleDonateClick = (e: React.FormEvent) => {
     e.preventDefault();
-    setGateOpen(true);
+    if (typeof window !== "undefined") {
+      window.open("https://donorbox.org/farmercindy", "_blank", "noopener,noreferrer");
+    }
   };
 
   const finalAmount = selectedTier === "custom" ? customAmount || "25" : selectedTier;
@@ -183,13 +183,6 @@ export function DonationTierSelector() {
           </p>
         </div>
       </div>
-
-      <GrownUpGateModal
-        isOpen={gateOpen}
-        onClose={() => setGateOpen(false)}
-        targetUrl="https://donorbox.org/farmercindy"
-        retailerName="FarmerCindy 501(c)(3) Giving Portal"
-      />
     </>
   );
 }

@@ -9,6 +9,7 @@ import { ActivityKitLeadMagnet } from "@/components/ActivityKitLeadMagnet";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 import { InstagramSocialFeed } from "@/components/InstagramSocialFeed";
 import { DonationImpactModule } from "@/components/DonationImpactModule";
+import { RareSeedsSponsor } from "@/components/RareSeedsSponsor";
 
 export default function HomePage() {
   return (
@@ -187,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          3. CARTOON THEATER (Full-Width Center Stage, Auto-Playing on View)
+          3. CARTOON THEATER (Immediately After Produce, Auto-Playing on View)
          ========================================================================= */}
       <section id="video-theater" className="py-20 bg-[#090D14] border-t border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,10 +198,10 @@ export default function HomePage() {
               <span>Animated Story Theater</span>
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-black text-white">
-              Watch FarmerCindy's Animated Cartoons
+              Watch FarmerCindy&apos;s Animated Cartoons
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-300">
-              Watch FarmerCindy's official animated adventures and see how community teamwork turns seeds into flourishing gardens.
+              Watch FarmerCindy&apos;s official animated adventures and see how community teamwork turns seeds into flourishing gardens.
             </p>
           </div>
 
@@ -209,77 +210,9 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          4. APPROVED BOOK 1 CARTOON & THE GIVING STORY CLIMAX (BOOK BLUE)
+          4. OFFICIAL BOOKS CATALOG (Directly Beneath the Videos)
          ========================================================================= */}
-      <section id="story-film" className="py-20 bg-[#06080A] border-t border-white/10 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-4xl bg-gradient-to-br from-[#0B2545] via-[#0F3D6E] to-[#081A33] text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-sky-400/30">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Column: Ultra-HD Check Presentation Artwork */}
-              <div className="lg:col-span-5 relative">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-300/30 bg-black group">
-                  <Image
-                    src="/images/book1_cindy_check_presentation.jpg"
-                    alt="FarmerCindy Receiving Community Farm Fund Donations in Book 1 Finale Scene"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] font-black uppercase tracking-wider text-[#FACC15] block">
-                      Book 1 Climax Scene
-                    </span>
-                    <span className="text-xs font-bold text-slate-200">
-                      "Community Fund - Strong Farms Stronger Futures"
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column: Narrative of the Giving Scene */}
-              <div className="lg:col-span-7 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#FACC15] text-black shadow-sm">
-                  <Heart className="w-3.5 h-3.5 fill-black text-black" />
-                  <span>The Story That Inspires The Mission</span>
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-white leading-tight">
-                  In Book 1, A Community Gathered. <br />
-                  <span className="text-[#FACC15]">Together, We Are Building That Farm.</span>
-                </h3>
-
-                <p className="text-sm sm:text-base text-sky-100/95 leading-relaxed font-medium">
-                  At the heartwarming climax of <em>FarmerCindy Finds a Farm</em>, neighbors arrive with wheelbarrows, heirloom seeds, and a $15,000 Community Farm Fund check to help Cindy clear the pastures and build the farm. That story represents our living goal: neighbors uniting to build community farms that nurture soil, feed families, and share fresh food.
-                </p>
-
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <Link
-                    href="/donate"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-black text-white bg-[#E11D48] hover:bg-[#F43F5E] shadow-lg transition active:scale-95 uppercase tracking-wider text-xs border border-rose-400/40"
-                  >
-                    <Heart className="w-4 h-4 fill-white text-white" />
-                    <span>Support the Community Farm</span>
-                  </Link>
-                  <Link
-                    href="/books"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/25 transition text-xs"
-                  >
-                    <span>Explore Both Books &amp; Cartoons</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#FACC15]" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          5. OFFICIAL BOOKS CATALOG (Colorful Covers Popping Off Black Canvas)
-         ========================================================================= */}
-      <section id="books-catalog" className="py-20 bg-[#090D14] border-t border-white/10 scroll-mt-20">
+      <section id="books-catalog" className="py-20 bg-[#06080A] border-t border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-sky-300 bg-[#0F3D6E] border border-sky-400/30 mb-3">
@@ -343,6 +276,79 @@ export default function HomePage() {
               <span>Explore Book Details, Cartoons &amp; Library Sets</span>
               <ArrowRight className="w-4 h-4 text-[#FACC15]" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          5. OFFICIAL HEIRLOOM SEED SPONSOR (Baker Creek / RareSeeds.com)
+         ========================================================================= */}
+      <RareSeedsSponsor />
+
+      {/* =========================================================================
+          6. APPROVED BOOK 1 CARTOON & THE GIVING STORY CLIMAX (BOOK BLUE)
+         ========================================================================= */}
+      <section id="story-film" className="py-20 bg-[#090D14] border-t border-white/10 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-4xl bg-gradient-to-br from-[#0B2545] via-[#0F3D6E] to-[#081A33] text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-sky-400/30">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              {/* Left Column: Ultra-HD Check Presentation Artwork */}
+              <div className="lg:col-span-5 relative">
+                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-300/30 bg-black group">
+                  <Image
+                    src="/images/book1_cindy_check_presentation.jpg"
+                    alt="FarmerCindy Receiving Community Farm Fund Donations in Book 1 Finale Scene"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 500px"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#FACC15] block">
+                      Book 1 Climax Scene
+                    </span>
+                    <span className="text-xs font-bold text-slate-200">
+                      &quot;Community Fund - Strong Farms Stronger Futures&quot;
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Narrative of the Giving Scene */}
+              <div className="lg:col-span-7 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#FACC15] text-black shadow-sm">
+                  <Heart className="w-3.5 h-3.5 fill-black text-black" />
+                  <span>The Story That Inspires The Mission</span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-white leading-tight">
+                  In Book 1, A Community Gathered. <br />
+                  <span className="text-[#FACC15]">Together, We Are Building That Farm.</span>
+                </h3>
+
+                <p className="text-sm sm:text-base text-sky-100/95 leading-relaxed font-medium">
+                  At the heartwarming climax of <em>FarmerCindy Finds a Farm</em>, neighbors arrive with wheelbarrows, heirloom seeds, and a $15,000 Community Farm Fund check to help Cindy clear the pastures and build the farm. That story represents our living goal: neighbors uniting to build community farms that nurture soil, feed families, and share fresh food.
+                </p>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <Link
+                    href="/donate"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-black text-white bg-[#E11D48] hover:bg-[#F43F5E] shadow-lg transition active:scale-95 uppercase tracking-wider text-xs border border-rose-400/40"
+                  >
+                    <Heart className="w-4 h-4 fill-white text-white" />
+                    <span>Support the Community Farm</span>
+                  </Link>
+                  <Link
+                    href="/books"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/25 transition text-xs"
+                  >
+                    <span>Explore Both Books &amp; Cartoons</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#FACC15]" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

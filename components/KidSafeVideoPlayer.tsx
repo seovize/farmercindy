@@ -160,6 +160,8 @@ export function KidSafeVideoPlayer({
                 src={activeVideo.nativeVideo}
                 controls
                 autoPlay
+                muted={isMuted}
+                loop
                 playsInline
                 poster={activeVideo.thumbnail}
                 className="max-h-full max-w-full object-contain mx-auto"

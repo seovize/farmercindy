@@ -80,7 +80,7 @@ export default function BooksPage() {
                 {/* Hardcover Specification Metadata */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-slate-600">
                   <span className="bg-amber-100 text-amber-900 px-3 py-1 rounded-full">8.5" × 8.5" Premium Color</span>
-                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">ISBN: 979-8893082784</span>
+                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">Official FarmerCindy Edition</span>
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#2B6E4F]" />
                     Verified ASIN: B0HL5F734J
@@ -311,7 +311,7 @@ export default function BooksPage() {
                 {/* Hardcover Specification Metadata */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-slate-600">
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full">8.5" × 8.5" Premium Color</span>
-                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">Newman Springs Publishing</span>
+                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">FarmerCindy Books</span>
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#2B6E4F]" />
                     Verified ASIN: B0HL53WTS8

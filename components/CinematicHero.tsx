@@ -9,21 +9,30 @@ export function CinematicHero() {
   return (
     <section className="relative min-h-[82vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#06080A] text-white">
       {/* =========================================================================
-          1. DRAMATIC BLACK-BACKGROUND VIBRANT PRODUCE & FOLIAGE HERO
+          1. LIVE AUTO-PLAYING FARM VIDEO + VIBRANT PRODUCE HERO (RareSeeds Style)
          ========================================================================= */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/generated/vibrant_produce_black_hero.jpg"
-          alt="Vibrant heirloom strawberries, cherries, tomatoes, emerald greens, and sunflowers glowing against a dramatic black background"
+          alt="Vibrant heirloom strawberries, cherries, tomatoes, emerald greens, and sunflowers"
           fill
           priority
           sizes="100vw"
-          quality={95}
-          className="object-cover object-center opacity-95"
+          quality={90}
+          className="object-cover object-center opacity-80"
+        />
+        <video
+          src="/videos/cindy_farm_reel_1.mp4"
+          poster="/images/generated/vibrant_produce_black_hero.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
         />
 
-        {/* Subtle Dark Vignette for Crisp Typography Contrast (Preserves Full Produce Color Pop!) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#06080A]" />
+        {/* Subtle Dark Vignette for Crisp Typography Contrast (Preserves Full Video & Produce Color Pop) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-[#06080A]" />
         <div className="absolute inset-0 bg-radial from-transparent via-black/25 to-black/80" />
       </div>
 

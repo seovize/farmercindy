@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { ShoppingBag, ShoppingCart, BookOpen, ExternalLink, School, ShieldCheck, Star, ArrowUpRight, CheckCircle2, Sprout } from "lucide-react";
-import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 import { useCart } from "@/context/CartContext";
 import { PRODUCTS } from "@/lib/products";
 
@@ -23,8 +22,6 @@ export function MultiRetailerRow({
   ingramSparkUrl = "https://www.ingramcontent.com/retailers",
   price = "$14.99",
 }: MultiRetailerRowProps) {
-  const [gateOpen, setGateOpen] = useState(false);
-  const [selectedRetailer, setSelectedRetailer] = useState({ name: "", url: "" });
   const { addToCart } = useCart();
 
   const amazonUrl = `https://www.amazon.com/dp/${asin}`;
@@ -59,14 +56,11 @@ export function MultiRetailerRow({
     },
   ];
 
-  const handleRetailerClick = (e: React.MouseEvent, name: string, url: string) => {
+  const handleRetailerClick = (e: React.MouseEvent, _name: string, url: string) => {
     e.preventDefault();
-    if (typeof window !== "undefined" && sessionStorage.getItem("grownup_gate_verified") === "true") {
+    if (typeof window !== "undefined") {
       window.open(url, "_blank", "noopener,noreferrer");
-      return;
     }
-    setSelectedRetailer({ name, url });
-    setGateOpen(true);
   };
 
   return (
@@ -164,21 +158,13 @@ export function MultiRetailerRow({
       <div className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 text-center">
         <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-          Protected by COPPA Grown-Up Gate
+          Direct Official Retailer Links
         </span>
         <span className="text-slate-300">•</span>
         <span>100% of profits fund free youth farming kits</span>
         <span className="text-slate-300">•</span>
         <span className="text-slate-600 font-bold">ASIN: {asin}</span>
       </div>
-
-      {/* Grown-Up Gate Modal Component */}
-      <GrownUpGateModal
-        isOpen={gateOpen}
-        onClose={() => setGateOpen(false)}
-        targetUrl={selectedRetailer.url}
-        retailerName={selectedRetailer.name}
-      />
     </div>
   );
 }

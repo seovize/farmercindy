@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Instagram, Heart, MessageCircle, Play, ExternalLink, CheckCircle2 } from "lucide-react";
-import { GrownUpGateModal } from "@/components/GrownUpGateModal";
 
 interface InstagramPost {
   id: string;
@@ -96,12 +95,10 @@ const highlights = [
 ];
 
 export function InstagramSocialFeed() {
-  const [gateOpen, setGateOpen] = useState(false);
-  const [pendingUrl, setPendingUrl] = useState<string | null>(null);
-
   const handleOpenExternal = (url: string) => {
-    setPendingUrl(url);
-    setGateOpen(true);
+    if (typeof window !== "undefined") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
@@ -320,14 +317,6 @@ export function InstagramSocialFeed() {
           </div>
         </div>
       </div>
-
-      {/* COPPA Safe Grown-Up Gate Modal */}
-      <GrownUpGateModal
-        isOpen={gateOpen}
-        onClose={() => setGateOpen(false)}
-        targetUrl={pendingUrl || "https://www.instagram.com/iamfarmercindy_/"}
-        retailerName="Instagram"
-      />
     </section>
   );
 }
