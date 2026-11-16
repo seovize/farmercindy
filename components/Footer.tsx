@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ShieldCheck, Sprout, BookOpen } from "lucide-react";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export function Footer() {
   return (
@@ -14,10 +15,10 @@ export function Footer() {
                 <Sprout className="w-6 h-6 text-[#FACC15]" />
               </div>
               <div>
-                <span className="font-heading font-black text-2xl text-white block leading-none">
-                  FarmerCindy 🍒🍓
-                </span>
-                <span className="text-[10px] text-emerald-400 font-extrabold uppercase tracking-wider mt-1 block">
+                <div className="text-2xl leading-none">
+                  <FarmerCindyBrand iconSize="md" />
+                </div>
+                <span className="text-[10px] text-emerald-400 font-extrabold uppercase tracking-wider mt-1.5 block">
                   FarmerCindy, Inc.
                 </span>
               </div>
@@ -105,7 +106,7 @@ export function Footer() {
               <span>COPPA Child Safety</span>
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              This site strictly adheres to the Children's Online Privacy Protection Act (COPPA). We do not collect personal information from children under 13. All external retail links are protected by a Grown-Up Gate.
+              This site adheres to the Children&apos;s Online Privacy Protection Act (COPPA). We do not collect personal information from children under 13.
             </p>
             <div className="mt-4 p-3 rounded-xl bg-[#0B1524] border border-sky-400/20 text-[11px] text-slate-300">
               <div className="font-bold text-white">FarmerCindy, Inc.</div>

@@ -23,7 +23,7 @@ export const cartoonVideos: VideoItem[] = [
     episodeTag: "Official Cartoon #1 • Narrated Edition",
     duration: "0:49",
     nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
-    thumbnail: "/images/book1_cindy_check_presentation.jpg",
+    thumbnail: "/images/cartoon_thumb_1.jpg",
     description: "FarmerCindy's official Book 1 cartoon! Watch Cindy discover fertile earth, culminating in the heartwarming finale where the neighborhood rallies together to present donations, heirloom seeds, and tools to build the farm.",
     curriculumBadge: "Book 1 Climax: Community Giving",
   },

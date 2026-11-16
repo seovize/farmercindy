@@ -18,33 +18,33 @@ const tiers: DonationTier[] = [
   {
     amount: 25,
     label: "$25",
-    badge: "Windowsill Sprout",
-    impactTitle: "5 Community Strawberry Kits",
-    impactDesc: "Supplies 5 families or students with personal heirloom seed kits, organic soil discs, and planting guides.",
+    badge: "Seed Supporter",
+    impactTitle: "501(c)(3) Community Seed Support",
+    impactDesc: "Helps fund FarmerCindy, Inc.'s 501(c)(3) educational outreach and future heirloom community farming initiatives.",
     icon: Sprout,
   },
   {
     amount: 50,
     label: "$50",
-    badge: "Community Soil",
-    impactTitle: "Heirloom Seed & Soil Pack",
-    impactDesc: "Provides 12 heirloom seed varieties and 40 lbs of nutrient-rich living compost to a community farm plot.",
+    badge: "Friend of the Farm",
+    impactTitle: "Growing Community Literacy & Farming",
+    impactDesc: "Supports our non-profit mission to expand agricultural storytelling and build toward community growing spaces.",
     icon: Sprout,
   },
   {
     amount: 100,
     label: "$100",
     badge: "Most Popular",
-    impactTitle: "Community Library & Book Gift",
-    impactDesc: "Sponsors a community reading session and donates 10 hardcover FarmerCindy picture books to families and libraries.",
+    impactTitle: "Community Farm Vision Builder",
+    impactDesc: "Directly advances FarmerCindy, Inc.'s 501(c)(3) goal of establishing community farming programs and youth education.",
     icon: BookOpen,
   },
   {
     amount: 250,
     label: "$250",
-    badge: "Garden Champion",
-    impactTitle: "Full Raised Farm Bed",
-    impactDesc: "Funds the construction of a complete cedar raised garden bed, living compost, irrigation, and heirloom produce plants.",
+    badge: "Founding Patron",
+    impactTitle: "501(c)(3) Founding Farm Patron",
+    impactDesc: "Provides major foundational support to help bring FarmerCindy's community heirloom farm vision to life.",
     icon: School,
   },
 ];
@@ -90,7 +90,7 @@ export function DonationImpactModule() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-            100% of your tax-deductible contribution to FarmerCindy, Inc. funds heirloom seeds, living soil, and community farm plots that grow free food.
+            Your tax-deductible contribution to FarmerCindy, Inc. helps fund our 501(c)(3) mission to grow our community heirloom farming vision and educational outreach.
           </p>
 
           {/* Giving Frequency Toggle */}

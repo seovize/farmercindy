@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Instagram, Heart, MessageCircle, Play, ExternalLink, CheckCircle2 } from "lucide-react";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 interface InstagramPost {
   id: string;
@@ -133,8 +134,8 @@ export function InstagramSocialFeed() {
               {/* Handle & Credibility */}
               <div>
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-1.5">
-                  <h2 className="text-2xl sm:text-3xl font-heading font-black text-white">
-                    FarmerCindy 🍒🍓
+                  <h2 className="text-2xl sm:text-3xl text-white">
+                    <FarmerCindyBrand iconSize="lg" />
                   </h2>
                   <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full text-xs font-black uppercase tracking-wider bg-[#0F3D6E] text-sky-200 border border-sky-400/30">
                     <Instagram className="w-3.5 h-3.5 text-[#FACC15]" />
@@ -302,18 +303,28 @@ export function InstagramSocialFeed() {
 
         {/* Bottom Conversion Strip */}
         <div className="mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-5 rounded-2xl bg-[#0D131C] border border-sky-400/25 shadow-lg max-w-2xl mx-auto">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-5 rounded-2xl bg-[#0D131C] border border-sky-400/25 shadow-lg max-w-3xl mx-auto">
             <span className="text-sm font-extrabold text-white">
-              Tag us in your garden and community harvest photos!
+              Follow &amp; tag us on Instagram &amp; TikTok!
             </span>
-            <button
-              type="button"
-              onClick={() => handleOpenExternal("https://www.instagram.com/iamfarmercindy_/")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1E5AA8] hover:bg-[#2563EB] text-white text-xs font-black shadow transition shrink-0"
-            >
-              <Instagram className="w-3.5 h-3.5 text-[#FACC15]" />
-              <span>Tag @iamfarmercindy_</span>
-            </button>
+            <div className="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
+              <button
+                type="button"
+                onClick={() => handleOpenExternal("https://www.instagram.com/iamfarmercindy_/")}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1E5AA8] hover:bg-[#2563EB] text-white text-xs font-black shadow transition"
+              >
+                <Instagram className="w-3.5 h-3.5 text-[#FACC15]" />
+                <span>Instagram @iamfarmercindy_</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => handleOpenExternal("https://www.tiktok.com/@iamfarmercindy_")}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0F3D6E] hover:bg-[#1E5AA8] text-white text-xs font-black shadow border border-sky-400/30 transition"
+              >
+                <Play className="w-3.5 h-3.5 text-[#FACC15] fill-current" />
+                <span>TikTok @iamfarmercindy_</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

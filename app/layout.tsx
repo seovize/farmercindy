@@ -121,6 +121,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${nunito.variable}`}>
       <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -62,28 +62,28 @@ export function ActivityKitLeadMagnet() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Visual Mockup of the Activity Booklet */}
+          {/* Left Column: Visual Showcase of FarmerCindy's Book & Farm */}
           <div className="lg:col-span-5 text-center">
-            <div className="relative mx-auto max-w-sm aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-400/30 group bg-black">
+            <div className="relative mx-auto max-w-xs aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-400/30 group bg-black">
               <Image
-                src="/images/activity_kit_preview.jpg"
-                alt="FarmerCindy's Strawberry Sprout & Seed Journal Activity Kit"
+                src="/images/book1_publisher_front.jpg"
+                alt="FarmerCindy's Official Book & Printable Activity Kit"
                 fill
-                sizes="(max-width: 1024px) 100vw, 450px"
+                sizes="(max-width: 1024px) 100vw, 400px"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
                 <span className="text-[11px] font-black bg-[#FACC15] text-black px-3 py-1 rounded-full shadow">
-                  Free 12-Page Printable PDF
+                  Free Printable PDF
                 </span>
                 <span className="text-xs font-bold drop-shadow">Ages 3–9</span>
               </div>
             </div>
 
             <p className="mt-3 text-xs font-bold text-slate-300">
-              Includes coloring sheets, heirloom seed identification &amp; growth calendar
+              Free digital activity sheets &amp; seed-planting guide
             </p>
           </div>
 
@@ -214,8 +214,14 @@ export function ActivityKitLeadMagnet() {
                   <p className="mt-2 text-xs font-bold text-amber-900 bg-amber-100 p-2 rounded-lg text-center lg:text-left">{errorMsg}</p>
                 )}
 
+                <div className="mt-4 p-3.5 rounded-2xl bg-[#0F3D6E]/50 border border-sky-400/30 text-xs text-sky-100 leading-relaxed text-left">
+                  <strong className="text-[#FACC15]">Postage &amp; Mail Requests (SASE Required):</strong>{" "}
+                  Digital PDF downloads are 100% free. For any mailed physical kit or seed packet request, you must include a{" "}
+                  <strong className="text-white underline">Self-Addressed Stamped Envelope (SASE)</strong> to cover return postage.
+                </div>
+
                 <p className="mt-3 text-xs text-slate-400 flex items-center justify-center lg:justify-start gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>100% Kid-Safe &amp; COPPA Compliant. Zero spam. Unsubscribe anytime.</span>
                 </p>
               </form>

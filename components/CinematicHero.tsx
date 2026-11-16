@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, BookOpen, Sprout, ArrowRight, Play, Sun } from "lucide-react";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export function CinematicHero() {
   return (
@@ -40,23 +41,24 @@ export function CinematicHero() {
           2. MAIN DRAMATIC EDITORIAL HERO CONTENT
          ========================================================================= */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center flex flex-col items-center">
-        {/* Book-Blue & Produce Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0F3D6E]/90 border border-sky-400/40 text-sky-200 text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg mb-6 backdrop-blur-md">
-          <Sprout className="w-4 h-4 text-emerald-400" />
-          <span>FarmerCindy 🍒🍓 • Heirloom Farming &amp; Living Soil</span>
+        {/* Book-Blue & Community Farming Badge */}
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#0F3D6E]/90 border border-sky-400/40 text-sky-200 text-xs sm:text-sm font-black tracking-wide shadow-lg mb-6 backdrop-blur-md">
+          <Sprout className="w-4 h-4 text-emerald-400 shrink-0" />
+          <FarmerCindyBrand iconSize="sm" className="text-base sm:text-lg" />
+          <span className="uppercase tracking-wider">• Heirloom Farming Community</span>
         </div>
 
-        {/* Master Headline (Bold, Dramatic, Colorful) */}
+        {/* Master Headline (Community Farming & Books Funding 501(c)(3)) */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-[1.08] max-w-3xl drop-shadow-2xl">
-          Vibrant Produce. <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#FACC15] to-rose-400">
-            Community Abundance.
+          Heirloom Farming. <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#FACC15] to-sky-400">
+            Community &amp; Stories.
           </span>
         </h1>
 
-        {/* Supporting Narrative */}
+        {/* Supporting Narrative (Honest 501(c)(3) Positioning) */}
         <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl drop-shadow-md">
-          Explore FarmerCindy's heirloom farming community and the colorful stories that help grow fresh organic food and share the harvest for free.
+          Official home of FarmerCindy&apos;s picture books and animated stories—raising funding to build our 501(c)(3) heirloom farming community.
         </p>
 
         {/* Dual Primary Actions */}

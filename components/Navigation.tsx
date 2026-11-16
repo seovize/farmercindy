@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { BookOpen, Heart, Menu, X, Sprout } from "lucide-react";
 import { CartButton } from "@/components/CartButton";
 import { CartDrawer } from "@/components/CartDrawer";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,9 +49,8 @@ export function Navigation() {
               <Sprout className="w-6 h-6 text-[#FACC15]" />
             </div>
             <div>
-              <div className="font-heading font-black text-xl md:text-2xl leading-none text-white tracking-tight group-hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                <span>FarmerCindy</span>
-                <span className="text-base md:text-lg" aria-hidden="true">🍒🍓</span>
+              <div className="text-xl md:text-2xl leading-none text-white group-hover:text-sky-300 transition-colors">
+                <FarmerCindyBrand iconSize="md" />
               </div>
               <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5 mt-1 whitespace-nowrap">
                 <span>Heirloom Farming &amp; Community</span>
