@@ -112,7 +112,7 @@ export default function HomePage() {
             <div className="group relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black">
               <Image
                 src="/images/generated/community_harvest_solidarity.jpg"
-                alt="Community volunteers sharing fresh organic produce with families for free"
+                alt="Community neighbors working together toward our heirloom farming vision"
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -120,13 +120,13 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <span className="text-[10px] font-black uppercase tracking-wider text-sky-400 block">
-                  Free Community Harvest
+                  Future Community Goal
                 </span>
                 <div className="text-base sm:text-lg font-black font-heading mt-0.5">
-                  Feeding Neighbors &amp; Families for Free
+                  Building Our Heirloom Farming Community
                 </div>
                 <p className="text-xs text-slate-300 line-clamp-1 mt-0.5">
-                  Growing food as a community and sharing abundance with open hands.
+                  Books and 501(c)(3) contributions help fund our community farming mission.
                 </p>
               </div>
             </div>
@@ -157,14 +157,14 @@ export default function HomePage() {
                   <Sun className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading font-black text-white mb-2">
-                  Shared Community Harvest
+                  Our 501(c)(3) Farm Goal
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed font-medium">
-                  Our farm's purpose is simple: grow colorful, nutrient-dense organic produce and share the harvest with families, children, and elderly neighbors for free.
+                  Our long-term mission is building an heirloom community farm to cultivate fresh organic produce and share future harvests with neighbors in need.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-white/10 text-xs font-bold text-[#FACC15]">
-                Free Wholesome Nutrition
+                Growing Our Mission Together
               </div>
             </div>
 

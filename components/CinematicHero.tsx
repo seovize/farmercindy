@@ -108,7 +108,7 @@ export function CinematicHero() {
           <span className="hidden sm:inline text-white/25">•</span>
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-sky-400" />
-            <span>Books Support Free Food</span>
+            <span>Books Fund Our 501(c)(3) Mission</span>
           </div>
         </div>
       </div>
