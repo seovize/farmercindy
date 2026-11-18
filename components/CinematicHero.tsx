@@ -10,30 +10,46 @@ export function CinematicHero() {
   return (
     <section className="relative min-h-[82vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#06080A] text-white">
       {/* =========================================================================
-          1. LIVE AUTO-PLAYING FARM VIDEO + VIBRANT PRODUCE HERO (RareSeeds Style)
+          1. 2026 DUAL-ASPECT LIVE AUTO-PLAYING HERO VIDEO (16:9 Desktop / 9:16 Mobile)
          ========================================================================= */}
       <div className="absolute inset-0 z-0">
+        {/* Static High-Res Poster / Reduced-Motion Fallback */}
         <Image
-          src="/images/generated/vibrant_produce_black_hero.jpg"
-          alt="Vibrant heirloom strawberries, cherries, tomatoes, emerald greens, and sunflowers"
+          src="/images/generated/black_farmers_community_sunrise.jpg"
+          alt="Heirloom community farmers tending organic raised beds at golden sunrise"
           fill
           priority
           sizes="100vw"
           quality={90}
-          className="object-cover object-center opacity-80"
+          className="object-cover object-center opacity-85"
         />
+
+        {/* Desktop & Landscape (16:9 Native Widescreen Community Farm Film) */}
         <video
-          src="/videos/cindy_farm_reel_1.mp4"
+          src="/videos/hero_community_farm_16x9.mp4"
+          poster="/images/generated/black_farmers_community_sunrise.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="hidden md:block motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-90"
+        />
+
+        {/* Mobile Portrait (9:16 Native Vertical Farm Reel) */}
+        <video
+          src="/videos/cindy_farm_reel_2.mp4"
           poster="/images/generated/vibrant_produce_black_hero.jpg"
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
+          preload="metadata"
+          className="block md:hidden motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-85"
         />
 
-        {/* Subtle Dark Vignette for Crisp Typography Contrast (Preserves Full Video & Produce Color Pop) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-[#06080A]" />
+        {/* Subtle Dark Gradient Scrim for WCAG AAA Typography Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-[#06080A]" />
         <div className="absolute inset-0 bg-radial from-transparent via-black/25 to-black/80" />
       </div>
 
