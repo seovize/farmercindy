@@ -22,20 +22,20 @@ export function Navigation() {
 
   return (
     <>
-      {/* Top Book-Blue & Community Mission Bar */}
+      {/* Top Book-Blue & Baker Creek 1 Free Seed Packet Incentive Bar */}
       <div className="bg-[#0F3D6E] text-white text-xs font-semibold tracking-wide py-2.5 px-4 text-center border-b border-sky-400/25 flex items-center justify-center gap-2 relative z-50">
         <Sprout className="w-4 h-4 text-emerald-400 shrink-0" />
         <span className="hidden sm:inline">
-          Heirloom seeds, living soil, and growing vibrant food together as a community.
+          Official Baker Creek Sponsor Bonus: Get <strong className="text-[#FACC15]">1 FREE Heirloom Seed Packet</strong> with every website book order!
         </span>
         <span className="sm:hidden">
-          Heirloom Farming &amp; Community Mission
+          <strong className="text-[#FACC15]">1 FREE Seed Packet</strong> with every website book order!
         </span>
         <Link
-          href="/donate"
-          className="inline-flex items-center gap-1 font-black text-[#FACC15] hover:text-white ml-1.5 transition-colors underline"
+          href="/books"
+          className="inline-flex items-center gap-1 font-black text-[#FACC15] hover:text-white ml-1.5 transition-colors underline shrink-0"
         >
-          <span>Support the Farm</span>
+          <span>Order Books</span>
           <span aria-hidden="true">→</span>
         </Link>
       </div>

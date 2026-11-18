@@ -32,13 +32,13 @@ export const PRODUCTS: Product[] = [
     coverImage: "/images/book1_cover.jpg",
     badge: "Series Debut",
     includesGift: true,
-    giftText: "Includes Free Organic Heirloom Strawberry Seed Starter Pack",
+    giftText: "Includes 1 FREE Baker Creek Heirloom Seed Packet with website order",
     formats: [
       {
         id: "paperback",
         name: "Paperback Edition",
         price: 14.99,
-        description: "8.5\" × 8.5\" Full Color, Glossy Softcover",
+        description: "8.5\" × 11\" Full Color, Glossy Softcover",
       },
       {
         id: "hardcover",
@@ -65,13 +65,13 @@ export const PRODUCTS: Product[] = [
     coverImage: "/images/book2_cover.jpg",
     badge: "Series Sequel",
     includesGift: true,
-    giftText: "Includes Free Pollinator Wildflower & Strawberry Seed Pack",
+    giftText: "Includes 1 FREE Baker Creek Heirloom Seed Packet with website order",
     formats: [
       {
         id: "paperback",
         name: "Paperback Edition",
         price: 14.99,
-        description: "8.5\" × 8.5\" Full Color, Glossy Softcover",
+        description: "8.5\" × 11\" Full Color, Glossy Softcover",
       },
       {
         id: "hardcover",

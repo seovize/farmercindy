@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sprout, ExternalLink, Sparkles, CheckCircle2 } from "lucide-react";
+import { Sprout, ExternalLink, Award, CheckCircle2 } from "lucide-react";
 
 export function RareSeedsSponsor() {
   return (
@@ -46,12 +46,12 @@ export function RareSeedsSponsor() {
             {/* Right: Partnership Story & Direct Seed Store Link */}
             <div className="lg:col-span-7 space-y-4 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-black uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-[#FACC15]" />
-                <span>Community Seed Packet Partner</span>
+                <Award className="w-3.5 h-3.5 text-[#FACC15]" />
+                <span>Approved Official Sponsor • 1 Free Seed Packet Incentive</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-white leading-tight">
-                Grow the Same Heirloom Seeds We Plant on Our Farm
+                1 Free Baker Creek Heirloom Seed Packet With Every Website Order
               </h2>
 
               <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
@@ -59,11 +59,13 @@ export function RareSeedsSponsor() {
                 <strong className="text-[#FACC15]">
                   Baker Creek Heirloom Seeds (RareSeeds.com)
                 </strong>{" "}
-                are proud supporters of FarmerCindy&apos;s mission, sponsoring
-                pure heirloom seed packets for our community. Explore their
-                extraordinary catalog of rare, colorful, non-GMO vegetables,
-                fruits, and flowers and order directly from them for your own
-                garden.
+                officially sponsor heirloom seed packets for FarmerCindy! Order
+                any book directly on our website to receive{" "}
+                <strong className="text-emerald-300">
+                  1 FREE Baker Creek seed packet
+                </strong>{" "}
+                with your order, or visit RareSeeds.com directly to explore and
+                buy from their full heirloom seed catalog.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-emerald-300 pt-1">

@@ -88,7 +88,7 @@ export function MultiRetailerRow({
               </div>
               <div className="flex items-center gap-1.5 mt-0.5 text-xs text-emerald-100 font-bold">
                 <Sprout className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
-                <span>Includes Free Heirloom Seeds</span>
+                <span>Includes 1 FREE Baker Creek Seed Packet</span>
                 <span>•</span>
                 <span className="text-[#E9C46A]">{price}</span>
               </div>

@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { User, Sprout, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Users, Sparkles } from "lucide-react";
+import { User, Sprout, Send, CheckCircle2, ShieldCheck, Mail, Calendar, MapPin, Loader2, BookOpen, Heart, HelpCircle, ChevronDown, Award, Sun, Users } from "lucide-react";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export default function AboutPage() {
   const [formData, setFormData] = useState({
@@ -106,11 +107,12 @@ export default function AboutPage() {
             <Sprout className="w-4 h-4 text-emerald-400" />
             <span>Heirloom Farmer, Author &amp; 501(c)(3) Founder</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-white tracking-tight leading-[1.15]">
-            Meet <span className="text-emerald-400">FarmerCindy 🍒🍓</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-white tracking-tight leading-[1.15] flex flex-wrap items-center justify-center gap-x-3">
+            <span>Meet</span>
+            <FarmerCindyBrand iconSize="xl" />
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            Heirloom farmer, author, and community advocate on a heartfelt mission to grow living food from healthy soil and share the harvest with families for free.
+            Author, heirloom farmer, and 501(c)(3) founder raising funding through picture books and community support to build our heirloom farming vision.
           </p>
         </div>
 
@@ -131,8 +133,10 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-6 text-center">
-                <h3 className="text-2xl font-black font-heading text-white">FarmerCindy 🍒🍓</h3>
-                <span className="text-xs font-black uppercase tracking-wider text-emerald-400 block mt-0.5">
+                <h3 className="text-2xl font-black text-white">
+                  <FarmerCindyBrand iconSize="md" />
+                </h3>
+                <span className="text-xs font-black uppercase tracking-wider text-emerald-400 block mt-1">
                   Heirloom Farmer &amp; Author • FarmerCindy, Inc.
                 </span>
                 <p className="mt-2 text-xs text-slate-300">
@@ -141,7 +145,7 @@ export default function AboutPage() {
 
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-center gap-2 text-xs font-bold text-sky-300">
                   <Sprout className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>100% Book Royalties Support Free Community Food</span>
+                  <span>Supporting 501(c)(3) Heirloom Farming Outreach</span>
                 </div>
               </div>
             </div>

@@ -178,7 +178,7 @@ export function InstagramSocialFeed() {
                 <ExternalLink className="w-4 h-4 opacity-80" />
               </button>
               <span className="text-[11px] text-slate-400 font-medium">
-                COPPA Protected • Opens Grown-Up Gate
+                Official Social Channels • Opens Directly
               </span>
             </div>
           </div>

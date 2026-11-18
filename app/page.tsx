@@ -10,8 +10,7 @@ import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
 import { InstagramSocialFeed } from "@/components/InstagramSocialFeed";
 import { DonationImpactModule } from "@/components/DonationImpactModule";
 import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
-// RareSeedsSponsor is ready to enable once Baker Creek confirms email permission:
-// import { RareSeedsSponsor } from "@/components/RareSeedsSponsor";
+import { RareSeedsSponsor } from "@/components/RareSeedsSponsor";
 
 export default function HomePage() {
   return (
@@ -77,7 +76,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <span className="text-[10px] font-black uppercase tracking-wider text-rose-400 block">
-                  FarmerCindy's Signature Harvest 🍒🍓
+                  Signature Heirloom Harvest
                 </span>
                 <div className="text-base sm:text-lg font-black font-heading mt-0.5">
                   Sun-Ripened Cherries &amp; Sweet Strawberries
@@ -283,7 +282,12 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          5. INTEGRATED COMMUNITY & BOOK VISUAL GALLERY (Instagram + TikTok)
+          5. OFFICIAL HEIRLOOM SEED SPONSOR (Baker Creek / RareSeeds.com)
+         ========================================================================= */}
+      <RareSeedsSponsor />
+
+      {/* =========================================================================
+          6. INTEGRATED COMMUNITY & BOOK VISUAL GALLERY (Instagram + TikTok)
          ========================================================================= */}
       <InstagramSocialFeed />
 

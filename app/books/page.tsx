@@ -5,6 +5,7 @@ import { BookOpen, Star, School, Sprout, Sun, Bug, Heart, CheckCircle2, ArrowRig
 import { MultiRetailerRow } from "@/components/MultiRetailerRow";
 import { BundleOrderBanner } from "@/components/BundleOrderBanner";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export const metadata = {
   title: "The Books | The Adventures of FarmerCindy Picture Book Series",
@@ -26,8 +27,19 @@ export default function BooksPage() {
             Stories of <span className="text-emerald-400">Living Soil</span>, <span className="text-[#FACC15]">Heirloom Seeds</span> &amp; <span className="text-rose-400">Community</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            Richly illustrated, colorful picture books created by FarmerCindy 🍒🍓 to spark family smiles and inspire growers. 100% of author profits directly fund community heirloom farming and free food.
+            Richly illustrated 8.5&quot; × 11&quot; picture books by{" "}
+            <FarmerCindyBrand iconSize="sm" className="text-xl align-middle mx-1" />{" "}
+            that support our 501(c)(3) heirloom farming community mission.
           </p>
+
+          {/* Approved Baker Creek 1 FREE Seed Packet Incentive Banner */}
+          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-3 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#0B2218] via-[#0F3D6E] to-[#0B2218] border-2 border-emerald-400/50 text-white shadow-xl">
+            <Sprout className="w-5 h-5 text-emerald-400 shrink-0" />
+            <span className="text-xs sm:text-sm font-black tracking-wide">
+              <span className="text-[#FACC15]">OFFICIAL BAKER CREEK INCENTIVE:</span> Get{" "}
+              <span className="text-emerald-300 underline">1 FREE Seed Packet</span> with every direct website book order!
+            </span>
+          </div>
         </div>
 
         {/* =========================================================================

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, ShieldCheck, BookOpen, Users, Sprout, ArrowRight, CheckCircle2, Award, School, Sun, Globe } from "lucide-react";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export const metadata = {
   title: "501(c)(3) Non-Profit Mission | FarmerCindy, Inc.",
@@ -74,8 +75,9 @@ export default function MissionPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-3 left-3 right-3 text-white text-center">
-                  <span className="text-xs font-black uppercase tracking-wider bg-[#0F3D6E] text-[#FACC15] px-3 py-1 rounded-full shadow border border-sky-400/30">
-                    FarmerCindy 🍒🍓 • Founder
+                  <span className="inline-flex items-center gap-1.5 text-xs font-black tracking-wider bg-[#0F3D6E] text-[#FACC15] px-3 py-1 rounded-full shadow border border-sky-400/30">
+                    <FarmerCindyBrand iconSize="sm" className="text-sm" />
+                    <span className="uppercase">• Founder</span>
                   </span>
                 </div>
               </div>

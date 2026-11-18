@@ -4,19 +4,20 @@ import Link from "next/link";
 import { Heart, ShieldCheck, CheckCircle2, Sprout, BookOpen, School, ArrowRight, Award, Users, Download, Film, Lock, Play } from "lucide-react";
 import { DonationImpactModule } from "@/components/DonationImpactModule";
 import { KidSafeVideoPlayer } from "@/components/KidSafeVideoPlayer";
+import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 
 export const metadata = {
-  title: "Donate to FarmerCindy, Inc. 501(c)(3) | The Book 1 Giving Story in Real Life",
+  title: "Donate to FarmerCindy, Inc. 501(c)(3) | Support the Community Farm Vision",
   description:
-    "Make an official 100% tax-deductible charitable donation to FarmerCindy, Inc. 501(c)(3). As shown at the climax of Book 1, community giving builds the farm. Every dollar directly funds heirloom seed kits, raised school beds, and picture books for Title I classrooms.",
+    "Make an official 100% tax-deductible charitable contribution to FarmerCindy, Inc. 501(c)(3) to support heirloom farming education, picture books, and our future community farm.",
 };
 
 export default function DonatePage() {
   const impactStats = [
     { value: "100%", label: "Tax-Deductible", desc: "Recognized 501(c)(3) public charity under IRS Code" },
-    { value: "12,400+", label: "Seed Packets Given", desc: "Distributed directly to elementary students nationwide" },
-    { value: "48", label: "School Raised Beds", desc: "Built with organic living soil in Title I school courtyards" },
-    { value: "$0", label: "Corporate Waste", desc: "100% of public gifts fund seeds, books, and youth garden tools" },
+    { value: "501(c)(3)", label: "Public Charity", desc: "Official non-profit foundation led by FarmerCindy" },
+    { value: "8.5 × 11\"", label: "Book Series", desc: "Storybooks raising funds for our community farm mission" },
+    { value: "1 Free", label: "Baker Creek Seed Pack", desc: "Included with every direct book order on our website" },
   ];
 
   const storybookParallels = [
@@ -86,8 +87,8 @@ export default function DonatePage() {
             <div className="lg:col-span-7 space-y-4">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#173D57]/30 bg-slate-900 group">
                 <Image
-                  src="/images/book1_cindy_check_presentation.jpg"
-                  alt="Farmer Cindy Receiving the Community Farm Fund Donation Check in Book 1 Official Cartoon Climax"
+                  src="/images/cartoon_thumb_1.jpg"
+                  alt="Official FarmerCindy Animated Story Climax Scene"
                   fill
                   sizes="(max-width: 1024px) 100vw, 700px"
                   className="object-cover group-hover:scale-102 transition-transform duration-700"
@@ -177,13 +178,15 @@ export default function DonatePage() {
                     />
                   </div>
                   <div>
-                    <div className="font-heading font-black text-sm text-white">FarmerCindy 🍒🍓</div>
+                    <div className="text-base text-white">
+                      <FarmerCindyBrand iconSize="sm" />
+                    </div>
                     <div className="text-[11px] font-black uppercase tracking-wider text-emerald-400">Author &amp; 501(c)(3) Founder</div>
                   </div>
                 </div>
 
                 <blockquote className="text-xs sm:text-sm italic font-heading font-bold text-sky-200 leading-relaxed">
-                  "When I wrote the climax of Book 1 where the community gives Cindy donations to build the farm, that was my living promise. Through our 501(c)(3) foundation, your tax-deductible gift directly funds organic heirloom seeds, living soil, and community plots so we can grow wholesome food and share it with families in need for free."
+                  &quot;In Book 1, neighbors come together to help FarmerCindy build the farm. Through our 501(c)(3) foundation, every book purchase and tax-deductible contribution brings us closer to building that community heirloom farm vision.&quot;
                 </blockquote>
               </div>
 
