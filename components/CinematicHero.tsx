@@ -24,7 +24,7 @@ export function CinematicHero() {
           className="object-cover object-center opacity-85"
         />
 
-        {/* Desktop & Landscape (16:9 Native Widescreen Community Farm Film) */}
+        {/* Unified 16:9 Moving Community Garden Film (Centered Crop Works Cleanly on Desktop & Mobile — Zero TikTok Selfie) */}
         <video
           src="/videos/hero_community_farm_16x9.mp4"
           poster="/images/generated/black_farmers_community_sunrise.jpg"
@@ -33,19 +33,7 @@ export function CinematicHero() {
           loop
           playsInline
           preload="auto"
-          className="hidden md:block motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-90"
-        />
-
-        {/* Mobile Portrait (9:16 Native Vertical Farm Reel) */}
-        <video
-          src="/videos/cindy_farm_reel_2.mp4"
-          poster="/images/generated/vibrant_produce_black_hero.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="block md:hidden motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-85"
+          className="motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-90"
         />
 
         {/* Subtle Dark Gradient Scrim for WCAG AAA Typography Contrast */}
@@ -56,7 +44,7 @@ export function CinematicHero() {
       {/* =========================================================================
           2. MAIN DRAMATIC EDITORIAL HERO CONTENT
          ========================================================================= */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-24 text-center flex flex-col items-center">
         {/* Book-Blue & Community Farming Badge */}
         <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-[#0F3D6E]/90 border border-sky-400/40 text-sky-200 text-xs sm:text-sm font-black tracking-wide shadow-lg mb-6 backdrop-blur-md">
           <Sprout className="w-4 h-4 text-emerald-400 shrink-0" />

@@ -216,10 +216,16 @@ export default function HomePage() {
       <section id="books-catalog" className="py-20 bg-[#06080A] border-t border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-sky-300 bg-[#0F3D6E] border border-sky-400/30 mb-3">
-              <BookOpen className="w-3.5 h-3.5 text-[#FACC15]" />
-              <span>The Official Picture Books</span>
-            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-sky-300 bg-[#0F3D6E] border border-sky-400/30">
+                <BookOpen className="w-3.5 h-3.5 text-[#FACC15]" />
+                <span>The Official Picture Books</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-emerald-200 bg-[#0B2218] border border-emerald-400/40">
+                <Sprout className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Holiday Gift Ready • 1 Free Baker Creek Seed Packet</span>
+              </span>
+            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white">
               Two Colorful Stories of Seeds, Soil &amp; Community
             </h2>
