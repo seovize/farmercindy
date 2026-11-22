@@ -528,7 +528,7 @@ export default function CheckoutPage() {
                 {/* Impact Note */}
                 <div className="p-4 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-[11px] text-slate-600 leading-relaxed text-center">
                   <Heart className="w-4 h-4 fill-[#2B6E4F] text-[#2B6E4F] inline mr-1" />
-                  <strong>100% Non-Profit Proceeds:</strong> Your order directly funds heirloom seed packets for Title I classrooms and community planter beds.
+                  <strong>100% Non-Profit Proceeds:</strong> Your order directly funds our 501(c)(3) mission to provide heirloom seed education and community farm gardens.
                 </div>
               </div>
             </div>

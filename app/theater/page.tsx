@@ -27,8 +27,8 @@ export default function TheaterPage() {
     },
     {
       num: "03",
-      title: "Growing Food to Feed People for Free",
-      description: "The heartbeat of FarmerCindy, Inc. is simple: an heirloom farming community dedicated to growing wholesome food and sharing the harvest with neighbors.",
+      title: "Community Farming & Fresh Harvests",
+      description: "The heartbeat of FarmerCindy, Inc. is simple: an heirloom farming community dedicated to growing wholesome food from living soil and sharing fresh harvest abundance with families.",
       theme: "Community Harvest",
       badgeColor: "bg-amber-100 text-amber-950",
     },

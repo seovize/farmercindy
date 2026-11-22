@@ -88,7 +88,7 @@ export default function AboutPage() {
     },
     {
       src: "/images/generated/community_harvest_solidarity.jpg",
-      caption: "Sharing Free Food with Families",
+      caption: "Sharing Farm Harvests & Education",
       tag: "Community Solidarity",
     },
     {

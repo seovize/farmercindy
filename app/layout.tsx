@@ -70,7 +70,7 @@ export default function RootLayout({
         nonprofitStatus: "Nonprofit501c3",
         url: "https://farmercindy.vercel.app",
         description:
-          "501(c)(3) non-profit organization dedicated to teaching children about heirloom farming, healthy nutrition, and growing free food.",
+          "501(c)(3) non-profit organization dedicated to teaching children about heirloom farming, healthy nutrition, and community gardens.",
       },
       {
         "@type": "Person",

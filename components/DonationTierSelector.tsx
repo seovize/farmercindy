@@ -67,11 +67,11 @@ export function DonationTierSelector() {
           </div>
 
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-[#0D3829] tracking-tight">
-            Sponsor Free Food &amp; Youth Farm Literacy
+            Sponsor Youth Farm Literacy &amp; Heirloom Seeds
           </h3>
 
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Every dollar donated to <strong>FarmerCindy, Inc.</strong> is 100% tax-deductible. We directly purchase heirloom seeds, soil kits, and picture books for underserved elementary classrooms.
+            Every dollar donated to <strong>FarmerCindy, Inc.</strong> is 100% tax-deductible. We directly support heirloom seed education, youth gardening kits, and our community farm foundation.
           </p>
 
           {/* Donation Frequency Toggle */}

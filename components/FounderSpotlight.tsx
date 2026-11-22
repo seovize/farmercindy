@@ -79,7 +79,7 @@ export function FounderSpotlight() {
             </blockquote>
 
             <p className="text-sm sm:text-base text-[#3B2314]/80 leading-relaxed font-normal">
-              Through her beautifully illustrated picture books, *FarmerCindy Finds a Farm* and *What's Happening to Our Farming Community?*, Cindy educates young minds on seed saving, soil ecology, and pollinator preservation. All book proceeds and donations directly fund free windowsill seed kits and raised garden beds for Title I public elementary schools.
+              Through her beautifully illustrated picture books, *FarmerCindy Finds a Farm* and *What's Happening to Our Farming Community?*, Cindy educates young minds on seed saving, soil ecology, and pollinator preservation. All book proceeds and donations directly fund our 501(c)(3) mission for youth agricultural literacy, heirloom seed distribution, and community farm development.
             </p>
 
             {/* Strategic Proof Points */}
@@ -95,8 +95,8 @@ export function FounderSpotlight() {
               <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#3B2314]/15 flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#2B6E4F] shrink-0 mt-0.5" />
                 <div className="text-xs text-[#0D3829]">
-                  <strong className="block font-black text-sm mb-0.5">Title I School Visits:</strong>
-                  Hands-on agricultural assemblies and free book donations for urban youth.
+                  <strong className="block font-black text-sm mb-0.5">Community &amp; Classroom Outreach:</strong>
+                  Hands-on botanical workshops, heirloom seed kits, and agricultural story sessions.
                 </div>
               </div>
             </div>

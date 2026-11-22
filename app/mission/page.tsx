@@ -7,7 +7,7 @@ import { FarmerCindyBrand } from "@/components/FarmerCindyBrand";
 export const metadata = {
   title: "501(c)(3) Non-Profit Mission | FarmerCindy, Inc.",
   description:
-    "Learn how FarmerCindy, Inc. educates children about heirloom farming, fresh nutrition, and grows free food for communities in need. 100% tax-deductible support.",
+    "Learn how FarmerCindy, Inc. educates children about heirloom farming, fresh nutrition, and builds our community farm vision. 100% tax-deductible support.",
 };
 
 export default function MissionPage() {
@@ -35,8 +35,8 @@ export default function MissionPage() {
     },
     {
       num: "04",
-      title: "Free Food is Harvested",
-      desc: "Students grow strawberries, sweet cherry tomatoes, and greens to share with their families and food pantries.",
+      title: "Heirloom Harvest Abundance",
+      desc: "Children and families learn to cultivate organic berries, greens, and heirloom vegetables from living soil.",
       icon: Sun,
       badge: "Community Health",
     },
@@ -52,10 +52,10 @@ export default function MissionPage() {
             <span>FarmerCindy, Inc. • 501(c)(3) Non-Profit</span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-white tracking-tight leading-[1.15]">
-            Planting Seeds of <span className="text-emerald-400">Free Food</span> &amp; Living Nutrition
+            Planting Seeds of <span className="text-emerald-400">Heirloom Literacy</span> &amp; Living Nutrition
           </h1>
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            Our mission is cultivating an heirloom farming community dedicated to growing wholesome food from living soil and sharing fresh harvest abundance with families for free.
+            Our mission is cultivating an heirloom farming community dedicated to growing wholesome food from living soil, teaching families agricultural literacy, and building our community farm.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function MissionPage() {
 
               <div className="mt-4 p-3 rounded-2xl bg-[#06080A] border border-sky-400/20 text-xs text-slate-300">
                 <strong className="text-emerald-400 block">501(c)(3) Mission Pledge:</strong>
-                Zero corporate overhead. Every dollar funds seeds, living soil, and community food.
+                Zero corporate overhead. Every dollar funds seeds, youth agricultural education, and our community farm.
               </div>
             </div>
 

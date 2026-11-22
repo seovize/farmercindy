@@ -24,22 +24,22 @@ export default function DonatePage() {
     {
       title: "Community Gathers with Seeds & Tools",
       cartoonDetail: "In Book 1, neighbors bring heirloom seeds, rich soil, and tools to help Cindy plant.",
-      realLifeImpact: "Your donation provides Title I classrooms with organic seeds, living compost, and student gardening tools.",
-      image: "/images/book1_community_donations_presentation.jpg",
+      realLifeImpact: "Your donation supports community garden workshops, heirloom seed distribution, and hands-on farm education.",
+      image: "/images/cartoon_thumb_1.jpg",
       tag: "Storybook Climax",
     },
     {
       title: "The Community Farm Fund Check",
       cartoonDetail: "Neighbors present Cindy with a $15,000 Community Farm Fund check to build the farm.",
-      realLifeImpact: "Your tax-deductible gift directly finances cedar raised beds, drip irrigation, and student garden kits.",
-      image: "/images/book1_cindy_check_presentation.jpg",
+      realLifeImpact: "Your tax-deductible gift directly finances cedar raised beds, organic compost, and our community farm land fund.",
+      image: "/images/cartoon_thumb_2.jpg",
       tag: "The Presentation Scene",
     },
     {
-      title: "Tractor & Heavy Equipment Donated",
+      title: "Farm Tools & Equipment Support",
       cartoonDetail: "Community members donate a farm tractor and equipment to clear the pastures.",
-      realLifeImpact: "Supplies school gardens with soil delivery, raised bed timber, wheelbarrows, and garden spades.",
-      image: "/images/book1_tractor_donation.jpg",
+      realLifeImpact: "Supplies community gardens with soil delivery, raised bed timber, wheelbarrows, and garden spades.",
+      image: "/images/generated/black_farmers_community_sunrise.jpg",
       tag: "Community Equipment",
     },
   ];
@@ -63,7 +63,7 @@ export default function DonatePage() {
           </h1>
 
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium leading-relaxed max-w-3xl mx-auto">
-            At the heartwarming climax of <em>The Adventures of FarmerCindy: FarmerCindy Finds a Farm</em> (Book 1), Cindy's dream blossomed because neighbors rallied together to donate seeds, tools, and farm funds. <strong>FarmerCindy, Inc. 501(c)(3)</strong> was founded to bring that exact storybook blessing to life: cultivating living soil, growing vibrant heirloom produce, and sharing food with families for free!
+            At the heartwarming climax of <em>The Adventures of FarmerCindy: FarmerCindy Finds a Farm</em> (Book 1), Cindy's dream blossomed because neighbors rallied together to donate seeds, tools, and farm funds. <strong>FarmerCindy, Inc. 501(c)(3)</strong> was founded to bring that exact storybook blessing to life: cultivating living soil, growing vibrant heirloom produce, and building our community farm!
           </p>
 
           {/* Quick Metrics Banner */}
@@ -122,7 +122,7 @@ export default function DonatePage() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border-2 border-stone-200 shadow-sm group">
                   <Image
-                    src="/images/book1_community_donations_presentation.jpg"
+                    src="/images/cartoon_thumb_2.jpg"
                     alt="Community Members Gathering with Donation Signs for Farmer Cindy"
                     fill
                     sizes="350px"
@@ -136,15 +136,15 @@ export default function DonatePage() {
 
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border-2 border-stone-200 shadow-sm group">
                   <Image
-                    src="/images/book1_tractor_donation.jpg"
-                    alt="Community Donated Tractor in Book 1 Finale"
+                    src="/images/generated/black_farmers_community_sunrise.jpg"
+                    alt="Heirloom Community Farmers Tending Raised Beds"
                     fill
                     sizes="350px"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                   <span className="absolute bottom-2 left-2 right-2 text-[11px] font-black text-white leading-tight drop-shadow">
-                    "Community Donated Farm Tractor &amp; Equipment"
+                    "Community Farming Vision &amp; Living Soil"
                   </span>
                 </div>
               </div>
@@ -271,7 +271,7 @@ export default function DonatePage() {
         <section className="mb-20 rounded-3xl bg-[#0D131C] p-6 sm:p-10 border border-sky-400/25 shadow-xl max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
-              How Your Tax-Deductible Gift Translates to Real Food
+              How Your Tax-Deductible Gift Builds Real Community Farms
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-slate-300 font-medium">
               100% of public contributions directly purchase seeds, living compost, and community garden plots.
@@ -300,7 +300,7 @@ export default function DonatePage() {
             <div className="p-5 rounded-2xl bg-[#06080A] border border-white/15">
               <span className="text-2xl font-black font-heading text-rose-400 block">$250</span>
               <span className="text-xs font-black uppercase text-white block mt-1">Full Raised Farm Bed</span>
-              <p className="text-xs text-slate-300 mt-2 leading-relaxed">Funds construction of a full cedar garden plot, compost, and pollinator plants for community food.</p>
+              <p className="text-xs text-slate-300 mt-2 leading-relaxed">Funds construction of a full cedar garden plot, compost, and pollinator plants for community farm education.</p>
             </div>
           </div>
         </section>

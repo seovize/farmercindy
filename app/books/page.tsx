@@ -364,7 +364,7 @@ export default function BooksPage() {
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DDA15E] text-slate-950 text-xs font-black uppercase tracking-wider mb-5 shadow-sm">
               <Library className="w-4 h-4 text-slate-950" />
-              <span>For Public School Districts, Title I &amp; Libraries</span>
+              <span>For Public School Districts, Libraries &amp; Youth Programs</span>
             </div>
 
             <h3 className="text-3xl sm:text-4xl font-heading font-black tracking-tight text-white">

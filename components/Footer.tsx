@@ -24,7 +24,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              FarmerCindy, Inc. is a registered 501(c)(3) educational non-profit organization dedicated to teaching children, families, and communities about heirloom agriculture, nutrition, and growing free food.
+              FarmerCindy, Inc. is a registered 501(c)(3) educational non-profit organization dedicated to teaching children, families, and communities about heirloom agriculture, nutrition, and community gardens.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0B1524] border border-sky-400/25 text-[11px] font-bold text-[#FACC15]">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
