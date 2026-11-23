@@ -169,6 +169,8 @@ export function DonationImpactModule() {
                   $
                 </span>
                 <input
+                  id="custom_donation_amount"
+                  name="customAmount"
                   type="number"
                   min="5"
                   step="5"

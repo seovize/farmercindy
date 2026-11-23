@@ -143,6 +143,8 @@ export function GivingModal({
                   $
                 </span>
                 <input
+                  id="modal_custom_amount"
+                  name="customAmount"
                   type="number"
                   min="5"
                   placeholder="Or enter custom amount"
@@ -159,10 +161,12 @@ export function GivingModal({
               {/* Donor Contact Details */}
               <div className="space-y-3 pt-2">
                 <div>
-                  <label className="block text-xs font-bold text-[#173D57] mb-1">
+                  <label htmlFor="modal_donor_name" className="block text-xs font-bold text-[#173D57] mb-1">
                     Your Name
                   </label>
                   <input
+                    id="modal_donor_name"
+                    name="donorName"
                     type="text"
                     required
                     placeholder="First & Last Name"
@@ -173,10 +177,12 @@ export function GivingModal({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#173D57] mb-1">
+                  <label htmlFor="modal_donor_email" className="block text-xs font-bold text-[#173D57] mb-1">
                     Email Address (for instant tax receipt)
                   </label>
                   <input
+                    id="modal_donor_email"
+                    name="donorEmail"
                     type="email"
                     required
                     placeholder="you@example.com"

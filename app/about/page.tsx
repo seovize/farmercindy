@@ -320,10 +320,12 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-black uppercase text-slate-200 mb-1">
+                  <label htmlFor="about_contact_name" className="block text-xs font-black uppercase text-slate-200 mb-1">
                     Your Name *
                   </label>
                   <input
+                    id="about_contact_name"
+                    name="name"
                     type="text"
                     required
                     placeholder="e.g. Sarah Johnson"
@@ -334,10 +336,12 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-black uppercase text-slate-200 mb-1">
+                  <label htmlFor="about_contact_org" className="block text-xs font-black uppercase text-slate-200 mb-1">
                     Organization / Community Group
                   </label>
                   <input
+                    id="about_contact_org"
+                    name="organization"
                     type="text"
                     placeholder="e.g. Green Valley Garden Club"
                     value={formData.organization}
@@ -349,10 +353,12 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-black uppercase text-slate-200 mb-1">
+                  <label htmlFor="about_contact_email" className="block text-xs font-black uppercase text-slate-200 mb-1">
                     Email Address *
                   </label>
                   <input
+                    id="about_contact_email"
+                    name="email"
                     type="email"
                     required
                     placeholder="yourname@domain.com"
@@ -363,10 +369,12 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-black uppercase text-slate-200 mb-1">
+                  <label htmlFor="about_contact_inquiry" className="block text-xs font-black uppercase text-slate-200 mb-1">
                     Inquiry Type
                   </label>
                   <select
+                    id="about_contact_inquiry"
+                    name="inquiryType"
                     value={formData.inquiryType}
                     onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-[#2B6E4F] focus:outline-none bg-white font-medium text-slate-800 shadow-sm"
@@ -381,10 +389,12 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-black uppercase text-slate-200 mb-1">
+                <label htmlFor="about_contact_region" className="block text-xs font-black uppercase text-slate-200 mb-1">
                   City, State or Region
                 </label>
                 <input
+                  id="about_contact_region"
+                  name="region"
                   type="text"
                   placeholder="e.g. Atlanta, GA"
                   value={formData.region}

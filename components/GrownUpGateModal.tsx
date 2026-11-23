@@ -94,6 +94,8 @@ export function GrownUpGateModal({
 
             <div className="mt-4 flex justify-center">
               <input
+                id="grown_up_math_answer"
+                name="mathAnswer"
                 type="number"
                 inputMode="numeric"
                 value={userAnswer}

@@ -182,6 +182,8 @@ export function ActivityKitLeadMagnet() {
                   <div className="relative w-full">
                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
+                      id="activity_kit_email"
+                      name="email"
                       type="email"
                       required
                       placeholder="Enter parent or teacher email..."

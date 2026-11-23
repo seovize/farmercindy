@@ -162,10 +162,12 @@ export default function CheckoutPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_first_name" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         First Name *
                       </label>
                       <input
+                        id="checkout_first_name"
+                        name="firstName"
                         type="text"
                         required
                         value={formData.firstName}
@@ -174,10 +176,12 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_last_name" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         Last Name *
                       </label>
                       <input
+                        id="checkout_last_name"
+                        name="lastName"
                         type="text"
                         required
                         value={formData.lastName}
@@ -189,10 +193,12 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_email" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         Email Address (For Tax Receipt &amp; Tracking) *
                       </label>
                       <input
+                        id="checkout_email"
+                        name="email"
                         type="email"
                         required
                         value={formData.email}
@@ -201,10 +207,12 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_phone" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         Phone (For Delivery Updates)
                       </label>
                       <input
+                        id="checkout_phone"
+                        name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -214,10 +222,12 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                    <label htmlFor="checkout_street_address" className="block text-xs font-black uppercase text-slate-700 mb-1">
                       Street Address *
                     </label>
                     <input
+                      id="checkout_street_address"
+                      name="streetAddress"
                       type="text"
                       required
                       placeholder="123 Orchard Lane"
@@ -229,10 +239,12 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-3 gap-3">
                     <div className="col-span-1">
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_apartment" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         Apt / Suite
                       </label>
                       <input
+                        id="checkout_apartment"
+                        name="apartment"
                         type="text"
                         placeholder="Apt 2B"
                         value={formData.apartment}
@@ -241,10 +253,12 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div className="col-span-1">
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_city" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         City *
                       </label>
                       <input
+                        id="checkout_city"
+                        name="city"
                         type="text"
                         required
                         value={formData.city}
@@ -253,10 +267,12 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div className="col-span-1">
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_state_zip" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         State &amp; ZIP *
                       </label>
                       <input
+                        id="checkout_state_zip"
+                        name="stateZip"
                         type="text"
                         required
                         value={`${formData.state} ${formData.zipCode}`}
@@ -352,12 +368,14 @@ export default function CheckoutPage() {
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                    <label htmlFor="checkout_card_number" className="block text-xs font-black uppercase text-slate-700 mb-1">
                       Card Number
                     </label>
                     <div className="relative">
                       <CreditCard className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                       <input
+                        id="checkout_card_number"
+                        name="cardNumber"
                         type="text"
                         value={formData.cardNumber}
                         onChange={(e) => setFormData({ ...formData, cardNumber: e.target.value })}
@@ -368,10 +386,12 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_card_expiry" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         Expiry Date
                       </label>
                       <input
+                        id="checkout_card_expiry"
+                        name="cardExpiry"
                         type="text"
                         value={formData.cardExpiry}
                         onChange={(e) => setFormData({ ...formData, cardExpiry: e.target.value })}
@@ -379,10 +399,12 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-black uppercase text-slate-700 mb-1">
+                      <label htmlFor="checkout_card_cvc" className="block text-xs font-black uppercase text-slate-700 mb-1">
                         CVC / CVV
                       </label>
                       <input
+                        id="checkout_card_cvc"
+                        name="cardCvc"
                         type="text"
                         value={formData.cardCvc}
                         onChange={(e) => setFormData({ ...formData, cardCvc: e.target.value })}
@@ -395,6 +417,8 @@ export default function CheckoutPage() {
                   <div className="pt-3 border-t border-slate-100 space-y-3">
                     <label className="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer font-bold">
                       <input
+                        id="checkout_tax_receipt"
+                        name="taxReceiptRequested"
                         type="checkbox"
                         checked={formData.taxReceiptRequested}
                         onChange={(e) => setFormData({ ...formData, taxReceiptRequested: e.target.checked })}
@@ -405,6 +429,8 @@ export default function CheckoutPage() {
 
                     <label className="flex items-center gap-2.5 text-xs text-slate-700 cursor-pointer font-bold">
                       <input
+                        id="checkout_is_gift"
+                        name="isGift"
                         type="checkbox"
                         checked={formData.isGift}
                         onChange={(e) => setFormData({ ...formData, isGift: e.target.checked })}
@@ -415,6 +441,8 @@ export default function CheckoutPage() {
 
                     {formData.isGift && (
                       <textarea
+                        id="checkout_gift_message"
+                        name="giftMessage"
                         rows={2}
                         placeholder="Write your gift message for the child..."
                         value={formData.giftMessage}
