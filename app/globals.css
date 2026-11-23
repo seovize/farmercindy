@@ -44,6 +44,15 @@ body {
   outline-offset: 2px;
 }
 
+/* Bespoke Selection & Caret */
+::selection {
+  background: #1E5AA8;
+  color: #FFFFFF;
+}
+input, textarea {
+  caret-color: #FACC15;
+}
+
 /* Dramatic Black Canvas with Subtle Book-Blue & Produce Ambient Glow */
 .paper-canvas,
 .paper-pattern {

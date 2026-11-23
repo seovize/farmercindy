@@ -59,7 +59,7 @@ export default function AboutPage() {
   const faqs = [
     {
       q: "What is the core mission of FarmerCindy, Inc.?",
-      a: "FarmerCindy, Inc. is a registered 501(c)(3) non-profit organization dedicated to heirloom farming, living soil stewardship, and cultivating fresh, nutrient-dense organic produce to share with neighbors and families in need for free.",
+      a: "FarmerCindy, Inc. is a registered 501(c)(3) non-profit organization dedicated to heirloom farming, living soil stewardship, cultivating fresh, nutrient-dense organic produce, and building our community farm.",
     },
     {
       q: "How do the picture books and merchandise fund the farm?",
@@ -166,11 +166,11 @@ export default function AboutPage() {
             </p>
 
             <blockquote className="my-6 pl-6 border-l-4 border-[#FACC15] text-sky-100 font-heading text-lg sm:text-xl italic font-bold leading-relaxed bg-[#0D131C] p-4 rounded-r-2xl border-y border-r border-white/10">
-              "When you build a community around living soil and heirloom seeds, you don't just grow fresh food—you feed people for free and restore human connection to the land."
+              "When you build a community around living soil and heirloom seeds, you don't just grow fresh food—you nurture healthy families and restore human connection to the land."
             </blockquote>
 
             <p>
-              Through her 501(c)(3) non-profit, <strong>FarmerCindy, Inc.</strong>, Cindy channels book proceeds and public support directly into organic seeds, cedar raised garden beds, and community plots that feed families with dignity.
+              Through her 501(c)(3) non-profit, <strong>FarmerCindy, Inc.</strong>, Cindy channels book proceeds and public support directly into organic seeds, cedar raised garden beds, and our future community farm.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-3">

@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/order-success',
+        destination: '/checkout/success',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

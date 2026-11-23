@@ -23,14 +23,14 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "FarmerCindy 🍒🍓 | Heirloom Farming Community & Stories of Living Soil",
   description:
-    "Building an heirloom farming community dedicated to growing wholesome organic food from living soil and sharing harvest abundance for free. Supported by FarmerCindy's picture books and 501(c)(3) mission.",
+    "Building an heirloom farming community dedicated to growing wholesome organic food from living soil, educating children, and sharing harvest abundance. Supported by FarmerCindy's picture books and 501(c)(3) mission.",
   keywords: [
     "FarmerCindy",
     "FarmerCindy Finds a Farm",
     "What's Happening to Our Farming Community",
     "heirloom farming",
     "living soil",
-    "free community food",
+    "community farm education",
     "children's picture books",
     "501c3 non-profit",
   ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FarmerCindy 🍒🍓 | Heirloom Farming Community & Living Soil",
     description:
-      "Join FarmerCindy's heirloom farming mission: growing vibrant real food from living soil and sharing abundance for free. Supported by Book 1 & Book 2.",
+      "Join FarmerCindy's heirloom farming mission: growing vibrant real food from living soil, educating youth, and building our community farm. Supported by Book 1 & Book 2.",
     url: "https://farmercindy.vercel.app",
     siteName: "FarmerCindy Flagship",
     images: [

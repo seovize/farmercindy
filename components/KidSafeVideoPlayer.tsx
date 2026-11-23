@@ -258,7 +258,7 @@ export function KidSafeVideoPlayer({
                 The Community Mission in Real Life
               </span>
               <p className="text-xs text-sky-100 font-medium mt-0.5">
-                Just like neighbors in the cartoon rallied with donations to build the farm, your tax-deductible gift directly funds seeds and soil to feed families for free!
+                Just like neighbors in the cartoon rallied with donations to build the farm, your tax-deductible gift directly funds seeds and soil to build our community farm vision!
               </p>
             </div>
           </div>

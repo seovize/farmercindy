@@ -142,7 +142,7 @@ export default function BooksPage() {
                   </div>
                   <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
                     <Heart className="w-4 h-4 text-rose-400 shrink-0" />
-                    <span><strong>501(c)(3) Mission Impact:</strong> 100% of author proceeds directly fund heirloom seeds and free community food.</span>
+                    <span><strong>501(c)(3) Mission Impact:</strong> 100% of author proceeds directly fund heirloom seeds and our community farm vision.</span>
                   </div>
                 </div>
 
@@ -388,8 +388,8 @@ export default function BooksPage() {
               </div>
 
               <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-                <div className="text-[#DDA15E] font-black text-sm uppercase">Author Assemblies</div>
-                <div className="text-xs text-emerald-100 mt-1">Virtual Zoom read-alouds or in-person elementary storytime sessions with Farmer Cindy.</div>
+                <div className="text-[#DDA15E] font-black text-sm uppercase">Community Readings</div>
+                <div className="text-xs text-emerald-100 mt-1">Storytime reading guides and classroom activities for libraries and community groups.</div>
               </div>
             </div>
 
@@ -400,7 +400,7 @@ export default function BooksPage() {
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition active:translate-y-0"
               >
                 <School className="w-5 h-5 text-slate-950" />
-                <span>Request Free Educator Review Copy &amp; Visit</span>
+                <span>Request Educator Review Copy &amp; Bulk Orders</span>
               </Link>
 
               <a

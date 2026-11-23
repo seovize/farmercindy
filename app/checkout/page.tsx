@@ -82,8 +82,13 @@ export default function CheckoutPage() {
       const data = await res.json();
 
       if (res.ok && data.success) {
+        try {
+          sessionStorage.setItem("last_order", JSON.stringify({ ...orderPayload, orderId: data.orderId }));
+        } catch (e) {
+          // ignore session write error
+        }
         clearCart();
-        router.push(`/order-success?orderId=${data.orderId}`);
+        router.push(`/checkout/success?orderId=${data.orderId}`);
       } else {
         setErrorMessage(data.error || "Payment simulation encountered an error. Please try again.");
       }

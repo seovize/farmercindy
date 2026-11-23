@@ -55,7 +55,7 @@ export function CinematicHero() {
         {/* Master Headline (Community Farming & Books Funding 501(c)(3)) */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-[1.08] max-w-3xl drop-shadow-2xl">
           Heirloom Farming. <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#FACC15] to-sky-400">
+          <span className="text-[#FACC15]">
             Community &amp; Stories.
           </span>
         </h1>

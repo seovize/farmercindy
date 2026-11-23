@@ -61,7 +61,7 @@ export function DonationImpactModule() {
     label: `$${customAmount || selectedAmount}`,
     badge: "Custom Generosity",
     impactTitle: "Heirloom Farm & Community Food Support",
-    impactDesc: "Your generous contribution directly funds heirloom seeds, living soil, and organic garden beds to help feed families and neighbors for free.",
+    impactDesc: "Your generous contribution directly funds heirloom seeds, living soil, and organic garden beds to help build our community farm and educational gardens.",
     icon: Heart,
   };
 

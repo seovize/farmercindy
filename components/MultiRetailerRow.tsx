@@ -161,7 +161,7 @@ export function MultiRetailerRow({
           Direct Official Retailer Links
         </span>
         <span className="text-slate-300">•</span>
-        <span>100% of profits fund free youth farming kits</span>
+        <span>100% of profits fund youth agricultural education &amp; community farm mission</span>
         <span className="text-slate-300">•</span>
         <span className="text-slate-600 font-bold">ASIN: {asin}</span>
       </div>

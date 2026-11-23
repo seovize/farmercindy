@@ -222,7 +222,7 @@ function SuccessContent() {
             href="/books"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-black text-slate-950 bg-[#DDA15E] hover:bg-[#c99252] shadow-lg hover:shadow-xl transition active:scale-95"
           >
-            <span>Explore More Stories &amp; School Assemblies</span>
+            <span>Explore More Stories &amp; Educational Books</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <div className="text-xs text-slate-500">

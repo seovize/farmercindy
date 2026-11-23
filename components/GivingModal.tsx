@@ -85,7 +85,7 @@ export function GivingModal({
             Support FarmerCindy's Mission
           </h3>
           <p className="mt-1 text-xs text-sky-100/90 font-medium">
-            Helping grow organic food and share harvest abundance with the community for free.
+            Helping fund heirloom seeds, educational gardens, and our community farm.
           </p>
         </div>
 

@@ -32,7 +32,7 @@ export default function HomePage() {
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white tracking-tight">
               Heirloom Farming Vision <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#FACC15] to-sky-400">
+              <span className="text-[#FACC15]">
                 Funded by Books &amp; Community
               </span>
             </h2>

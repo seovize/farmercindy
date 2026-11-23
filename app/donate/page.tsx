@@ -348,7 +348,7 @@ export default function DonatePage() {
               How Your Donations Grow in Real Communities
             </h3>
             <p className="mt-2 text-sm sm:text-base text-slate-300 font-medium">
-              From community garden plots to urban raised beds, every dollar directly empowers growers and feeds families.
+              From community garden plots to youth workshops, every dollar directly empowers young growers and supports our farm vision.
             </p>
           </div>
 

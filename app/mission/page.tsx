@@ -123,7 +123,7 @@ export default function MissionPage() {
               The "Book-to-Seed" Community Engine
             </h3>
             <p className="mt-2 text-sm sm:text-base text-slate-300">
-              See how a simple book purchase turns into real vibrant produce grown and shared for free.
+              See how a simple book purchase helps build our community farm and educational gardens.
             </p>
           </div>
 
@@ -177,7 +177,7 @@ export default function MissionPage() {
             Support Our Heirloom Farming Community
           </h2>
           <p className="mt-4 text-base sm:text-lg text-sky-100 max-w-2xl mx-auto leading-relaxed">
-            Your tax-deductible 501(c)(3) gift directly finances organic heirloom seeds, rich living compost, drip irrigation, and community plots dedicated to growing food and sharing harvest abundance for free.
+            Your tax-deductible 501(c)(3) gift directly finances organic heirloom seeds, rich living compost, drip irrigation, and our future community farm vision.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
