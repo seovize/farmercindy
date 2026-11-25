@@ -37,7 +37,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
-              FarmerCindy is a 501(c)(3) educational mission using children&apos;s picture books, animated stories, and community donations to build our future heirloom farm.
+              FarmerCindy 🍒🍓 is a 501(c)(3) educational mission using children&apos;s picture books, animated stories, and community donations to build our future heirloom farm.
             </p>
           </div>
 
@@ -134,53 +134,53 @@ export default function HomePage() {
 
           {/* Three Concrete Agricultural Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="p-7 rounded-3xl bg-[#0D131C] border border-sky-400/20 shadow-lg flex flex-col justify-between">
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-[#064E3B] via-[#065F46] to-[#0B2218] border-2 border-emerald-400/60 shadow-xl shadow-emerald-950/50 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#0F3D6E] text-emerald-400 flex items-center justify-center mb-5 border border-sky-400/30">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center mb-5 shadow-md">
                   <Sprout className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading font-black text-white mb-2">
                   Heirloom Seed Stewardship
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed font-medium">
+                <p className="text-sm text-emerald-50/90 leading-relaxed font-medium">
                   We cultivate non-GMO, heritage varieties of strawberries, cherries, tomatoes, and vibrant leafy greens that produce true seeds generation after generation.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-bold text-emerald-400">
+              <div className="mt-6 pt-4 border-t border-emerald-300/25 text-xs font-bold text-emerald-200">
                 100% Organic &amp; Heritage Crops
               </div>
             </div>
 
-            <div className="p-7 rounded-3xl bg-[#0D131C] border border-sky-400/20 shadow-lg flex flex-col justify-between">
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-[#78350F] via-[#92400E] to-[#451A03] border-2 border-[#FACC15]/70 shadow-xl shadow-amber-950/50 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#0F3D6E] text-[#FACC15] flex items-center justify-center mb-5 border border-sky-400/30">
+                <div className="w-12 h-12 rounded-2xl bg-[#FACC15] text-black flex items-center justify-center mb-5 shadow-md">
                   <Sun className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading font-black text-white mb-2">
                   Our 501(c)(3) Farm Goal
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed font-medium">
+                <p className="text-sm text-amber-50/90 leading-relaxed font-medium">
                   Our long-term mission is building an heirloom community farm to cultivate fresh organic produce and share future harvests with neighbors in need.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-bold text-[#FACC15]">
+              <div className="mt-6 pt-4 border-t border-amber-300/25 text-xs font-bold text-[#FACC15]">
                 Growing Our Mission Together
               </div>
             </div>
 
-            <div className="p-7 rounded-3xl bg-[#0D131C] border border-sky-400/20 shadow-lg flex flex-col justify-between">
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-[#881337] via-[#9F1239] to-[#4C0519] border-2 border-rose-400/65 shadow-xl shadow-rose-950/50 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#0F3D6E] text-rose-400 flex items-center justify-center mb-5 border border-sky-400/30">
+                <div className="w-12 h-12 rounded-2xl bg-[#F43F5E] text-white flex items-center justify-center mb-5 shadow-md">
                   <BookOpen className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading font-black text-white mb-2">
                   Books Funding the Land
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed font-medium">
-                  Every purchase of FarmerCindy's colorful picture books directly funds organic seeds, living soil, and raised beds to bring community farming to life.
+                <p className="text-sm text-rose-50/90 leading-relaxed font-medium">
+                  Every purchase of FarmerCindy 🍒🍓&apos;s colorful picture books directly funds organic seeds, living soil, and raised beds to bring community farming to life.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-bold text-sky-400">
+              <div className="mt-6 pt-4 border-t border-rose-300/25 text-xs font-bold text-rose-200">
                 Storybooks That Plant Real Seeds
               </div>
             </div>
@@ -199,10 +199,10 @@ export default function HomePage() {
               <span>Animated Story Theater</span>
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-black text-white">
-              Watch FarmerCindy&apos;s Animated Cartoons
+              Watch FarmerCindy 🍒🍓&apos;s Animated Cartoons
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-300">
-              Watch FarmerCindy&apos;s official animated adventures and see how community teamwork turns seeds into flourishing gardens.
+              Watch FarmerCindy 🍒🍓&apos;s official animated adventures and see how community teamwork turns seeds into flourishing gardens.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ export default function HomePage() {
               Two Colorful Stories of Seeds, Soil &amp; Community
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
-              Written by FarmerCindy to inspire curious minds with vibrant illustrations, living soil, and the joy of community farming.
+              Written by FarmerCindy 🍒🍓 to inspire curious minds with vibrant illustrations, living soil, and the joy of community farming.
             </p>
           </div>
 
@@ -239,9 +239,9 @@ export default function HomePage() {
             <TiltBookCard
               asin="B0HL5F734J"
               volume="Volume 1"
-              title="FarmerCindy Finds a Farm"
+              title="FarmerCindy 🍒🍓 Finds a Farm"
               subtitle="Urban Gardening & Heirloom Sprouts"
-              ageRange="Ages 3–9"
+              ageRange="Ages 5–12"
               pages={76}
               coverImage="/images/book1_publisher_front.jpg"
               gradient="from-[#0F3D6E] via-[#1E5AA8] to-[#0B2545]"
@@ -256,7 +256,7 @@ export default function HomePage() {
               volume="Volume 2"
               title="What's Happening to Our Farming Community?"
               subtitle="Soil Health, Pollinators & Teamwork"
-              ageRange="Ages 3–9"
+              ageRange="Ages 5–12"
               pages={76}
               coverImage="/images/book2_publisher_front.jpg"
               gradient="from-[#14532D] via-[#15803D] to-[#0F3D6E]"
@@ -312,7 +312,7 @@ export default function HomePage() {
               <FarmerCindyBrand iconSize="xl" />
             </h2>
             <p className="mt-3 text-base text-slate-300 font-medium">
-              Every tax-deductible contribution helps fund FarmerCindy, Inc.&apos;s 501(c)(3) educational outreach and future heirloom community farm vision.
+              Every tax-deductible contribution helps fund FarmerCindy 🍒🍓, Inc.&apos;s 501(c)(3) educational outreach and future heirloom community farm vision.
             </p>
           </div>
 

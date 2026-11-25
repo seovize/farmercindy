@@ -32,7 +32,7 @@ export function CinematicHero() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="motion-reduce:hidden absolute inset-0 w-full h-full object-cover object-center opacity-90"
         />
 
@@ -54,15 +54,15 @@ export function CinematicHero() {
 
         {/* Master Headline (Community Farming & Books Funding 501(c)(3)) */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-[1.08] max-w-3xl drop-shadow-2xl">
-          Heirloom Farming. <br />
+          Heirloom Farming, <br />
           <span className="text-[#FACC15]">
-            Community &amp; Stories.
+            Community and Stories
           </span>
         </h1>
 
         {/* Supporting Narrative (Honest 501(c)(3) Positioning) */}
         <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl drop-shadow-md">
-          Official home of FarmerCindy&apos;s picture books and animated stories—raising funding to build our 501(c)(3) heirloom farming community.
+          Official home of FarmerCindy 🍒🍓&apos;s picture books and animated stories, raising funding to build our 501(c)(3) heirloom farming community.
         </p>
 
         {/* Dual Primary Actions */}
@@ -93,7 +93,7 @@ export function CinematicHero() {
             <span className="w-6 h-6 rounded-full bg-[#FACC15] text-black flex items-center justify-center shadow-xs">
               <Play className="w-3 h-3 fill-black translate-x-0.5" />
             </span>
-            <span>Watch FarmerCindy's Animated Cartoons</span>
+            <span>Watch FarmerCindy 🍒🍓&apos;s Animated Cartoons</span>
             <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
           </Link>
         </div>

@@ -87,7 +87,7 @@ export default function RootLayout({
         publisher: { "@id": "https://farmercindy.vercel.app/#organization" },
         inLanguage: "en-US",
         bookFormat: "https://schema.org/Hardcover",
-        typicalAgeRange: "3-9",
+        typicalAgeRange: "5-12",
         numberOfPages: 76,
         genre: ["Children's Picture Book", "Farming", "Urban Gardening", "Nutrition"],
         offers: {
@@ -105,7 +105,7 @@ export default function RootLayout({
         author: { "@id": "https://farmercindy.vercel.app/#author" },
         publisher: { "@id": "https://farmercindy.vercel.app/#organization" },
         inLanguage: "en-US",
-        typicalAgeRange: "3-9",
+        typicalAgeRange: "5-12",
         genre: ["Children's Picture Book", "Community Gardening", "Pollinators", "Soil Health"],
         offers: {
           "@type": "Offer",

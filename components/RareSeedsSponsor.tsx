@@ -12,10 +12,15 @@ export function RareSeedsSponsor() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-4xl bg-gradient-to-br from-[#0B2218] via-[#0F3D6E]/70 to-[#09131C] border-2 border-emerald-400/35 p-6 sm:p-10 lg:p-12 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left: Baker Creek Heirloom Seeds / RareSeeds.com Brand Lockup */}
-            <div className="lg:col-span-5 flex flex-col items-center text-center p-6 sm:p-8 rounded-3xl bg-[#FDFBF7] text-slate-900 shadow-xl border-2 border-emerald-500/40">
-              <div className="w-16 h-16 rounded-2xl bg-[#1B4332] text-[#FACC15] flex items-center justify-center shadow-md mb-4">
-                <Sprout className="w-9 h-9 stroke-[2.2]" />
+            {/* Left: Baker Creek Heirloom Seeds / RareSeeds.com Animated Promo + Brand Lockup */}
+            <div className="lg:col-span-5 flex flex-col items-center text-center p-5 sm:p-6 rounded-3xl bg-[#FDFBF7] text-slate-900 shadow-xl border-2 border-emerald-500/40">
+              <div className="w-full mb-4 overflow-hidden rounded-2xl shadow-lg border-2 border-emerald-400/50 bg-black">
+                <img
+                  src="/images/baker_creek_seed_promo.gif"
+                  alt="1 Free Baker Creek Heirloom Seed Packet with every FarmerCindy website book order"
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
               </div>
 
               <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#2B6E4F] mb-1">
@@ -59,7 +64,7 @@ export function RareSeedsSponsor() {
                 <strong className="text-[#FACC15]">
                   Baker Creek Heirloom Seeds (RareSeeds.com)
                 </strong>{" "}
-                officially sponsor heirloom seed packets for FarmerCindy! Order
+                officially sponsor heirloom seed packets for FarmerCindy 🍒🍓! Order
                 any book directly on our website to receive{" "}
                 <strong className="text-emerald-300">
                   1 FREE Baker Creek seed packet
@@ -71,7 +76,7 @@ export function RareSeedsSponsor() {
               <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-emerald-300 pt-1">
                 <span className="inline-flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  Official Sponsor of FarmerCindy Seed Packets
+                  Official Sponsor of FarmerCindy 🍒🍓 Seed Packets
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />

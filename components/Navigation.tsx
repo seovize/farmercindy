@@ -17,7 +17,7 @@ export function Navigation() {
     { href: "/mission", label: "Our Mission" },
     { href: "/books", label: "The Books" },
     { href: "/theater", label: "Watch" },
-    { href: "/about", label: "About FarmerCindy" },
+    { href: "/about", label: "About FarmerCindy 🍒🍓" },
   ];
 
   return (

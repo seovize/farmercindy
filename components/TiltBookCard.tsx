@@ -56,8 +56,7 @@ export function TiltBookCard({
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, 400px"
-              className="object-cover group-hover:scale-102 transition-transform duration-500"
-              priority={asin === "B0HL5F734J"}
+              className="object-cover contrast-[1.1] saturate-[1.22] brightness-[0.96] group-hover:scale-102 transition-transform duration-500"
             />
             {/* Subtle Realistic Book Spine Highlight */}
             <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-black/30 via-white/10 to-transparent pointer-events-none" />
@@ -66,7 +65,7 @@ export function TiltBookCard({
           <div className={`relative w-full h-full p-6 text-white bg-gradient-to-br ${gradient} flex flex-col justify-between`}>
             <div className="relative z-10">
               <div className="inline-block px-3 py-1 rounded-lg bg-black/30 text-[10px] font-black uppercase tracking-widest text-amber-200">
-                The Adventures of Farmer Cindy
+                The Adventures of FarmerCindy 🍒🍓
               </div>
               <h3 className="mt-3 text-2xl font-black leading-tight">
                 {title}

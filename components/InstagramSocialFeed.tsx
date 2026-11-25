@@ -123,7 +123,6 @@ export function InstagramSocialFeed() {
                     fill
                     sizes="120px"
                     className="object-cover"
-                    priority
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center border-2 border-[#0D131C] shadow">
@@ -148,7 +147,7 @@ export function InstagramSocialFeed() {
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
-                  "We are a registered 501(c)(3) Non-Profit organization. 100% of book and merchandise proceeds directly fund our heirloom farms and free community food programs."
+                  "We are a registered 501(c)(3) Non-Profit organization. 100% of book and merchandise proceeds directly fund our heirloom farms and our heirloom community farm vision."
                 </p>
 
                 {/* Proof Pills */}
@@ -209,10 +208,10 @@ export function InstagramSocialFeed() {
             <span>Live Social Stream</span>
           </div>
           <h3 className="text-3xl sm:text-4xl font-heading font-black text-white">
-            Inside FarmerCindy's <span className="text-[#FACC15]">Farm &amp; Reading Community</span>
+            Inside FarmerCindy 🍒🍓&apos;s <span className="text-[#FACC15]">Farm &amp; Reading Community</span>
           </h3>
           <p className="mt-2 text-sm sm:text-base text-slate-300">
-            Real snapshots, animated cartoon sneak-peeks, and heirloom gardening tips fresh from FarmerCindy's garden journal.
+            Real snapshots, animated cartoon sneak-peeks, and heirloom gardening tips fresh from FarmerCindy 🍒🍓&apos;s garden journal.
           </p>
         </div>
 

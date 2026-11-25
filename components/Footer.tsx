@@ -19,12 +19,12 @@ export function Footer() {
                   <FarmerCindyBrand iconSize="md" />
                 </div>
                 <span className="text-[10px] text-emerald-400 font-extrabold uppercase tracking-wider mt-1.5 block">
-                  FarmerCindy, Inc.
+                  FarmerCindy 🍒🍓, Inc.
                 </span>
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              FarmerCindy, Inc. is a registered 501(c)(3) educational non-profit organization dedicated to teaching children, families, and communities about heirloom agriculture, nutrition, and community gardens.
+              FarmerCindy 🍒🍓, Inc. is a registered 501(c)(3) educational non-profit organization dedicated to teaching children, families, and communities about heirloom agriculture, nutrition, and community gardens.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0B1524] border border-sky-400/25 text-[11px] font-bold text-[#FACC15]">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -41,7 +41,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
                 <Link href="/books" className="hover:text-white transition flex items-center gap-1">
-                  <span>Volume 1: FarmerCindy Finds a Farm</span>
+                  <span>Volume 1: FarmerCindy 🍒🍓 Finds a Farm</span>
                 </Link>
                 <span className="text-[10px] text-sky-400/80 block mt-0.5">ASIN: B0HL5F734J</span>
               </li>
@@ -83,7 +83,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/about" className="hover:text-white transition">
-                  About FarmerCindy
+                  About FarmerCindy 🍒🍓
                 </Link>
               </li>
               <li>
@@ -109,7 +109,7 @@ export function Footer() {
               This site adheres to the Children&apos;s Online Privacy Protection Act (COPPA). We do not collect personal information from children under 13.
             </p>
             <div className="mt-4 p-3 rounded-xl bg-[#0B1524] border border-sky-400/20 text-[11px] text-slate-300">
-              <div className="font-bold text-white">FarmerCindy, Inc.</div>
+              <div className="font-bold text-white">FarmerCindy 🍒🍓, Inc.</div>
               <div>Official 501(c)(3) Public Charity</div>
               <div className="mt-1 text-[10px] text-sky-400/80">All Rights Reserved © {new Date().getFullYear()}</div>
             </div>

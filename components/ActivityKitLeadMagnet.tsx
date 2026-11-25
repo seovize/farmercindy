@@ -70,15 +70,14 @@ export function ActivityKitLeadMagnet() {
                 alt="FarmerCindy's Official Book & Printable Activity Kit"
                 fill
                 sizes="(max-width: 1024px) 100vw, 400px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                priority
+                className="object-cover contrast-[1.1] saturate-[1.22] brightness-[0.96] group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
                 <span className="text-[11px] font-black bg-[#FACC15] text-black px-3 py-1 rounded-full shadow">
                   Free Printable PDF
                 </span>
-                <span className="text-xs font-bold drop-shadow">Ages 3–9</span>
+                <span className="text-xs font-bold drop-shadow">Ages 5–12</span>
               </div>
             </div>
 
@@ -95,7 +94,7 @@ export function ActivityKitLeadMagnet() {
             </span>
 
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white tracking-tight leading-tight">
-              Download FarmerCindy's <br />
+              Download FarmerCindy 🍒🍓&apos;s <br />
               <span className="text-emerald-400">Strawberry Sprout &amp; Seed Journal!</span>
             </h2>
 

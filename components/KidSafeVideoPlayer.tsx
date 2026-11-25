@@ -24,17 +24,17 @@ export const cartoonVideos: VideoItem[] = [
     duration: "0:49",
     nativeVideo: "/videos/farmer_cindy_cartoon_1.mp4",
     thumbnail: "/images/cartoon_thumb_1.jpg",
-    description: "FarmerCindy's official Book 1 cartoon! Watch Cindy discover fertile earth, culminating in the heartwarming finale where the neighborhood rallies together to present donations, heirloom seeds, and tools to build the farm.",
+    description: "FarmerCindy 🍒🍓's official Book 1 cartoon! Watch Cindy discover fertile earth, culminating in the heartwarming finale where the neighborhood rallies together to present donations, heirloom seeds, and tools to build the farm.",
     curriculumBadge: "Book 1 Climax: Community Giving",
   },
   {
     id: "cindy-cartoon-2",
-    title: "Book 2: What's Happening to Our Farming Community? (Voiced by FarmerCindy)",
-    episodeTag: "Official Cartoon #2 • FarmerCindy's Voice",
+    title: "Book 2: What's Happening to Our Farming Community? (Voiced by FarmerCindy 🍒🍓)",
+    episodeTag: "Official Cartoon #2 • FarmerCindy 🍒🍓's Voice",
     duration: "0:37",
     nativeVideo: "/videos/farmer_cindy_cartoon_2.mp4",
     thumbnail: "/images/cartoon_thumb_2.jpg",
-    description: "FarmerCindy's official Book 2 cartoon voiced by FarmerCindy herself! A wholesome story showing what happens when neighbors and families join hands to protect green spaces and cultivate heirloom gardens.",
+    description: "FarmerCindy 🍒🍓's official Book 2 cartoon voiced by FarmerCindy 🍒🍓 herself! A wholesome story showing what happens when neighbors and families join hands to protect green spaces and cultivate heirloom gardens.",
     curriculumBadge: "Book 2: Community Farming",
   },
 ];
@@ -50,57 +50,31 @@ export function KidSafeVideoPlayer({
 }: KidSafeVideoPlayerProps) {
   const initialVideo = cartoonVideos.find((v) => v.id === initialVideoId) || cartoonVideos[0];
   const [activeVideo, setActiveVideo] = useState<VideoItem>(initialVideo);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [needsSoundGesture, setNeedsSoundGesture] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Viewport-aware autoplay: plays automatically when visible, pauses when scrolled away
+  // Pause active playback if scrolled out of view; never auto-decode on scroll before Play click
   useEffect(() => {
     const container = containerRef.current;
-    const videoEl = videoRef.current;
-    if (!container || !videoEl) return;
-
-    const attemptPlay = async () => {
-      if (!videoRef.current) return;
-      try {
-        videoRef.current.muted = false;
-        await videoRef.current.play();
-        setIsPlaying(true);
-        setIsMuted(false);
-        setNeedsSoundGesture(false);
-      } catch {
-        if (videoRef.current) {
-          videoRef.current.muted = true;
-          try {
-            await videoRef.current.play();
-            setIsPlaying(true);
-            setIsMuted(true);
-            setNeedsSoundGesture(true);
-          } catch {
-            setIsPlaying(false);
-          }
-        }
-      }
-    };
+    if (!container || !isPlaying) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            attemptPlay();
-          } else if (videoRef.current && !videoRef.current.paused) {
+          if (!entry.isIntersecting && videoRef.current && !videoRef.current.paused) {
             videoRef.current.pause();
           }
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.25 }
     );
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, [activeVideo]);
+  }, [activeVideo, isPlaying]);
 
   const handleSelectVideo = (video: VideoItem) => {
     setActiveVideo(video);
@@ -163,6 +137,7 @@ export function KidSafeVideoPlayer({
                 muted={isMuted}
                 loop
                 playsInline
+                preload="metadata"
                 poster={activeVideo.thumbnail}
                 className="max-h-full max-w-full object-contain mx-auto"
                 onPlay={() => setIsPlaying(true)}
@@ -199,7 +174,6 @@ export function KidSafeVideoPlayer({
                 fill
                 sizes="(max-width: 1024px) 100vw, 900px"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
-                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40" />
 

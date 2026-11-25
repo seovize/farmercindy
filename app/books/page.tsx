@@ -62,8 +62,7 @@ export default function BooksPage() {
                       alt="The Adventures of FarmerCindy: FarmerCindy Finds a Farm Cover by Farmer Cindy"
                       fill
                       sizes="(max-width: 1024px) 100vw, 420px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      priority
+                      className="object-cover contrast-[1.1] saturate-[1.22] brightness-[0.96] group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Realistic Hardcover Spine & Emboss Sheen */}
                     <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/60 via-white/20 to-transparent pointer-events-none" />
@@ -75,7 +74,7 @@ export default function BooksPage() {
                         Volume 1
                       </span>
                       <span className="bg-[#2B6E4F] text-white px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider shadow">
-                        Ages 3–9
+                        Ages 5–12
                       </span>
                     </div>
 
@@ -92,7 +91,7 @@ export default function BooksPage() {
                 {/* Hardcover Specification Metadata */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-slate-600">
                   <span className="bg-amber-100 text-amber-900 px-3 py-1 rounded-full">8.5&quot; × 11&quot; Premium Color</span>
-                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">Official FarmerCindy Edition</span>
+                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">Official FarmerCindy 🍒🍓 Edition</span>
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#2B6E4F]" />
                     Verified ASIN: B0HL5F734J
@@ -107,7 +106,7 @@ export default function BooksPage() {
                     Series Debut
                   </span>
                   <span className="text-xs font-bold text-slate-500">
-                    Pre-K to 3rd Grade Elementary Curriculum
+                    Grades K–6 Elementary Curriculum (Ages 5–12)
                   </span>
                   <div className="flex items-center text-[#FF9900] ml-auto">
                     {[...Array(5)].map((_, i) => (
@@ -117,8 +116,8 @@ export default function BooksPage() {
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white tracking-tight leading-[1.15]">
-                  The Adventures of FarmerCindy: <br />
-                  <span className="text-emerald-400">FarmerCindy Finds a Farm</span>
+                  The Adventures of FarmerCindy 🍒🍓: <br />
+                  <span className="text-emerald-400">FarmerCindy 🍒🍓 Finds a Farm</span>
                 </h2>
 
                 {/* Author Excerpt Pull-Quote */}
@@ -152,9 +151,9 @@ export default function BooksPage() {
                   <span>•</span>
                   <span><strong>Pages:</strong> 76 Pages</span>
                   <span>•</span>
-                  <span><strong>Ages:</strong> 3–9 (Pre-K to 3rd)</span>
+                  <span><strong>Ages:</strong> 5–12 (Grades K–6)</span>
                   <span>•</span>
-                  <span><strong>Publisher:</strong> FarmerCindy Books</span>
+                  <span><strong>Publisher:</strong> FarmerCindy 🍒🍓 Books</span>
                 </div>
 
                 {/* Refined High-Converting Multi-Retailer Row */}
@@ -176,10 +175,10 @@ export default function BooksPage() {
                   <span>Official Animated Short • Book 1 Narrated Edition</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
-                  Watch Book 1: FarmerCindy Finds a Farm
+                  Watch Book 1: FarmerCindy 🍒🍓 Finds a Farm
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1.5">
-                  Watch FarmerCindy's official animated short! See Cindy discover urban window farming, leading into the inspiring finale where the community gathers with donations to build the farm.
+                  Watch FarmerCindy 🍒🍓&apos;s official animated short! See Cindy discover urban window farming, leading into the inspiring finale where the community gathers with donations to build the farm.
                 </p>
               </div>
 
@@ -232,7 +231,7 @@ export default function BooksPage() {
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white tracking-tight leading-[1.15]">
-                  The Adventures of FarmerCindy: <br />
+                  The Adventures of FarmerCindy 🍒🍓: <br />
                   <span className="text-emerald-400">What's Happening to Our Farming Community?</span>
                 </h2>
 
@@ -267,9 +266,9 @@ export default function BooksPage() {
                   <span>•</span>
                   <span><strong>Pages:</strong> 76 Pages</span>
                   <span>•</span>
-                  <span><strong>Ages:</strong> 3–9 (Pre-K to 3rd)</span>
+                  <span><strong>Ages:</strong> 5–12 (Grades K–6)</span>
                   <span>•</span>
-                  <span><strong>Publisher:</strong> FarmerCindy Books</span>
+                  <span><strong>Publisher:</strong> FarmerCindy 🍒🍓 Books</span>
                 </div>
 
                 {/* Refined Multi-Retailer Row */}
@@ -294,7 +293,7 @@ export default function BooksPage() {
                       alt="The Adventures of FarmerCindy: What's Happening to Our Farming Community? Cover by Farmer Cindy"
                       fill
                       sizes="(max-width: 1024px) 100vw, 420px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="object-cover contrast-[1.1] saturate-[1.22] brightness-[0.96] group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Realistic Hardcover Spine & Emboss Sheen */}
                     <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/60 via-white/20 to-transparent pointer-events-none" />
@@ -323,7 +322,7 @@ export default function BooksPage() {
                 {/* Hardcover Specification Metadata */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-slate-600">
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full">8.5&quot; × 11&quot; Premium Color</span>
-                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">FarmerCindy Books</span>
+                  <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">FarmerCindy 🍒🍓 Books</span>
                   <span className="bg-emerald-100 text-[#0D3829] px-3 py-1 rounded-full flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#2B6E4F]" />
                     Verified ASIN: B0HL53WTS8
@@ -337,13 +336,13 @@ export default function BooksPage() {
               <div className="text-center max-w-2xl mx-auto mb-6">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3D6E] text-[#FACC15] text-xs font-black uppercase tracking-wider mb-2 border border-sky-400/30">
                   <Film className="w-3.5 h-3.5 text-[#FACC15]" />
-                  <span>Official Animated Short • Book 2 (Voiced by FarmerCindy)</span>
+                  <span>Official Animated Short • Book 2 (Voiced by FarmerCindy 🍒🍓)</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
                   Watch Book 2: What's Happening to Our Farming Community?
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1.5">
-                  Narrated by FarmerCindy herself! See how friendly honeybees, earthworms, and community teamwork show the vital importance of protecting local organic farming.
+                  Narrated by FarmerCindy 🍒🍓 herself! See how friendly honeybees, earthworms, and community teamwork show the vital importance of protecting local organic farming.
                 </p>
               </div>
 
@@ -372,7 +371,7 @@ export default function BooksPage() {
             </h3>
 
             <p className="mt-4 text-base sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl mx-auto">
-              All Farmer Cindy picture books are registered with <strong>IngramSpark Wholesale</strong>, allowing public schools, homeschool co-ops, and municipal libraries to place tax-exempt bulk orders using official purchase orders (PO).
+              All FarmerCindy 🍒🍓 picture books are registered with <strong>IngramSpark Wholesale</strong>, allowing public schools, homeschool co-ops, and municipal libraries to place tax-exempt bulk orders using official purchase orders (PO).
             </p>
 
             {/* Feature Highlights Grid */}
